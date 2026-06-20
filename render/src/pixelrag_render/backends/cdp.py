@@ -65,8 +65,14 @@ async def _connect_cdp(port: int, retries: int = 5, delay: float = 1.0):
                 f"http://localhost:{port}/json", timeout=3
             ).read()
             targets = json.loads(data)
+            # Connect to the actual page target — NOT targets[0]. Some Chrome builds list a
+            # component-extension `background_page` (a 0x0 target) first in /json; navigating
+            # and capturing that target makes Page.captureScreenshot hang forever (the render
+            # "hang" seen on Kaggle and on macOS with managed/component extensions present).
+            # Fall back to targets[0] only if no page target is listed.
+            target = next((t for t in targets if t.get("type") == "page"), targets[0])
             ws = await websockets.connect(
-                targets[0]["webSocketDebuggerUrl"],
+                target["webSocketDebuggerUrl"],
                 open_timeout=10,
                 max_size=50 * 1024 * 1024,
             )
