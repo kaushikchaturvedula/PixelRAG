@@ -191,6 +191,61 @@ _SCROLL_WAIT = """new Promise(resolve => {{
 }})"""
 
 
+# DOM block-region extractor for the content-aware chunker. Returns block-element bounding
+# boxes in ABSOLUTE page pixels (CSS px) so the chunker can choose cut lines that never split a
+# region. DOM is used ONLY to decide WHERE to cut — the reader still only ever sees tile images.
+# No Python interpolation (plain string). Run after the page has settled (post-readiness).
+REGIONS_EXPR = r"""(() => {
+    const SEL = 'p,h1,h2,h3,h4,h5,h6,figure,table,li,blockquote,pre,dl';
+    const sy = window.scrollY || 0;
+    const stack = [];   // running heading hierarchy → parent heading path
+    const regions = [];
+    document.querySelectorAll(SEL).forEach((el, i) => {
+        const tag = el.tagName.toLowerCase();
+        const r = el.getBoundingClientRect();
+        if (r.height <= 0 || r.width <= 0) return;           // skip hidden / zero-size
+        const hm = tag.match(/^h([1-6])$/);
+        if (hm) { const lvl = +hm[1];
+                  while (stack.length && stack[stack.length-1].level >= lvl) stack.pop(); }
+        const region = {
+            id: i, tag,
+            y: Math.round(r.top + sy), height: Math.round(r.height),
+            heading_path: stack.map(h => h.text).join(' > '),
+            kind: tag === 'table' ? 'table' : tag === 'figure' ? 'figure'
+                  : hm ? 'heading' : 'block',
+        };
+        if (tag === 'table') {
+            const hasThead = !!el.querySelector('thead');
+            region.rows = Array.from(el.querySelectorAll('tr')).map((tr, j) => {
+                const rr = tr.getBoundingClientRect();
+                return { y: Math.round(rr.top + sy), height: Math.round(rr.height),
+                         is_header: hasThead ? !!tr.closest('thead') : (j === 0) };
+            }).filter(row => row.height > 0);
+        }
+        regions.push(region);
+        if (hm) stack.push({ level: +hm[1], text: (el.textContent || '').trim().slice(0, 80) });
+    });
+    return {
+        device_pixel_ratio: window.devicePixelRatio || 1,
+        page_height: Math.max(document.documentElement.scrollHeight,
+                              document.body ? document.body.scrollHeight : 0),
+        viewport_width: window.innerWidth,
+        regions,
+    };
+})()"""
+
+
+async def capture_regions(ws, msg_id_ref: list) -> dict:
+    """Run REGIONS_EXPR in the page and return the block-region map (for content-aware chunking)."""
+    result = await _cdp_send(
+        ws,
+        msg_id_ref,
+        "Runtime.evaluate",
+        {"expression": REGIONS_EXPR, "returnByValue": True},
+    )
+    return result.get("result", {}).get("value", {}) or {}
+
+
 async def capture_url(
     ws,
     msg_id_ref: list,
@@ -203,10 +258,13 @@ async def capture_url(
     image_format: str = "jpeg",
     from_surface: bool = True,
     wait_network_idle: bool = False,
+    emit_regions: bool = False,
 ) -> int:
     """Capture a URL as tiled images via direct CDP websocket.
 
-    Returns the number of tiles written.
+    Returns the number of tiles written. When ``emit_regions`` is set, also writes a
+    ``regions.json`` (DOM block boxes) beside ``tiles.json`` for the content-aware chunker;
+    off by default so the baseline render is unchanged.
     """
     tile_dir.mkdir(parents=True, exist_ok=True)
 
@@ -297,6 +355,17 @@ async def capture_url(
     with open(tile_dir / "tiles.json", "w") as f:
         json.dump(manifest, f)
 
+    if emit_regions:
+        try:
+            regions = await capture_regions(ws, msg_id_ref)
+            regions.setdefault("url", url)
+            regions.setdefault("page_height", page_height)
+            regions.setdefault("viewport_width", viewport_w)
+            with open(tile_dir / "regions.json", "w") as f:
+                json.dump(regions, f)
+        except Exception as e:  # region capture is best-effort; never fail a render over it
+            logger.warning("region capture failed for %s: %s", url, str(e)[:160])
+
     return len(tiles)
 
 
@@ -314,6 +383,7 @@ async def _worker(
     worker_id: int,
     stats: dict,
     results: list,
+    emit_regions: bool = False,
 ):
     """Async worker: owns a Chrome process, pulls URLs from queue."""
     proc = subprocess.Popen(
@@ -372,6 +442,7 @@ async def _worker(
                     image_format=image_format,
                     from_surface=from_surface,
                     wait_network_idle=wait_network_idle,
+                    emit_regions=emit_regions,
                 )
                 stats["done"] += 1
                 elapsed = time.monotonic() - t0
@@ -432,6 +503,7 @@ async def _run_batch(
     wait_network_idle: bool,
     stems: list[str] | None,
     chrome_path: str,
+    emit_regions: bool = False,
 ) -> list[Path]:
     work_queue: asyncio.Queue = asyncio.Queue()
     stem_list = _derive_stems(urls, stems)
@@ -458,6 +530,7 @@ async def _run_batch(
             wid,
             stats,
             results,
+            emit_regions,
         )
         for wid in range(actual_workers)
     ]
@@ -479,6 +552,7 @@ def render_urls(
     image_format: str = "jpeg",
     from_surface: bool = True,
     wait_network_idle: bool = False,
+    emit_regions: bool = False,
     turbo: bool | None = None,
     chrome_path: str | None = None,
 ) -> list[Path]:
@@ -528,6 +602,7 @@ def render_urls(
         or viewport_width != VIEWPORT_W
         or wait_network_idle
         or not from_surface
+        or emit_regions  # region capture is standard-path only (turbo fast_cdp can't emit it)
     ):
         use_turbo = False
 
@@ -574,5 +649,6 @@ def render_urls(
             wait_network_idle,
             stems,
             chrome,
+            emit_regions,
         )
     )

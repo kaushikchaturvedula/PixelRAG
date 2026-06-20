@@ -1,0 +1,19 @@
+# PixelRAG table/layout-stress probe set — 18 table-heavy pages
+https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)
+https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population
+https://en.wikipedia.org/wiki/List_of_countries_by_area
+https://en.wikipedia.org/wiki/List_of_chemical_elements
+https://en.wikipedia.org/wiki/Comparison_of_programming_languages
+https://en.wikipedia.org/wiki/Comparison_of_file_systems
+https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+https://en.wikipedia.org/wiki/List_of_largest_companies_by_revenue
+https://en.wikipedia.org/wiki/List_of_highest-grossing_films
+https://en.wikipedia.org/wiki/List_of_tallest_buildings
+https://en.wikipedia.org/wiki/List_of_Nobel_laureates_in_Physics
+https://en.wikipedia.org/wiki/List_of_metro_systems
+https://en.wikipedia.org/wiki/2022_FIFA_World_Cup
+https://en.wikipedia.org/wiki/List_of_Olympic_Games_host_cities
+https://en.wikipedia.org/wiki/Demographics_of_India
+https://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy
+https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population
+https://en.wikipedia.org/wiki/Tokyo
