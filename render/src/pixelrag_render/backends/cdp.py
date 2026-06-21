@@ -297,6 +297,12 @@ async def capture_url(
     if emit_regions:
         try:
             regions_data = await capture_regions(ws, msg_id_ref)
+            # A page can grow a little between the readiness probe and region capture as lazy
+            # content settles. Tile to cover the regions so every region the chunker uses is
+            # actually present in the rendered pixels.
+            rph = regions_data.get("page_height")
+            if isinstance(rph, (int, float)) and rph > page_height:
+                page_height = int(rph)
         except Exception as e:  # best-effort; never fail a render over it
             logger.warning("region capture failed for %s: %s", url, str(e)[:160])
 
