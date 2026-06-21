@@ -29,6 +29,8 @@ def main() -> None:
     ap.add_argument("--quality", type=int, default=85)
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--chunker", default="fixed", choices=["fixed"])
+    ap.add_argument("--emit-regions", action="store_true",
+                    help="Capture DOM regions.json in the same render session (for content-aware).")
     args = ap.parse_args()
 
     from pixelrag_render.render import render_urls
@@ -60,6 +62,7 @@ def main() -> None:
             tile_height=args.tile_height,
             quality=args.quality,
             workers=args.workers,
+            emit_regions=args.emit_regions,
         )
     print(f"[render] rendered {len(todo)} (skipped {len(urls) - len(todo)} already present)", flush=True)
 

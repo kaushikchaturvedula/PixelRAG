@@ -155,13 +155,16 @@ def _readiness_expr(wait_network_idle: bool) -> str:
             new Promise(r => setTimeout(r, 1000)),
         ]);
         document.documentElement.style.scrollBehavior = 'auto';
-        const sh = document.documentElement.scrollHeight;
-        const body = document.body;
-        if (body) {{
-            const bottom = Math.ceil(body.getBoundingClientRect().bottom);
-            return Math.min(sh, Math.max(bottom, 1));
-        }}
-        return sh;
+        // Full scrollable content height. Do NOT clamp by body.getBoundingClientRect().bottom:
+        // on some skins (e.g. Wikipedia Vector 2022) the <body> box is only viewport-tall with the
+        // article overflowing a child container, so that bottom ~= innerHeight. With the emulated
+        // viewport height set to tile_height (8192), min(scrollHeight, bottom) capped every tall page
+        // at 8192 and silently truncated multi-tile pages. scrollHeight is the correct full height.
+        const sh = Math.max(
+            document.documentElement.scrollHeight,
+            document.body ? document.body.scrollHeight : 0
+        );
+        return Math.max(sh, 1);
     }})()"""
 
 
@@ -287,6 +290,16 @@ async def capture_url(
     except (KeyError, TypeError):
         page_height = tile_h
 
+    # Capture DOM block regions NOW — at scroll 0, in the same settled layout the page_height
+    # measurement and the first tile use. Capturing AFTER the tiling scroll loop can disagree with
+    # the rendered tiles on tall, dynamic pages that reflow while scrolling.
+    regions_data = None
+    if emit_regions:
+        try:
+            regions_data = await capture_regions(ws, msg_id_ref)
+        except Exception as e:  # best-effort; never fail a render over it
+            logger.warning("region capture failed for %s: %s", url, str(e)[:160])
+
     tiles = []
     y = 0
     idx = 0
@@ -355,16 +368,12 @@ async def capture_url(
     with open(tile_dir / "tiles.json", "w") as f:
         json.dump(manifest, f)
 
-    if emit_regions:
-        try:
-            regions = await capture_regions(ws, msg_id_ref)
-            regions.setdefault("url", url)
-            regions.setdefault("page_height", page_height)
-            regions.setdefault("viewport_width", viewport_w)
-            with open(tile_dir / "regions.json", "w") as f:
-                json.dump(regions, f)
-        except Exception as e:  # region capture is best-effort; never fail a render over it
-            logger.warning("region capture failed for %s: %s", url, str(e)[:160])
+    if regions_data is not None:
+        regions_data.setdefault("url", url)
+        regions_data.setdefault("page_height", page_height)
+        regions_data.setdefault("viewport_width", viewport_w)
+        with open(tile_dir / "regions.json", "w") as f:
+            json.dump(regions_data, f)
 
     return len(tiles)
 
