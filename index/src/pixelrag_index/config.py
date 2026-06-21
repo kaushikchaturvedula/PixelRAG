@@ -9,6 +9,9 @@ from .sources import SOURCES
 
 DEFAULT_CONFIG = {
     "ingest": {"backend": "cdp", "quality": 85, "tile_height": 8192},
+    # Chunking strategy for stage 2. "fixed" = equal-height 1024px strips (baseline);
+    # "content_aware" = cut at DOM block boundaries. region_source: dom (regions.json) | vision (stub).
+    "chunk": {"chunker": "fixed", "region_source": "dom"},
     "embed": {"model": "Qwen/Qwen3-VL-Embedding-2B", "device": "cuda"},
     "output": "./index",
 }

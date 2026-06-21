@@ -349,16 +349,45 @@ def main():
         action="store_true",
         help="Delete tile_*.png after chunking each shard",
     )
+    parser.add_argument(
+        "--chunker",
+        choices=["fixed", "content_aware"],
+        default="fixed",
+        help=(
+            f"Chunking strategy. 'fixed' = equal-height {CHUNK_HEIGHT}px strips (default; the "
+            "baseline control — byte-identical to the unflagged path). 'content_aware' = cut at DOM "
+            "block boundaries from regions.json (never split a region; tables split at <tr> with the "
+            "header row repeated)."
+        ),
+    )
+    parser.add_argument(
+        "--region-source",
+        choices=["dom", "vision"],
+        default="dom",
+        help="Where content_aware gets region boxes: 'dom' = regions.json captured at render time; "
+             "'vision' = pluggable layout detector (stub, not wired). Ignored for --chunker fixed.",
+    )
     args = parser.parse_args()
+
+    # Select the shard processor. The fixed path is the unchanged byte-identical control; the
+    # content-aware path dispatches to the chunking module with the chosen region source.
+    if args.chunker == "content_aware":
+        from .chunking import content_aware
+
+        def _process_shard(shard_dir, dry_run, force, delete_tiles):
+            return content_aware.process_shard(
+                shard_dir, dry_run=dry_run, force=force,
+                delete_tiles=delete_tiles, region_source=args.region_source,
+            )
+    else:
+        _process_shard = process_shard
 
     if args.shard_dir:
         logger.info(
-            "Processing single shard: %s (force=%s, delete_tiles=%s)",
-            args.shard_dir,
-            args.force,
-            args.delete_tiles,
+            "Processing single shard: %s (chunker=%s, region_source=%s, force=%s, delete_tiles=%s)",
+            args.shard_dir, args.chunker, args.region_source, args.force, args.delete_tiles,
         )
-        result = process_shard(
+        result = _process_shard(
             args.shard_dir,
             dry_run=args.dry_run,
             force=args.force,
@@ -397,12 +426,24 @@ def main():
     }
 
     with ProcessPoolExecutor(max_workers=args.workers) as pool:
-        futures = {
-            pool.submit(
-                process_shard, sd, args.dry_run, args.force, args.delete_tiles
-            ): sd
-            for sd in shard_dirs
-        }
+        # Submit module-level functions (picklable). content_aware takes an extra region_source arg.
+        if args.chunker == "content_aware":
+            from .chunking import content_aware
+
+            futures = {
+                pool.submit(
+                    content_aware.process_shard, sd, args.dry_run, args.force,
+                    args.delete_tiles, args.region_source,
+                ): sd
+                for sd in shard_dirs
+            }
+        else:
+            futures = {
+                pool.submit(
+                    process_shard, sd, args.dry_run, args.force, args.delete_tiles
+                ): sd
+                for sd in shard_dirs
+            }
         for fut in as_completed(futures):
             sd = futures[fut]
             try:

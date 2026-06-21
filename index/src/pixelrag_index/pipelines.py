@@ -116,7 +116,14 @@ def build(config: dict, limit: int | None = None, force: bool = False) -> Path:
     )
 
     # Stage 2: Chunk tiles (split large tiles into 1024px strips)
-    logger.info("Stage 2/4: Chunking tiles...")
+    # The chunker is selectable; "fixed" (default) is the equal-height baseline and is a
+    # no-op alias for the current behavior. Content-aware chunkers plug in here later.
+    chunk_cfg = config.get("chunk", {})
+    chunker = chunk_cfg.get("chunker", "fixed")
+    region_source = chunk_cfg.get("region_source", "dom")
+    logger.info(
+        "Stage 2/4: Chunking tiles (chunker=%s, region_source=%s)...", chunker, region_source
+    )
     subprocess.run(
         [
             sys.executable,
@@ -126,6 +133,10 @@ def build(config: dict, limit: int | None = None, force: bool = False) -> Path:
             str(tiles_dir),
             "--workers",
             "8",
+            "--chunker",
+            chunker,
+            "--region-source",
+            region_source,
         ],
         check=True,
     )
