@@ -70,3 +70,7 @@ node_modules/
 # local scratch / test artifacts (never commit)
 tmp/
 demos/demo_tiles/
+
+# Mac dev venv + Kaggle transfer bundles (build artifacts, never commit)
+.venv-mac/
+*.zip

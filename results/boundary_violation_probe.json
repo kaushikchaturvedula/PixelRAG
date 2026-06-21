@@ -1,0 +1,26 @@
+{
+  "fixed": {
+    "pages": 18,
+    "block_split_rate": 0.0382,
+    "blocks": 10130,
+    "blocks_split": 387,
+    "row_split_rate": 0.0542,
+    "rows": 7140,
+    "rows_split": 387,
+    "answer_split_rate": null,
+    "answers": 0,
+    "answers_split": 0
+  },
+  "content_aware": {
+    "pages": 18,
+    "block_split_rate": 0.0077,
+    "blocks": 10130,
+    "blocks_split": 78,
+    "row_split_rate": 0.0095,
+    "rows": 7140,
+    "rows_split": 68,
+    "answer_split_rate": null,
+    "answers": 0,
+    "answers_split": 0
+  }
+}
