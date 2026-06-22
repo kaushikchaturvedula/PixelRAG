@@ -1,0 +1,130 @@
+{
+  "chunker": "fixed",
+  "retrieval": "flat",
+  "modality": "text",
+  "reader": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "detail": "low",
+    "image_maxdim": null
+  },
+  "grade_method": "exact",
+  "judge_model": null,
+  "config": {
+    "reader_top_k": 4,
+    "expand_neighbors": 1,
+    "expand_cap": 8,
+    "expand_mode": null,
+    "expand_mode_effective": null
+  },
+  "n_graded": 3,
+  "n_skipped": 0,
+  "n_tiles_total": 12,
+  "mean_tiles_per_query": 4.0,
+  "accuracy": 0.0,
+  "verdict_counts": {
+    "correct": 0,
+    "incorrect": 3,
+    "unattempted": 0,
+    "errors": 0
+  },
+  "reader_usage": {
+    "prompt_tokens": 1268,
+    "completion_tokens": 58,
+    "total_tokens": 1326
+  },
+  "judge_usage": null,
+  "results_src": "results/nqt_fixed_retrieval.json",
+  "per_query": [
+    {
+      "qid": "train_4152846960040914039_0",
+      "question": "where was friday night lights tv series filmed",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          35,
+          0,
+          0
+        ],
+        [
+          35,
+          0,
+          3
+        ],
+        [
+          35,
+          0,
+          1
+        ],
+        [
+          35,
+          0,
+          2
+        ]
+      ],
+      "answer": "The \"Friday Night Lights\" TV series was filmed in Austin, Texas, and surrounding areas such as Pflugerville and Del Valle.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Austin, Texas | Pflugerville, Texas"
+    },
+    {
+      "qid": "train_8363535834304498519_0",
+      "question": "who owns liberty national golf course in new jersey",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          99,
+          0,
+          0
+        ],
+        [
+          99,
+          0,
+          2
+        ],
+        [
+          99,
+          0,
+          3
+        ],
+        [
+          99,
+          0,
+          1
+        ]
+      ],
+      "answer": "Liberty National Golf Club was developed by Paul Fireman.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Paul Fireman"
+    },
+    {
+      "qid": "train_5358989750134113442_0",
+      "question": "where is chicago illinois located on the map",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          84,
+          0,
+          0
+        ],
+        [
+          84,
+          0,
+          1
+        ],
+        [
+          84,
+          0,
+          4
+        ],
+        [
+          84,
+          0,
+          3
+        ]
+      ],
+      "answer": "Chicago, Illinois is located on the western shore of Lake Michigan in the Midwestern United States.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 41°50′13″N 87°41′05″W﻿ / ﻿41.83694°N 87.68472°W"
+    }
+  ]
+}

@@ -1,0 +1,6764 @@
+{
+  "chunker": "fixed",
+  "retrieval": "hier-expand",
+  "modality": "text",
+  "reader": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "detail": "low",
+    "image_maxdim": null
+  },
+  "grade_method": "judge",
+  "judge_model": "gpt-4.1-2025-04-14",
+  "config": {
+    "reader_top_k": 4,
+    "expand_neighbors": 1,
+    "expand_cap": 8,
+    "expand_mode": "section+neighbors",
+    "expand_mode_effective": "neighbors"
+  },
+  "n_graded": 150,
+  "n_skipped": 0,
+  "n_tiles_total": 1044,
+  "mean_tiles_per_query": 6.96,
+  "accuracy": 0.5933,
+  "verdict_counts": {
+    "correct": 89,
+    "incorrect": 32,
+    "unattempted": 29,
+    "errors": 0
+  },
+  "reader_usage": {
+    "prompt_tokens": 101358,
+    "completion_tokens": 2588,
+    "total_tokens": 103946
+  },
+  "judge_usage": {
+    "prompt_tokens": 273199,
+    "completion_tokens": 7127,
+    "total_tokens": 280326
+  },
+  "results_src": "results/nq_fixed_retrieval.json",
+  "per_query": [
+    {
+      "qid": "11211891ba60fa545fc3ac610229e34e",
+      "question": "who took over for batman when his back was broken",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          130,
+          0,
+          7
+        ],
+        [
+          130,
+          0,
+          0
+        ],
+        [
+          130,
+          0,
+          4
+        ],
+        [
+          130,
+          0,
+          3
+        ],
+        [
+          130,
+          0,
+          6
+        ],
+        [
+          130,
+          0,
+          1
+        ],
+        [
+          130,
+          0,
+          5
+        ],
+        [
+          130,
+          0,
+          2
+        ]
+      ],
+      "answer": "Jean-Paul Valley took over for Batman when his back was broken.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Jean-Paul Valley (a.k.a. Azrael) | an apprentice named Jean-Paul Valley (a.k.a. Azrael)"
+    },
+    {
+      "qid": "333beb57a300b7a318982e416c4518eb",
+      "question": "who did cora marry in once upon a time",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          31,
+          0,
+          4
+        ],
+        [
+          31,
+          0,
+          3
+        ],
+        [
+          79,
+          0,
+          4
+        ],
+        [
+          79,
+          0,
+          5
+        ],
+        [
+          31,
+          0,
+          5
+        ],
+        [
+          31,
+          0,
+          2
+        ],
+        [
+          79,
+          0,
+          3
+        ],
+        [
+          79,
+          0,
+          6
+        ]
+      ],
+      "answer": "I cannot find the information in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Henry"
+    },
+    {
+      "qid": "a168fa01a4d02c5b4e331b17df9eaee6",
+      "question": "where does the formation of atp take place",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          17,
+          0,
+          0
+        ],
+        [
+          17,
+          0,
+          5
+        ],
+        [
+          17,
+          0,
+          3
+        ],
+        [
+          17,
+          0,
+          1
+        ],
+        [
+          17,
+          0,
+          4
+        ],
+        [
+          17,
+          0,
+          6
+        ],
+        [
+          17,
+          0,
+          2
+        ]
+      ],
+      "answer": "ATP formation takes place in the mitochondria.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: inner mitochondrial membrane | mitochondrial membrane in eukaryotes | plasma membrane in bacteria | thylakoid membrane"
+    },
+    {
+      "qid": "cb2e00584dfdd954a757dd3baefd03b0",
+      "question": "who was kat slater's sisters in eastenders",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          142,
+          0,
+          0
+        ],
+        [
+          142,
+          0,
+          1
+        ],
+        [
+          110,
+          0,
+          4
+        ],
+        [
+          64,
+          0,
+          0
+        ],
+        [
+          142,
+          0,
+          2
+        ],
+        [
+          110,
+          0,
+          3
+        ],
+        [
+          110,
+          0,
+          5
+        ],
+        [
+          64,
+          0,
+          1
+        ]
+      ],
+      "answer": "Kat Slater's sisters in EastEnders are Lynne Slater and Zoe Slater.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Little Mo | Lynne | Zoe"
+    },
+    {
+      "qid": "dc3a2182c9d17fa8579822e5aad59ba1",
+      "question": "who did the music for your lie in april",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          59,
+          0,
+          0
+        ],
+        [
+          59,
+          0,
+          7
+        ],
+        [
+          59,
+          0,
+          1
+        ],
+        [
+          59,
+          0,
+          5
+        ],
+        [
+          59,
+          0,
+          6
+        ],
+        [
+          59,
+          0,
+          2
+        ],
+        [
+          59,
+          0,
+          4
+        ]
+      ],
+      "answer": "The music for \"Your Lie in April\" was composed by Masaru Yokoyama.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Masaru Yokoyama"
+    },
+    {
+      "qid": "97b4fdab5c95e0eb88d7c5e028fca6c1",
+      "question": "where is the host file located in windows server 2008 r2",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          204,
+          0,
+          1
+        ],
+        [
+          204,
+          0,
+          4
+        ],
+        [
+          204,
+          0,
+          0
+        ],
+        [
+          204,
+          0,
+          2
+        ],
+        [
+          204,
+          0,
+          3
+        ],
+        [
+          204,
+          0,
+          5
+        ]
+      ],
+      "answer": "The host file in Windows Server 2008 R2 is located at:\n\n```\n%SystemRoot%\\System32\\drivers\\etc\\hosts\n```",
+      "verdict": "correct",
+      "ground_truth": "Any of: %SystemRoot%\\System32\\drivers\\etc\\hosts"
+    },
+    {
+      "qid": "48ef4713da9c0f65432500876c263187",
+      "question": "a bond that the issuer has the right to pay off before its maturity date",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          104,
+          0,
+          4
+        ],
+        [
+          104,
+          0,
+          0
+        ],
+        [
+          104,
+          0,
+          2
+        ],
+        [
+          104,
+          0,
+          7
+        ],
+        [
+          104,
+          0,
+          3
+        ],
+        [
+          104,
+          0,
+          5
+        ],
+        [
+          104,
+          0,
+          1
+        ],
+        [
+          104,
+          0,
+          6
+        ]
+      ],
+      "answer": "A bond that the issuer has the right to pay off before its maturity date is called a \"callable bond.\"",
+      "verdict": "correct",
+      "ground_truth": "Any of: callable | callable bonds"
+    },
+    {
+      "qid": "7088d3b2b230cf438dc25d4f35a44d59",
+      "question": "when is the next episode of flash airing",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          112,
+          0,
+          0
+        ],
+        [
+          112,
+          0,
+          1
+        ],
+        [
+          112,
+          0,
+          3
+        ],
+        [
+          112,
+          0,
+          5
+        ],
+        [
+          112,
+          0,
+          2
+        ],
+        [
+          112,
+          0,
+          4
+        ],
+        [
+          112,
+          0,
+          6
+        ]
+      ],
+      "answer": "I cannot find the information on when the next episode of \"The Flash\" is airing.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: May 8, 2018"
+    },
+    {
+      "qid": "85659c4cd4db4ddf93f8e8484c44980f",
+      "question": "when was the worlds first laptop computer introduced in the market and by whom",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          191,
+          0,
+          7
+        ],
+        [
+          191,
+          0,
+          5
+        ],
+        [
+          191,
+          0,
+          1
+        ],
+        [
+          191,
+          0,
+          0
+        ],
+        [
+          191,
+          0,
+          6
+        ],
+        [
+          191,
+          0,
+          4
+        ],
+        [
+          191,
+          0,
+          2
+        ]
+      ],
+      "answer": "The world's first laptop computer, the Osborne 1, was introduced in the market in 1981 by Osborne Computer Corporation.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: R2E Micral CCMC | September 1980 | The portable micro computer the “Portal\" of the French company R2E Micral CCMC officially appeared in September 1980"
+    },
+    {
+      "qid": "59ff8cab0fd46846066a9f56e433ca81",
+      "question": "when does the little couples new season start",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          65,
+          0,
+          0
+        ],
+        [
+          65,
+          0,
+          2
+        ],
+        [
+          65,
+          0,
+          5
+        ],
+        [
+          111,
+          0,
+          0
+        ],
+        [
+          65,
+          0,
+          1
+        ],
+        [
+          65,
+          0,
+          3
+        ],
+        [
+          65,
+          0,
+          4
+        ],
+        [
+          65,
+          0,
+          6
+        ]
+      ],
+      "answer": "I cannot find information about the new season's start date in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: September 19, 2017"
+    },
+    {
+      "qid": "6f8bec78a09fed8ad5c421816ed9da6b",
+      "question": "who is the owner of reading football club",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          96,
+          0,
+          0
+        ],
+        [
+          9,
+          0,
+          4
+        ],
+        [
+          96,
+          0,
+          2
+        ],
+        [
+          9,
+          0,
+          6
+        ],
+        [
+          96,
+          0,
+          1
+        ],
+        [
+          9,
+          0,
+          3
+        ],
+        [
+          9,
+          0,
+          5
+        ],
+        [
+          96,
+          0,
+          3
+        ]
+      ],
+      "answer": "I cannot find the owner of Reading Football Club in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Dai Xiuli | Dai Yongge | Dai Yongge and Dai Xiuli (majority) | Xiu Li Dai | Yongge Dai"
+    },
+    {
+      "qid": "d281fa7fffe0d3e8558689d0075db110",
+      "question": "who is the guy who walked across the twin towers",
+      "n_tiles": 5,
+      "tiles": [
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          3
+        ],
+        [
+          8,
+          0,
+          1
+        ],
+        [
+          8,
+          0,
+          2
+        ],
+        [
+          8,
+          0,
+          4
+        ]
+      ],
+      "answer": "Philippe Petit.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Philippe Petit"
+    },
+    {
+      "qid": "9031357ae3c26806e9d61ee8a56c2a60",
+      "question": "what was the city of beijing previously known as",
+      "n_tiles": 5,
+      "tiles": [
+        [
+          144,
+          0,
+          0
+        ],
+        [
+          144,
+          0,
+          3
+        ],
+        [
+          144,
+          0,
+          1
+        ],
+        [
+          144,
+          0,
+          2
+        ],
+        [
+          144,
+          0,
+          4
+        ]
+      ],
+      "answer": "Beijing was previously known as Peking.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Peking"
+    },
+    {
+      "qid": "8c4eac0d44b1b6e01e4e4ca99ed4a6cc",
+      "question": "who is the current director of the us mint",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          165,
+          0,
+          0
+        ],
+        [
+          165,
+          0,
+          6
+        ],
+        [
+          165,
+          0,
+          5
+        ],
+        [
+          45,
+          0,
+          3
+        ],
+        [
+          165,
+          0,
+          1
+        ],
+        [
+          165,
+          0,
+          7
+        ],
+        [
+          165,
+          0,
+          4
+        ],
+        [
+          45,
+          0,
+          2
+        ]
+      ],
+      "answer": "The current director of the U.S. Mint is Ventris Gibson.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: David J. Ryder | David Motl"
+    },
+    {
+      "qid": "b0c71a91a141d2e7e0b8202a4d1a3b82",
+      "question": "where was the first season of slasher filmed",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          13,
+          0,
+          0
+        ],
+        [
+          13,
+          0,
+          2
+        ],
+        [
+          13,
+          0,
+          1
+        ],
+        [
+          54,
+          0,
+          5
+        ],
+        [
+          13,
+          0,
+          3
+        ],
+        [
+          54,
+          0,
+          4
+        ],
+        [
+          54,
+          0,
+          6
+        ]
+      ],
+      "answer": "The first season of \"Slasher\" was filmed in Sudbury, Parry Sound, and Sault Ste. Marie, Ontario.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Orangeville, Ontario, Canada | Sault Ste. Marie, Ontario | Sudbury, Parry Sound | Sudbury, Parry Sound, and Sault Ste. Marie, Ontario"
+    },
+    {
+      "qid": "91abeb4850961234d6b2e546207491dd",
+      "question": "when is season 2 of jessica jones being released",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          194,
+          0,
+          0
+        ],
+        [
+          194,
+          0,
+          7
+        ],
+        [
+          194,
+          0,
+          6
+        ],
+        [
+          194,
+          0,
+          1
+        ],
+        [
+          194,
+          0,
+          5
+        ],
+        [
+          194,
+          0,
+          2
+        ]
+      ],
+      "answer": "Season 2 of Jessica Jones was released on March 8, 2018.",
+      "verdict": "correct",
+      "ground_truth": "Any of: March 8, 2018"
+    },
+    {
+      "qid": "367ec5e9ffdd322cee5fe4b374e27b60",
+      "question": "when is the last time the philadelphia won the superbowl",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          206,
+          0,
+          0
+        ],
+        [
+          196,
+          0,
+          7
+        ],
+        [
+          196,
+          0,
+          0
+        ],
+        [
+          95,
+          0,
+          0
+        ],
+        [
+          206,
+          0,
+          1
+        ],
+        [
+          196,
+          0,
+          6
+        ],
+        [
+          196,
+          0,
+          1
+        ],
+        [
+          95,
+          0,
+          1
+        ]
+      ],
+      "answer": "The Philadelphia Eagles last won the Super Bowl on February 4, 2018.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 2017 | Super Bowl LII,"
+    },
+    {
+      "qid": "2b36814653193d1f428c2478c414c008",
+      "question": "what's the dog's name on tom and jerry",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          192,
+          0,
+          0
+        ],
+        [
+          192,
+          0,
+          5
+        ],
+        [
+          192,
+          0,
+          1
+        ],
+        [
+          192,
+          0,
+          3
+        ],
+        [
+          192,
+          0,
+          4
+        ],
+        [
+          192,
+          0,
+          6
+        ],
+        [
+          192,
+          0,
+          2
+        ]
+      ],
+      "answer": "The dog's name on Tom and Jerry is Spike.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Spike | Spike, occasionally referred to as Butch or Killer"
+    },
+    {
+      "qid": "b28cc9a595dadb84d2a80278e0038fab",
+      "question": "who beat university of virginia in basketball this year",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          24,
+          0,
+          1
+        ],
+        [
+          24,
+          0,
+          0
+        ],
+        [
+          24,
+          0,
+          6
+        ],
+        [
+          24,
+          0,
+          7
+        ],
+        [
+          24,
+          0,
+          2
+        ],
+        [
+          24,
+          0,
+          5
+        ]
+      ],
+      "answer": "I cannot find the information in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: UMBC | Virginia Tech | West Virginia"
+    },
+    {
+      "qid": "ff8182a404f31861bfe53a2fbc97f559",
+      "question": "who turned out to be the mother on how i met your mother",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          148,
+          0,
+          0
+        ],
+        [
+          148,
+          0,
+          4
+        ],
+        [
+          148,
+          0,
+          1
+        ],
+        [
+          148,
+          0,
+          2
+        ],
+        [
+          148,
+          0,
+          3
+        ],
+        [
+          148,
+          0,
+          5
+        ]
+      ],
+      "answer": "Tracy McConnell",
+      "verdict": "correct",
+      "ground_truth": "Any of: Tracy McConnell"
+    },
+    {
+      "qid": "ef97fd4a76c68e96eb580cf3c7161b6c",
+      "question": "total number of mna in pakistan national assembly",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          99,
+          0,
+          0
+        ],
+        [
+          99,
+          0,
+          4
+        ],
+        [
+          99,
+          0,
+          7
+        ],
+        [
+          99,
+          0,
+          3
+        ],
+        [
+          99,
+          0,
+          1
+        ],
+        [
+          99,
+          0,
+          5
+        ],
+        [
+          99,
+          0,
+          6
+        ],
+        [
+          99,
+          0,
+          2
+        ]
+      ],
+      "answer": "The National Assembly of Pakistan has a total of 336 members.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 332 | 332 members"
+    },
+    {
+      "qid": "3c6051e566c187f0b2bb8b177741d2f0",
+      "question": "when was the last time villanova won the ncaa basketball championship",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          24,
+          0,
+          1
+        ],
+        [
+          24,
+          0,
+          6
+        ],
+        [
+          24,
+          0,
+          3
+        ],
+        [
+          24,
+          0,
+          5
+        ],
+        [
+          24,
+          0,
+          0
+        ],
+        [
+          24,
+          0,
+          2
+        ],
+        [
+          24,
+          0,
+          7
+        ],
+        [
+          24,
+          0,
+          4
+        ]
+      ],
+      "answer": "The last time Villanova won the NCAA basketball championship was in 2018.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 2018"
+    },
+    {
+      "qid": "6399bf65675ed8dd95a25e3e2d86cae2",
+      "question": "who had the longest tenure as moderator on meet the press",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          53,
+          0,
+          2
+        ],
+        [
+          53,
+          0,
+          0
+        ],
+        [
+          53,
+          0,
+          7
+        ],
+        [
+          53,
+          0,
+          5
+        ],
+        [
+          53,
+          0,
+          1
+        ],
+        [
+          53,
+          0,
+          3
+        ],
+        [
+          53,
+          0,
+          6
+        ],
+        [
+          53,
+          0,
+          4
+        ]
+      ],
+      "answer": "Lawrence Spivak had the longest tenure as moderator on \"Meet the Press,\" serving from 1966 to 1975.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Tim Russert"
+    },
+    {
+      "qid": "0b415bbff9eac4065e21863d1591bc60",
+      "question": "what is the main mineral in lithium batteries",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          141,
+          0,
+          7
+        ],
+        [
+          141,
+          0,
+          4
+        ],
+        [
+          141,
+          0,
+          0
+        ],
+        [
+          141,
+          0,
+          1
+        ],
+        [
+          141,
+          0,
+          6
+        ],
+        [
+          141,
+          0,
+          3
+        ],
+        [
+          141,
+          0,
+          5
+        ],
+        [
+          141,
+          0,
+          2
+        ]
+      ],
+      "answer": "Lithium.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Lithium | lithium"
+    },
+    {
+      "qid": "8d3070ab473d7a71cefaa9942299f36f",
+      "question": "who will take the throne after the queen dies",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          173,
+          0,
+          0
+        ],
+        [
+          173,
+          0,
+          3
+        ],
+        [
+          173,
+          0,
+          1
+        ],
+        [
+          173,
+          0,
+          7
+        ],
+        [
+          173,
+          0,
+          2
+        ],
+        [
+          173,
+          0,
+          4
+        ],
+        [
+          173,
+          0,
+          6
+        ]
+      ],
+      "answer": "King Charles III's heir is his elder son, William, Prince of Wales.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Charles, Prince of Wales | her eldest son, Charles, Prince of Wales"
+    },
+    {
+      "qid": "0e189a0e112a283d51484636b304a590",
+      "question": "where does the optic nerve cross the midline ​",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          164,
+          0,
+          0
+        ],
+        [
+          164,
+          0,
+          2
+        ],
+        [
+          164,
+          0,
+          1
+        ],
+        [
+          188,
+          0,
+          0
+        ],
+        [
+          164,
+          0,
+          3
+        ],
+        [
+          188,
+          0,
+          1
+        ]
+      ],
+      "answer": "The optic nerve crosses the midline at the optic chiasm.",
+      "verdict": "correct",
+      "ground_truth": "Any of: The optic chiasm or optic chiasma | optic chiasm"
+    },
+    {
+      "qid": "de57f6b467ba566b2a4c8814f1de7c40",
+      "question": "who was the governor general of india when country became independent",
+      "n_tiles": 5,
+      "tiles": [
+        [
+          74,
+          0,
+          0
+        ],
+        [
+          74,
+          0,
+          2
+        ],
+        [
+          74,
+          0,
+          1
+        ],
+        [
+          74,
+          0,
+          3
+        ],
+        [
+          74,
+          0,
+          4
+        ]
+      ],
+      "answer": "Lord Mountbatten was the Governor-General of India when the country became independent.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Louis Mountbatten, 1st Earl Mountbatten of Burma"
+    },
+    {
+      "qid": "ac150628e92633c69f55604623d831f9",
+      "question": "name a food you might eat on thanksgiving",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          160,
+          0,
+          0
+        ],
+        [
+          160,
+          0,
+          5
+        ],
+        [
+          160,
+          0,
+          6
+        ],
+        [
+          160,
+          0,
+          7
+        ],
+        [
+          160,
+          0,
+          1
+        ],
+        [
+          160,
+          0,
+          4
+        ]
+      ],
+      "answer": "Roast turkey.",
+      "verdict": "correct",
+      "ground_truth": "Any of: a large roasted turkey | turkey"
+    },
+    {
+      "qid": "ac0557ffad5df970f330a373be88357d",
+      "question": "who sings the theme song for the proud family",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          47,
+          0,
+          0
+        ],
+        [
+          47,
+          0,
+          1
+        ],
+        [
+          47,
+          0,
+          7
+        ],
+        [
+          47,
+          0,
+          6
+        ],
+        [
+          47,
+          0,
+          2
+        ],
+        [
+          47,
+          0,
+          5
+        ]
+      ],
+      "answer": "The theme song for \"The Proud Family\" is sung by Solange & Destiny's Child.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Destiny's Child | Solange Knowles"
+    },
+    {
+      "qid": "fb6a3b53ddc2661bd51721d41ae72e71",
+      "question": "when was the first episode of scooby doo",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          15,
+          0,
+          0
+        ],
+        [
+          15,
+          0,
+          5
+        ],
+        [
+          15,
+          0,
+          3
+        ],
+        [
+          15,
+          0,
+          2
+        ],
+        [
+          15,
+          0,
+          1
+        ],
+        [
+          15,
+          0,
+          4
+        ],
+        [
+          15,
+          0,
+          6
+        ]
+      ],
+      "answer": "The first episode of \"Scooby-Doo, Where Are You!\" aired on September 13, 1969.",
+      "verdict": "correct",
+      "ground_truth": "Any of: September 13, 1969"
+    },
+    {
+      "qid": "d220576629851d1bd459505d4342ba71",
+      "question": "what is the sentencing reform act of 1984",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          209,
+          0,
+          0
+        ],
+        [
+          71,
+          0,
+          7
+        ],
+        [
+          165,
+          0,
+          4
+        ],
+        [
+          182,
+          0,
+          7
+        ],
+        [
+          209,
+          0,
+          1
+        ],
+        [
+          71,
+          0,
+          6
+        ],
+        [
+          165,
+          0,
+          3
+        ],
+        [
+          165,
+          0,
+          5
+        ]
+      ],
+      "answer": "The Sentencing Reform Act of 1984 was a U.S. federal statute intended to increase consistency in United States federal sentencing. It established the United States Sentencing Commission and abolished federal parole, except for offenses committed under federal law before November 1, 1987.",
+      "verdict": "correct",
+      "ground_truth": "Any of: U.S. federal statute intended to increase consistency in United States federal sentencing | a U.S. federal statute intended to increase consistency in United States federal sentencing"
+    },
+    {
+      "qid": "61b4887f05bbfa3f259cbfc986c61785",
+      "question": "who plays the voice of johnny in sing",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          86,
+          0,
+          3
+        ],
+        [
+          86,
+          0,
+          0
+        ],
+        [
+          86,
+          0,
+          6
+        ],
+        [
+          86,
+          0,
+          2
+        ],
+        [
+          86,
+          0,
+          4
+        ],
+        [
+          86,
+          0,
+          1
+        ],
+        [
+          86,
+          0,
+          5
+        ],
+        [
+          86,
+          0,
+          7
+        ]
+      ],
+      "answer": "Taron Egerton",
+      "verdict": "correct",
+      "ground_truth": "Any of: Taron Egerton"
+    },
+    {
+      "qid": "637ea44e0cc3a50f70ca374bfc369c0b",
+      "question": "who played daisy duke in the new dukes of hazzard",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          56,
+          0,
+          0
+        ],
+        [
+          56,
+          0,
+          6
+        ],
+        [
+          56,
+          0,
+          5
+        ],
+        [
+          56,
+          0,
+          2
+        ],
+        [
+          56,
+          0,
+          1
+        ],
+        [
+          56,
+          0,
+          7
+        ],
+        [
+          56,
+          0,
+          4
+        ],
+        [
+          56,
+          0,
+          3
+        ]
+      ],
+      "answer": "Jessica Simpson played Daisy Duke in the new \"Dukes of Hazzard\" film.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Jessica Simpson"
+    },
+    {
+      "qid": "eaa3456f2d69b088aa02a28766d0f7e4",
+      "question": "what us president is the only president to become an eagle scout",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          179,
+          0,
+          0
+        ],
+        [
+          181,
+          0,
+          0
+        ],
+        [
+          181,
+          0,
+          2
+        ],
+        [
+          179,
+          0,
+          1
+        ],
+        [
+          181,
+          0,
+          1
+        ],
+        [
+          181,
+          0,
+          3
+        ],
+        [
+          179,
+          0,
+          2
+        ]
+      ],
+      "answer": "Gerald Ford",
+      "verdict": "correct",
+      "ground_truth": "Any of: Ford"
+    },
+    {
+      "qid": "175e198da27268668353c84ac1436b90",
+      "question": "the seed of a gymnosperm seed is made in the",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          58,
+          0,
+          0
+        ],
+        [
+          58,
+          0,
+          4
+        ],
+        [
+          58,
+          0,
+          5
+        ],
+        [
+          58,
+          0,
+          1
+        ],
+        [
+          58,
+          0,
+          3
+        ],
+        [
+          58,
+          0,
+          6
+        ],
+        [
+          58,
+          0,
+          2
+        ]
+      ],
+      "answer": "The seed of a gymnosperm is made on the scales of cones.",
+      "verdict": "correct",
+      "ground_truth": "Any of: either on the surface of scales or leaves | either on the surface of scales or leaves, which are often modified to form cones, or solitary | the surface of scales or leaves"
+    },
+    {
+      "qid": "5724037500bf42ee5af27441fe992546",
+      "question": "when does the nba season end this year",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          24,
+          0,
+          6
+        ],
+        [
+          24,
+          0,
+          1
+        ],
+        [
+          39,
+          0,
+          6
+        ],
+        [
+          115,
+          0,
+          1
+        ],
+        [
+          24,
+          0,
+          5
+        ],
+        [
+          24,
+          0,
+          7
+        ],
+        [
+          24,
+          0,
+          0
+        ],
+        [
+          24,
+          0,
+          2
+        ]
+      ],
+      "answer": "I cannot find the end date of the NBA season in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: April 11, 2018"
+    },
+    {
+      "qid": "398668b685a56d6198a98f33ef8032c7",
+      "question": "when did jack mccoy join law and order",
+      "n_tiles": 5,
+      "tiles": [
+        [
+          126,
+          0,
+          0
+        ],
+        [
+          126,
+          0,
+          2
+        ],
+        [
+          126,
+          0,
+          1
+        ],
+        [
+          126,
+          0,
+          3
+        ],
+        [
+          126,
+          0,
+          4
+        ]
+      ],
+      "answer": "Jack McCoy joined \"Law & Order\" in 1994.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 1994 | in the season-five premiere episode \"Second Opinion\" | the season-five premiere episode \"Second Opinion\""
+    },
+    {
+      "qid": "b4fd8c855caa20aab21b26667b24a478",
+      "question": "when did god save the queen became the national anthem",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          114,
+          0,
+          0
+        ],
+        [
+          114,
+          0,
+          2
+        ],
+        [
+          114,
+          0,
+          5
+        ],
+        [
+          114,
+          0,
+          1
+        ],
+        [
+          114,
+          0,
+          3
+        ],
+        [
+          114,
+          0,
+          4
+        ],
+        [
+          114,
+          0,
+          6
+        ]
+      ],
+      "answer": "I cannot find the specific date when \"God Save the Queen\" became the national anthem in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: After the Battle of Culloden | in the 1780s and 1790s"
+    },
+    {
+      "qid": "48626ecec992d0e4f0c3b5d6d65d9c73",
+      "question": "who starred in the movie summer of 42",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          39,
+          0,
+          4
+        ],
+        [
+          175,
+          0,
+          0
+        ],
+        [
+          54,
+          0,
+          0
+        ],
+        [
+          68,
+          0,
+          0
+        ],
+        [
+          39,
+          0,
+          3
+        ],
+        [
+          39,
+          0,
+          5
+        ],
+        [
+          175,
+          0,
+          1
+        ],
+        [
+          54,
+          0,
+          1
+        ]
+      ],
+      "answer": "I can't find the information about who starred in the movie \"Summer of '42\" from the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Christopher Norris | Gary Grimes | Jennifer O'Neill | Jerry Houser | Katherine Allentuck | Maureen Stapleton | Oliver Conant | Robert Mulligan"
+    },
+    {
+      "qid": "29ac73c3a984ead32acb3bf1eae0733b",
+      "question": "which film won the oscar for best animated feature in 2007",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          62,
+          0,
+          0
+        ],
+        [
+          62,
+          0,
+          1
+        ],
+        [
+          86,
+          0,
+          5
+        ],
+        [
+          121,
+          0,
+          7
+        ],
+        [
+          62,
+          0,
+          2
+        ],
+        [
+          86,
+          0,
+          4
+        ],
+        [
+          86,
+          0,
+          6
+        ],
+        [
+          121,
+          0,
+          6
+        ]
+      ],
+      "answer": "The film \"Happy Feet\" won the Oscar for Best Animated Feature in 2007.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Ratatouille"
+    },
+    {
+      "qid": "5f82bbca77a02917563d83996d28d0a6",
+      "question": "when does the miz and maryse show start",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          106,
+          0,
+          0
+        ],
+        [
+          106,
+          0,
+          5
+        ],
+        [
+          106,
+          0,
+          6
+        ],
+        [
+          106,
+          0,
+          4
+        ],
+        [
+          106,
+          0,
+          1
+        ],
+        [
+          106,
+          0,
+          7
+        ],
+        [
+          106,
+          0,
+          3
+        ]
+      ],
+      "answer": "The show \"Miz & Mrs.\" started in 2018.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 2018"
+    },
+    {
+      "qid": "d37b29e59841348a05d8152910e685ab",
+      "question": "what do the films mean in high castle",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          42,
+          0,
+          5
+        ],
+        [
+          42,
+          0,
+          7
+        ],
+        [
+          42,
+          0,
+          0
+        ],
+        [
+          42,
+          0,
+          6
+        ],
+        [
+          42,
+          0,
+          4
+        ],
+        [
+          42,
+          0,
+          1
+        ]
+      ],
+      "answer": "The films in \"The Man in the High Castle\" are mysterious alternate history films that depict a world where the Allies won World War II. They are central to the plot and symbolize hope and resistance against the Axis powers' rule.",
+      "verdict": "correct",
+      "ground_truth": "Any of: The Grasshopper Lies Heavy is a series of newsreel films depicting multiple alternative realities | as-yet-unknown purpose"
+    },
+    {
+      "qid": "3a13d80ad55393efaa1f9738afe01382",
+      "question": "who designed the garden city of new earswick",
+      "n_tiles": 5,
+      "tiles": [
+        [
+          139,
+          0,
+          0
+        ],
+        [
+          139,
+          0,
+          1
+        ],
+        [
+          139,
+          0,
+          2
+        ],
+        [
+          139,
+          0,
+          3
+        ],
+        [
+          139,
+          0,
+          4
+        ]
+      ],
+      "answer": "Barry Parker and Raymond Unwin designed the garden village of New Earswick.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Raymond Unwin | The planner Raymond Unwin and the architect Barry Parker | architect Barry Parker | planner Raymond Unwin | planner Raymond Unwin and the architect Barry Parker"
+    },
+    {
+      "qid": "5beb8000715479f36a8c652e85f3e05e",
+      "question": "where is gall bladder situated in human body",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          21,
+          0,
+          0
+        ],
+        [
+          21,
+          0,
+          2
+        ],
+        [
+          21,
+          0,
+          3
+        ],
+        [
+          21,
+          0,
+          7
+        ],
+        [
+          21,
+          0,
+          1
+        ],
+        [
+          21,
+          0,
+          4
+        ],
+        [
+          21,
+          0,
+          6
+        ]
+      ],
+      "answer": "The gallbladder is situated under the liver, on the right side of the abdomen.",
+      "verdict": "correct",
+      "ground_truth": "Any of: beneath the liver"
+    },
+    {
+      "qid": "4da59c60980374a56d3d7e62bc4c2211",
+      "question": "what is the corporate tax rate in great britain",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          38,
+          0,
+          0
+        ],
+        [
+          38,
+          0,
+          1
+        ],
+        [
+          38,
+          0,
+          4
+        ],
+        [
+          38,
+          0,
+          7
+        ],
+        [
+          38,
+          0,
+          2
+        ],
+        [
+          38,
+          0,
+          3
+        ],
+        [
+          38,
+          0,
+          5
+        ],
+        [
+          38,
+          0,
+          6
+        ]
+      ],
+      "answer": "The corporate tax rate in Great Britain is forecast to rise to 25% in 2023-24.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 20% | a flat rate of 20%"
+    },
+    {
+      "qid": "0ab73883528a93e64b3fe4180e4d4250",
+      "question": "what is the largest bill in american money",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          45,
+          0,
+          0
+        ],
+        [
+          45,
+          0,
+          1
+        ],
+        [
+          45,
+          0,
+          7
+        ],
+        [
+          45,
+          0,
+          5
+        ],
+        [
+          45,
+          0,
+          2
+        ],
+        [
+          45,
+          0,
+          6
+        ],
+        [
+          45,
+          0,
+          4
+        ]
+      ],
+      "answer": "The largest bill in American money was the $100,000 bill.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: $100"
+    },
+    {
+      "qid": "ec50b06eff9b095dc99e748069b669ce",
+      "question": "the cuban revolt against spain was led by",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          152,
+          0,
+          1
+        ],
+        [
+          152,
+          0,
+          3
+        ],
+        [
+          152,
+          0,
+          5
+        ],
+        [
+          152,
+          0,
+          0
+        ],
+        [
+          152,
+          0,
+          2
+        ],
+        [
+          152,
+          0,
+          4
+        ],
+        [
+          152,
+          0,
+          6
+        ]
+      ],
+      "answer": "The Cuban revolt against Spain was led by Máximo Gómez and Antonio Maceo.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Antonio Maceo | José Martí | Máximo Gomez"
+    },
+    {
+      "qid": "7033e0ca7ae4c955ec20e0b500bbf8d1",
+      "question": "what are the top five wine producing states",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          25,
+          0,
+          2
+        ],
+        [
+          25,
+          0,
+          0
+        ],
+        [
+          25,
+          0,
+          3
+        ],
+        [
+          25,
+          0,
+          6
+        ],
+        [
+          25,
+          0,
+          1
+        ],
+        [
+          25,
+          0,
+          4
+        ],
+        [
+          25,
+          0,
+          5
+        ],
+        [
+          25,
+          0,
+          7
+        ]
+      ],
+      "answer": "The top five wine-producing states in 2024 are:\n\n1. California\n2. Washington\n3. New York\n4. Oregon\n5. Texas",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: California | New York | Oregon | Pennsylvania | Washington"
+    },
+    {
+      "qid": "c34b375ce3aa662256adcd73094d3ec7",
+      "question": "who wrote song what a friend we have in jesus",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          174,
+          0,
+          0
+        ],
+        [
+          174,
+          0,
+          3
+        ],
+        [
+          174,
+          0,
+          4
+        ],
+        [
+          174,
+          0,
+          1
+        ],
+        [
+          174,
+          0,
+          2
+        ],
+        [
+          174,
+          0,
+          5
+        ]
+      ],
+      "answer": "\"What a Friend We Have in Jesus\" was written by Joseph M. Scriven.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Charles Crozat Converse | Joseph M. Scriven | William Bolcom"
+    },
+    {
+      "qid": "5aab10211ba9ded87097b06cf5cdcb73",
+      "question": "who wrote there's a guy works down the chip shop lyrics",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          20,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          180,
+          0,
+          0
+        ],
+        [
+          20,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          180,
+          0,
+          1
+        ]
+      ],
+      "answer": "I cannot find that information in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Kirsty MacColl | Kirsty MacColl/Philip Rambow | Philip Rambow"
+    },
+    {
+      "qid": "73827eddfe4531ba4c0b0b7adc88b095",
+      "question": "when was the minimum wage established in the united states",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          70,
+          0,
+          0
+        ],
+        [
+          70,
+          0,
+          1
+        ],
+        [
+          70,
+          0,
+          4
+        ],
+        [
+          70,
+          0,
+          6
+        ],
+        [
+          70,
+          0,
+          2
+        ],
+        [
+          70,
+          0,
+          3
+        ],
+        [
+          70,
+          0,
+          5
+        ],
+        [
+          70,
+          0,
+          7
+        ]
+      ],
+      "answer": "The minimum wage in the United States was established in 1938.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 1912 | 1933 | 1938"
+    },
+    {
+      "qid": "ac4f0b3cfdd4eeaaf415ee7f9fdcf6e1",
+      "question": "an edge that is between a vertex and itself is a",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          89,
+          0,
+          0
+        ],
+        [
+          89,
+          0,
+          1
+        ],
+        [
+          185,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          3
+        ],
+        [
+          89,
+          0,
+          2
+        ],
+        [
+          185,
+          0,
+          0
+        ],
+        [
+          185,
+          0,
+          2
+        ],
+        [
+          5,
+          0,
+          2
+        ]
+      ],
+      "answer": "a loop",
+      "verdict": "correct",
+      "ground_truth": "Any of: loop | loop (also called a self-loop or a \"buckle\")"
+    },
+    {
+      "qid": "41998c1d0561b847ece239a4f5931cb9",
+      "question": "who is the richest club in the championship",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          9,
+          0,
+          2
+        ],
+        [
+          9,
+          0,
+          0
+        ],
+        [
+          9,
+          0,
+          7
+        ],
+        [
+          96,
+          0,
+          0
+        ],
+        [
+          9,
+          0,
+          1
+        ],
+        [
+          9,
+          0,
+          3
+        ],
+        [
+          9,
+          0,
+          6
+        ],
+        [
+          96,
+          0,
+          1
+        ]
+      ],
+      "answer": "Blackburn Rovers - $2B.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Aston Villa | Manchester City"
+    },
+    {
+      "qid": "901612a4010d886c9d952d06d71aba1c",
+      "question": "where is kruger national park in south africa",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          80,
+          0,
+          0
+        ],
+        [
+          80,
+          0,
+          5
+        ],
+        [
+          80,
+          0,
+          7
+        ],
+        [
+          80,
+          0,
+          4
+        ],
+        [
+          80,
+          0,
+          1
+        ],
+        [
+          80,
+          0,
+          6
+        ],
+        [
+          80,
+          0,
+          3
+        ]
+      ],
+      "answer": "Kruger National Park is located in the provinces of Limpopo and Mpumalanga in the northeast of South Africa.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Limpopo and Mpumalanga provinces, South Africa | in the north-east of South Africa,[9] in the eastern parts of Limpopo and Mpumalanga provinces | in the provinces of Limpopo and Mpumalanga | the provinces of Limpopo and Mpumalanga in northeastern South Africa"
+    },
+    {
+      "qid": "57d923b63b59dde4c990508fef81fa98",
+      "question": "right to property according to the constitution of india is a",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          183,
+          0,
+          0
+        ],
+        [
+          183,
+          0,
+          1
+        ],
+        [
+          183,
+          0,
+          3
+        ],
+        [
+          183,
+          0,
+          4
+        ],
+        [
+          183,
+          0,
+          2
+        ],
+        [
+          183,
+          0,
+          5
+        ]
+      ],
+      "answer": "I'm sorry, I can't find the specific information about the right to property according to the Constitution of India in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: constitutional right"
+    },
+    {
+      "qid": "1abe5ad530899d7dd7e8ddfa87568d3d",
+      "question": "what is the first basic process in the light reaction of photosynthesis",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          35,
+          0,
+          5
+        ],
+        [
+          35,
+          0,
+          2
+        ],
+        [
+          35,
+          0,
+          6
+        ],
+        [
+          35,
+          0,
+          1
+        ],
+        [
+          35,
+          0,
+          4
+        ],
+        [
+          35,
+          0,
+          3
+        ],
+        [
+          35,
+          0,
+          7
+        ],
+        [
+          35,
+          0,
+          0
+        ]
+      ],
+      "answer": "The first basic process in the light reaction of photosynthesis is the absorption of light by chlorophyll.",
+      "verdict": "correct",
+      "ground_truth": "Any of: energy from light is absorbed by proteins called reaction centres that contain green chlorophyll pigments | one molecule of the pigment chlorophyll absorbs one photon and loses one electron"
+    },
+    {
+      "qid": "9c551d56062383b205140badf7b4f26f",
+      "question": "when is the womens ice skating for the olympics",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          49,
+          0,
+          5
+        ],
+        [
+          199,
+          0,
+          0
+        ],
+        [
+          49,
+          0,
+          1
+        ],
+        [
+          49,
+          0,
+          0
+        ],
+        [
+          49,
+          0,
+          4
+        ],
+        [
+          49,
+          0,
+          6
+        ],
+        [
+          199,
+          0,
+          1
+        ],
+        [
+          49,
+          0,
+          2
+        ]
+      ],
+      "answer": "I cannot find the specific date for women's ice skating in the Olympics from the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 21 February | 21–23 February | 23 February"
+    },
+    {
+      "qid": "9f1bce273477c6d7d6fb8a763887ab5f",
+      "question": "who has trained the most melbourne cup winners",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          207,
+          0,
+          7
+        ],
+        [
+          207,
+          0,
+          2
+        ],
+        [
+          207,
+          0,
+          0
+        ],
+        [
+          207,
+          0,
+          5
+        ],
+        [
+          207,
+          0,
+          6
+        ],
+        [
+          207,
+          0,
+          1
+        ],
+        [
+          207,
+          0,
+          3
+        ],
+        [
+          207,
+          0,
+          4
+        ]
+      ],
+      "answer": "Etienne de Mestre trained the most Melbourne Cup winners, with five victories.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Bart Cummings"
+    },
+    {
+      "qid": "b1c03de837e3948046b5c3d36248ce92",
+      "question": "who got the first nobel prize in physics",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          201,
+          0,
+          0
+        ],
+        [
+          201,
+          0,
+          1
+        ],
+        [
+          201,
+          0,
+          4
+        ],
+        [
+          201,
+          0,
+          7
+        ],
+        [
+          201,
+          0,
+          2
+        ],
+        [
+          201,
+          0,
+          3
+        ],
+        [
+          201,
+          0,
+          5
+        ],
+        [
+          201,
+          0,
+          6
+        ]
+      ],
+      "answer": "Wilhelm Conrad Röntgen",
+      "verdict": "correct",
+      "ground_truth": "Any of: Wilhelm Conrad Röntgen | Wilhelm Conrad Röntgen, of Germany"
+    },
+    {
+      "qid": "9978993a39f6cb448dbcaebbd39671eb",
+      "question": "who played stumpy in the movie rio bravo",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          52,
+          0,
+          2
+        ],
+        [
+          52,
+          0,
+          0
+        ],
+        [
+          52,
+          0,
+          4
+        ],
+        [
+          52,
+          0,
+          5
+        ],
+        [
+          52,
+          0,
+          1
+        ],
+        [
+          52,
+          0,
+          3
+        ],
+        [
+          52,
+          0,
+          6
+        ]
+      ],
+      "answer": "Walter Brennan played Stumpy in the movie \"Rio Bravo.\"",
+      "verdict": "correct",
+      "ground_truth": "Any of: Walter Brennan"
+    },
+    {
+      "qid": "7d45698e0e66b6006f2bb4229c965271",
+      "question": "what is the first step in the evolution of the eye",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          187,
+          0,
+          0
+        ],
+        [
+          187,
+          0,
+          1
+        ],
+        [
+          187,
+          0,
+          2
+        ],
+        [
+          187,
+          0,
+          7
+        ],
+        [
+          187,
+          0,
+          3
+        ],
+        [
+          187,
+          0,
+          6
+        ]
+      ],
+      "answer": "The first step in the evolution of the eye was the development of photoreceptor cells.",
+      "verdict": "correct",
+      "ground_truth": "Any of: eyespots | photoreceptor proteins that sense light | photoreceptor proteins that sense light, found even in unicellular organisms, called \"eyespots\""
+    },
+    {
+      "qid": "c9604c2223d0e6ec26c8659ae60c2e11",
+      "question": "who plays matthew on anne with an e",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          110,
+          0,
+          1
+        ],
+        [
+          102,
+          0,
+          0
+        ],
+        [
+          205,
+          0,
+          0
+        ],
+        [
+          110,
+          0,
+          4
+        ],
+        [
+          110,
+          0,
+          0
+        ],
+        [
+          110,
+          0,
+          2
+        ],
+        [
+          102,
+          0,
+          1
+        ],
+        [
+          205,
+          0,
+          1
+        ]
+      ],
+      "answer": "I cannot find it in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: R. H. Thomson"
+    },
+    {
+      "qid": "22e97b71423679cec5bfa1edae720891",
+      "question": "who sings the song you'll never find another love like mine",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          47,
+          0,
+          7
+        ],
+        [
+          180,
+          0,
+          0
+        ],
+        [
+          20,
+          0,
+          2
+        ],
+        [
+          175,
+          0,
+          5
+        ],
+        [
+          47,
+          0,
+          6
+        ],
+        [
+          180,
+          0,
+          1
+        ],
+        [
+          20,
+          0,
+          1
+        ],
+        [
+          20,
+          0,
+          3
+        ]
+      ],
+      "answer": "I cannot find it in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Lou Rawls"
+    },
+    {
+      "qid": "c92367a4ec87db8771bf9c7e2294f6ad",
+      "question": "where did the term spirits for alcohol come from",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          208,
+          0,
+          0
+        ],
+        [
+          208,
+          0,
+          5
+        ],
+        [
+          208,
+          0,
+          1
+        ],
+        [
+          208,
+          0,
+          2
+        ],
+        [
+          208,
+          0,
+          4
+        ],
+        [
+          208,
+          0,
+          6
+        ],
+        [
+          208,
+          0,
+          3
+        ]
+      ],
+      "answer": "The term \"spirit\" comes from the Latin word *spiritus*, meaning \"breath\" or \"spirit.\" It was used to describe the process of distillation, which was thought to release the spirit of the original material.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Middle Eastern alchemy"
+    },
+    {
+      "qid": "7b3d34110d189db57982308b66e56028",
+      "question": "what is the most common blood type in sweden",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          101,
+          0,
+          0
+        ],
+        [
+          101,
+          0,
+          4
+        ],
+        [
+          101,
+          0,
+          5
+        ],
+        [
+          101,
+          0,
+          7
+        ],
+        [
+          101,
+          0,
+          1
+        ],
+        [
+          101,
+          0,
+          3
+        ],
+        [
+          101,
+          0,
+          6
+        ]
+      ],
+      "answer": "The most common blood type in Sweden is A, at 45%.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: A+ | AB+"
+    },
+    {
+      "qid": "6bdcf6af0404930f4dd4e0e81b84125b",
+      "question": "what are the importance of rigor mortis in meat processing",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          97,
+          0,
+          1
+        ],
+        [
+          97,
+          0,
+          0
+        ],
+        [
+          97,
+          0,
+          2
+        ],
+        [
+          176,
+          0,
+          1
+        ],
+        [
+          97,
+          0,
+          3
+        ],
+        [
+          176,
+          0,
+          0
+        ],
+        [
+          176,
+          0,
+          2
+        ]
+      ],
+      "answer": "Rigor mortis is important in meat processing because it determines the tenderness of meat. The post-slaughter meat is immediately chilled to 15 °C (59 °F) to prevent cold shortening, which occurs when muscles contract and toughen the meat.",
+      "verdict": "correct",
+      "ground_truth": "Any of: rigor mortis and its resolution partially determine the tenderness of meat | tenderness of meat"
+    },
+    {
+      "qid": "64e4fdb7cb82d8a24d6db6349a991bfa",
+      "question": "what is final season of game of thrones",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          77,
+          0,
+          0
+        ],
+        [
+          77,
+          0,
+          5
+        ],
+        [
+          77,
+          0,
+          6
+        ],
+        [
+          77,
+          0,
+          1
+        ],
+        [
+          77,
+          0,
+          4
+        ],
+        [
+          77,
+          0,
+          7
+        ],
+        [
+          77,
+          0,
+          2
+        ]
+      ],
+      "answer": "The final season of Game of Thrones is season 8.",
+      "verdict": "correct",
+      "ground_truth": "Any of: The eighth | eighth | the eighth season"
+    },
+    {
+      "qid": "c846195cfedfe1f32c624d8ce19b66f9",
+      "question": "what is the share of agriculture in indian economy",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          128,
+          0,
+          7
+        ],
+        [
+          128,
+          0,
+          1
+        ],
+        [
+          128,
+          0,
+          5
+        ],
+        [
+          128,
+          0,
+          6
+        ],
+        [
+          128,
+          0,
+          2
+        ],
+        [
+          128,
+          0,
+          4
+        ]
+      ],
+      "answer": "I cannot find the specific share of agriculture in the Indian economy in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 17.32% | 23%"
+    },
+    {
+      "qid": "e0bf8b88651b9d4167c48762011712c6",
+      "question": "who did shakespeare write his play hamlet for",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          29,
+          0,
+          0
+        ],
+        [
+          29,
+          0,
+          1
+        ],
+        [
+          29,
+          0,
+          4
+        ],
+        [
+          29,
+          0,
+          2
+        ],
+        [
+          29,
+          0,
+          3
+        ],
+        [
+          29,
+          0,
+          5
+        ]
+      ],
+      "answer": "I cannot find that information in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: almost certainly wrote his version of the title role for his fellow actor, Richard Burbage | for his fellow actor, Richard Burbage, the leading tragedian of Shakespeare's time | his fellow actor, Richard Burbage"
+    },
+    {
+      "qid": "a650637c8aa89e7d609a91dc72d613dd",
+      "question": "what is the tigers name in life of pi",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          109,
+          0,
+          4
+        ],
+        [
+          109,
+          0,
+          0
+        ],
+        [
+          109,
+          0,
+          1
+        ],
+        [
+          109,
+          0,
+          3
+        ],
+        [
+          109,
+          0,
+          5
+        ],
+        [
+          109,
+          0,
+          2
+        ]
+      ],
+      "answer": "The tiger's name in \"Life of Pi\" is Richard Parker.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Richard Parker"
+    },
+    {
+      "qid": "fa345d9ed3473ca89d6b4c29dcbcfb46",
+      "question": "what is the significance of the sahara desert",
+      "n_tiles": 5,
+      "tiles": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          4
+        ]
+      ],
+      "answer": "The Sahara Desert is significant as the world's largest hot desert, covering a vast area of North Africa. It plays a crucial role in the climate and geography of the region, influencing weather patterns and supporting unique ecosystems. Its harsh conditions and extreme temperatures make it a challenging environment for life.",
+      "verdict": "correct",
+      "ground_truth": "Any of: the largest hot desert | the largest hot desert and the third largest desert in the world after Antarctica and the Arctic | the third largest desert in the world after Antarctica and the Arctic"
+    },
+    {
+      "qid": "75131fa65b1f91a145241fda76aa8a82",
+      "question": "where is the country music hall of fame located",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          186,
+          0,
+          0
+        ],
+        [
+          186,
+          0,
+          5
+        ],
+        [
+          186,
+          0,
+          2
+        ],
+        [
+          186,
+          0,
+          4
+        ],
+        [
+          186,
+          0,
+          1
+        ],
+        [
+          186,
+          0,
+          6
+        ],
+        [
+          186,
+          0,
+          3
+        ]
+      ],
+      "answer": "Nashville, Tennessee.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Nashville, Tennessee"
+    },
+    {
+      "qid": "cfacfce3b09396e1f733310be5aab854",
+      "question": "who sings stop listen what's that sound",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          75,
+          0,
+          0
+        ],
+        [
+          86,
+          0,
+          0
+        ],
+        [
+          75,
+          0,
+          2
+        ],
+        [
+          86,
+          0,
+          3
+        ],
+        [
+          75,
+          0,
+          1
+        ],
+        [
+          86,
+          0,
+          1
+        ],
+        [
+          75,
+          0,
+          3
+        ],
+        [
+          86,
+          0,
+          2
+        ]
+      ],
+      "answer": "I cannot find it in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Buffalo Springfield"
+    },
+    {
+      "qid": "1de41e0c5c4d10951cdab2512c0fd9a6",
+      "question": "all the motor neurons that control the skeletal muscles are",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          66,
+          0,
+          0
+        ],
+        [
+          66,
+          0,
+          3
+        ],
+        [
+          66,
+          0,
+          4
+        ],
+        [
+          66,
+          0,
+          1
+        ],
+        [
+          66,
+          0,
+          2
+        ],
+        [
+          66,
+          0,
+          5
+        ]
+      ],
+      "answer": "All the motor neurons that control the skeletal muscles are called somatic motor neurons.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Somatic | Somatic motor neurons | efferent nerves"
+    },
+    {
+      "qid": "853da2b6d272d6c449864d259ce6d02c",
+      "question": "when is dancing on ice on the tv",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          111,
+          0,
+          0
+        ],
+        [
+          111,
+          0,
+          1
+        ],
+        [
+          111,
+          0,
+          6
+        ],
+        [
+          111,
+          0,
+          7
+        ],
+        [
+          111,
+          0,
+          2
+        ],
+        [
+          111,
+          0,
+          5
+        ]
+      ],
+      "answer": "I cannot find the specific TV schedule for \"Dancing on Ice\" in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 2019"
+    },
+    {
+      "qid": "507a6b4b919f7eb1f92ed99b25435a13",
+      "question": "what gun does the california highway patrol use",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          71,
+          0,
+          0
+        ],
+        [
+          71,
+          0,
+          7
+        ],
+        [
+          71,
+          0,
+          1
+        ],
+        [
+          71,
+          0,
+          2
+        ],
+        [
+          71,
+          0,
+          6
+        ],
+        [
+          71,
+          0,
+          3
+        ]
+      ],
+      "answer": "The California Highway Patrol currently uses the Smith & Wesson M&P pistol chambered in .40 S&W.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Remington 870 Police Magnum 12‑gauge shotgun | Sig Sauer M400 rifle in 5.56mm | Smith & Wesson M&P in .40 S&W | Smith & Wesson Model 4006 TSW in .40 S&W | a Remington 870 Police Magnum 12‑gauge shotgun | a Sig Sauer M400 rifle in 5.56mm"
+    },
+    {
+      "qid": "044499779e5126c52c8ba914bc67da45",
+      "question": "who died in the plane crash greys anatomy",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          145,
+          0,
+          1
+        ],
+        [
+          194,
+          0,
+          1
+        ],
+        [
+          110,
+          0,
+          6
+        ],
+        [
+          13,
+          0,
+          3
+        ],
+        [
+          145,
+          0,
+          0
+        ],
+        [
+          145,
+          0,
+          2
+        ],
+        [
+          194,
+          0,
+          0
+        ],
+        [
+          194,
+          0,
+          2
+        ]
+      ],
+      "answer": "I cannot find the information in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Dr. Lexie Grey | Dr. Lexie Grey (Chyler Leigh) | Lexie"
+    },
+    {
+      "qid": "eb112525fc435ccf9f96366c8acddd3c",
+      "question": "who was named african footballer of the year 2014",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          14,
+          0,
+          0
+        ],
+        [
+          14,
+          0,
+          5
+        ],
+        [
+          14,
+          0,
+          3
+        ],
+        [
+          14,
+          0,
+          1
+        ],
+        [
+          14,
+          0,
+          4
+        ],
+        [
+          14,
+          0,
+          6
+        ],
+        [
+          14,
+          0,
+          2
+        ]
+      ],
+      "answer": "Yaya Touré",
+      "verdict": "correct",
+      "ground_truth": "Any of: Yaya Touré"
+    },
+    {
+      "qid": "0d760091adc79e8d0a20d3b8330f1139",
+      "question": "what is billy last name in where the red fern grows",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          6,
+          0,
+          2
+        ],
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          1
+        ],
+        [
+          63,
+          0,
+          1
+        ],
+        [
+          6,
+          0,
+          3
+        ],
+        [
+          63,
+          0,
+          0
+        ],
+        [
+          63,
+          0,
+          2
+        ]
+      ],
+      "answer": "Billy's last name is Coleman.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Billy Colman | Colman"
+    },
+    {
+      "qid": "b999be340d6dd9ab0c00615d685ec140",
+      "question": "in what part of the digestive tube do you expect the initial digestion of starch",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          82,
+          0,
+          0
+        ],
+        [
+          82,
+          0,
+          1
+        ],
+        [
+          82,
+          0,
+          3
+        ],
+        [
+          138,
+          0,
+          4
+        ],
+        [
+          82,
+          0,
+          2
+        ],
+        [
+          82,
+          0,
+          4
+        ],
+        [
+          138,
+          0,
+          3
+        ],
+        [
+          138,
+          0,
+          5
+        ]
+      ],
+      "answer": "The initial digestion of starch is expected to occur in the mouth.",
+      "verdict": "correct",
+      "ground_truth": "Any of: the minor salivary glands | the mouth"
+    },
+    {
+      "qid": "d93bad3ec91e01c7f31839e684d8a221",
+      "question": "where was a time for choosing speech given",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          27,
+          0,
+          0
+        ],
+        [
+          27,
+          0,
+          1
+        ],
+        [
+          27,
+          0,
+          2
+        ],
+        [
+          137,
+          0,
+          0
+        ],
+        [
+          27,
+          0,
+          3
+        ],
+        [
+          137,
+          0,
+          1
+        ]
+      ],
+      "answer": "The speech was given at the 1964 Republican National Convention in San Francisco, California.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Los Angeles County, California, U.S. | part of a pre-recorded television program, Rendezvous with Destiny"
+    },
+    {
+      "qid": "825e4e606b07d89bad6a239ed8c1d24e",
+      "question": "when did united states enter world war i",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          48,
+          0,
+          0
+        ],
+        [
+          48,
+          0,
+          6
+        ],
+        [
+          48,
+          0,
+          7
+        ],
+        [
+          48,
+          0,
+          1
+        ],
+        [
+          48,
+          0,
+          5
+        ],
+        [
+          48,
+          0,
+          2
+        ]
+      ],
+      "answer": "The United States entered World War I on April 6, 1917.",
+      "verdict": "correct",
+      "ground_truth": "Any of: April 1917"
+    },
+    {
+      "qid": "79bb287bd141586c6da1fbccaabea6f5",
+      "question": "who wants a heart in the wizard of oz",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          1
+        ],
+        [
+          10,
+          0,
+          6
+        ],
+        [
+          10,
+          0,
+          4
+        ],
+        [
+          10,
+          0,
+          2
+        ],
+        [
+          10,
+          0,
+          5
+        ],
+        [
+          10,
+          0,
+          7
+        ],
+        [
+          10,
+          0,
+          3
+        ]
+      ],
+      "answer": "The Tin Woodman wants a heart in \"The Wizard of Oz.\"",
+      "verdict": "correct",
+      "ground_truth": "Any of: Tin Woodman | the Tin Woodman"
+    },
+    {
+      "qid": "8e0550623c57ac85335729ed01018862",
+      "question": "what are the band members names of the rolling stones",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          12,
+          0,
+          0
+        ],
+        [
+          12,
+          0,
+          1
+        ],
+        [
+          12,
+          0,
+          2
+        ],
+        [
+          12,
+          0,
+          7
+        ],
+        [
+          12,
+          0,
+          3
+        ],
+        [
+          12,
+          0,
+          6
+        ]
+      ],
+      "answer": "Mick Jagger, Keith Richards, Brian Jones, Bill Wyman, Charlie Watts.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Charlie Watts | Keith Richards | Mick Jagger | Ronnie Wood"
+    },
+    {
+      "qid": "af6bb1c06a67e99260363121b8047918",
+      "question": "who is the girl in green day 21 guns",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          190,
+          0,
+          0
+        ],
+        [
+          190,
+          0,
+          2
+        ],
+        [
+          190,
+          0,
+          4
+        ],
+        [
+          190,
+          0,
+          3
+        ],
+        [
+          190,
+          0,
+          1
+        ],
+        [
+          190,
+          0,
+          5
+        ]
+      ],
+      "answer": "I can't find the name of the girl in the \"21 Guns\" music video from the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Lisa Stelly"
+    },
+    {
+      "qid": "cfe2eff8aa7ad9c66e959ab23bd47b3a",
+      "question": "who plays sheila carter on the bold and the beautiful",
+      "n_tiles": 5,
+      "tiles": [
+        [
+          79,
+          0,
+          0
+        ],
+        [
+          79,
+          0,
+          2
+        ],
+        [
+          79,
+          0,
+          3
+        ],
+        [
+          79,
+          0,
+          1
+        ],
+        [
+          79,
+          0,
+          4
+        ]
+      ],
+      "answer": "Sheila Carter is played by Kimberlin Brown.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Kimberlin Brown | Kimberlin Brown (1990–) | Michelle Stafford | Michelle Stafford (2006–07)"
+    },
+    {
+      "qid": "0074792e1b60d7566f0420ddbefb06f4",
+      "question": "actor who plays eric on boy meets world",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          205,
+          0,
+          0
+        ],
+        [
+          205,
+          0,
+          1
+        ],
+        [
+          205,
+          0,
+          2
+        ],
+        [
+          205,
+          0,
+          4
+        ],
+        [
+          205,
+          0,
+          3
+        ],
+        [
+          205,
+          0,
+          5
+        ]
+      ],
+      "answer": "Will Friedle",
+      "verdict": "correct",
+      "ground_truth": "Any of: William Alan \"Will\" Friedle"
+    },
+    {
+      "qid": "d7276aa9a7c7576e587c56eeeebccefe",
+      "question": "who has been ranked no. 1 in the latest football rankings announced by fifa",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          78,
+          0,
+          0
+        ],
+        [
+          78,
+          0,
+          2
+        ],
+        [
+          78,
+          0,
+          1
+        ],
+        [
+          78,
+          0,
+          6
+        ],
+        [
+          78,
+          0,
+          3
+        ],
+        [
+          78,
+          0,
+          5
+        ],
+        [
+          78,
+          0,
+          7
+        ]
+      ],
+      "answer": "Argentina has been ranked No. 1 in the latest FIFA Men's World Ranking as of 11 June 2026.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Germany"
+    },
+    {
+      "qid": "dfddb79dab684d686250365c16a45d37",
+      "question": "what material was used to build the roofs of houses in burzahom",
+      "n_tiles": 5,
+      "tiles": [
+        [
+          51,
+          0,
+          0
+        ],
+        [
+          51,
+          0,
+          1
+        ],
+        [
+          51,
+          0,
+          3
+        ],
+        [
+          51,
+          0,
+          2
+        ],
+        [
+          51,
+          0,
+          4
+        ]
+      ],
+      "answer": "Mud plaster was used to build the roofs of houses in Burzahom.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: birch"
+    },
+    {
+      "qid": "9cccb1705880d8253c9acc78a7c59d10",
+      "question": "when did the the regulatory reform (fire safety) order 2005 first come into effect",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          124,
+          0,
+          0
+        ],
+        [
+          124,
+          0,
+          1
+        ],
+        [
+          124,
+          0,
+          2
+        ],
+        [
+          23,
+          0,
+          5
+        ],
+        [
+          124,
+          0,
+          3
+        ],
+        [
+          23,
+          0,
+          4
+        ],
+        [
+          23,
+          0,
+          6
+        ]
+      ],
+      "answer": "The Regulatory Reform (Fire Safety) Order 2005 came into force on 1 October 2006.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 1 October 2006"
+    },
+    {
+      "qid": "1b08bbf3f0bd24e67c132a457229c6b6",
+      "question": "who did the astros play last time they were in the world series",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          169,
+          0,
+          0
+        ],
+        [
+          169,
+          0,
+          7
+        ],
+        [
+          169,
+          0,
+          2
+        ],
+        [
+          132,
+          0,
+          1
+        ],
+        [
+          169,
+          0,
+          1
+        ],
+        [
+          169,
+          0,
+          6
+        ],
+        [
+          169,
+          0,
+          3
+        ],
+        [
+          132,
+          0,
+          0
+        ]
+      ],
+      "answer": "The Houston Astros played the Chicago White Sox in their last World Series appearance.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Los Angeles Dodgers | White Sox"
+    },
+    {
+      "qid": "7f6d4d2e10e5ef12fba4f7627a5417f3",
+      "question": "which apostle spoke at the council of jerusalem",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          118,
+          0,
+          0
+        ],
+        [
+          118,
+          0,
+          1
+        ],
+        [
+          118,
+          0,
+          6
+        ],
+        [
+          118,
+          0,
+          3
+        ],
+        [
+          118,
+          0,
+          2
+        ],
+        [
+          118,
+          0,
+          5
+        ],
+        [
+          118,
+          0,
+          7
+        ],
+        [
+          118,
+          0,
+          4
+        ]
+      ],
+      "answer": "James and Peter spoke at the Council of Jerusalem.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Barnabas | James | Paul | Simon Peter"
+    },
+    {
+      "qid": "03a9652637d3b54234a37c62c7de9660",
+      "question": "who starred in the movie natural born killers",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          54,
+          0,
+          0
+        ],
+        [
+          54,
+          0,
+          7
+        ],
+        [
+          54,
+          0,
+          4
+        ],
+        [
+          54,
+          0,
+          6
+        ],
+        [
+          54,
+          0,
+          1
+        ],
+        [
+          54,
+          0,
+          3
+        ],
+        [
+          54,
+          0,
+          5
+        ]
+      ],
+      "answer": "Woody Harrelson, Juliette Lewis, Robert Downey Jr., Tommy Lee Jones, Tom Sizemore.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Juliette Lewis | Robert Downey Jr. | Robert Downey, Jr. | Tom Sizemore | Tommy Lee Jones | Woody Harrelson"
+    },
+    {
+      "qid": "e91d90838be6186ea763e234045f40ff",
+      "question": "when do the walking dead comics come out",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          122,
+          0,
+          0
+        ],
+        [
+          122,
+          0,
+          1
+        ],
+        [
+          122,
+          0,
+          2
+        ],
+        [
+          122,
+          0,
+          7
+        ],
+        [
+          122,
+          0,
+          3
+        ],
+        [
+          122,
+          0,
+          6
+        ]
+      ],
+      "answer": "The Walking Dead comics were published from October 2003 to July 2019.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 2003 | October 2003 – present"
+    },
+    {
+      "qid": "13d826e482262b88cc610e0a3c062917",
+      "question": "who is rose in the fall season 2",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          40,
+          0,
+          4
+        ],
+        [
+          194,
+          0,
+          7
+        ],
+        [
+          194,
+          0,
+          6
+        ],
+        [
+          110,
+          0,
+          0
+        ],
+        [
+          40,
+          0,
+          3
+        ],
+        [
+          40,
+          0,
+          5
+        ],
+        [
+          194,
+          0,
+          5
+        ],
+        [
+          110,
+          0,
+          1
+        ]
+      ],
+      "answer": "Rose Stagg is a character in \"The Fall\" who is portrayed by Valene Kane.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Valene Kane | a woman who had a sexual relationship with Paul whilst at university"
+    },
+    {
+      "qid": "9bc46126e039608e94a1266067b2c0ed",
+      "question": "who sings the theme song for the tv show cops",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          107,
+          0,
+          2
+        ],
+        [
+          107,
+          0,
+          0
+        ],
+        [
+          47,
+          0,
+          7
+        ],
+        [
+          86,
+          0,
+          0
+        ],
+        [
+          107,
+          0,
+          1
+        ],
+        [
+          107,
+          0,
+          3
+        ],
+        [
+          47,
+          0,
+          6
+        ],
+        [
+          86,
+          0,
+          1
+        ]
+      ],
+      "answer": "Inner Circle sings the theme song for the TV show \"Cops.\"",
+      "verdict": "correct",
+      "ground_truth": "Any of: Inner Circle | Jamaican reggae band Inner Circle | the Jamaican reggae band Inner Circle"
+    },
+    {
+      "qid": "3c78a043dc08eb52623dcc509d1c9689",
+      "question": "when does the new season of law and order svu come on",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          126,
+          0,
+          0
+        ],
+        [
+          126,
+          0,
+          5
+        ],
+        [
+          126,
+          0,
+          1
+        ],
+        [
+          126,
+          0,
+          6
+        ],
+        [
+          126,
+          0,
+          4
+        ],
+        [
+          126,
+          0,
+          2
+        ],
+        [
+          126,
+          0,
+          7
+        ]
+      ],
+      "answer": "I cannot find that information in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: September 27, 2017"
+    },
+    {
+      "qid": "25b289ba22306f5b0c9989fb7aa2509f",
+      "question": "what is the job of justice of the peace",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          131,
+          0,
+          0
+        ],
+        [
+          131,
+          0,
+          7
+        ],
+        [
+          131,
+          0,
+          6
+        ],
+        [
+          131,
+          0,
+          5
+        ],
+        [
+          131,
+          0,
+          1
+        ],
+        [
+          131,
+          0,
+          4
+        ]
+      ],
+      "answer": "A Justice of the Peace (JP) is a judicial officer who handles minor legal matters, administers oaths, witnesses signatures, and presides over small claims and summary offenses. They may also perform civil ceremonies and issue warrants. Their specific duties can vary by jurisdiction.",
+      "verdict": "correct",
+      "ground_truth": "Any of: a judicial officer, of a lower or puisne court, elected or appointed by means of a commission (letters patent) to keep the peace. | deal with local administrative applications in common law jurisdictions | dispense summary justice"
+    },
+    {
+      "qid": "ba4deae7ea7b3739961f53e8ff79fe2e",
+      "question": "who was toot toot in the green mile",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          34,
+          0,
+          0
+        ],
+        [
+          34,
+          0,
+          4
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          34,
+          0,
+          2
+        ],
+        [
+          34,
+          0,
+          1
+        ],
+        [
+          34,
+          0,
+          3
+        ],
+        [
+          34,
+          0,
+          5
+        ],
+        [
+          4,
+          0,
+          2
+        ]
+      ],
+      "answer": "Toot-Toot was a stand-in for the condemned during execution rehearsals and sold snacks to prisoners and guards.",
+      "verdict": "correct",
+      "ground_truth": "Any of: A trustee | A trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards | trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards"
+    },
+    {
+      "qid": "f3722db41a046ee0b4138eca0bebe77b",
+      "question": "what is the point of a menstrual cup",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          129,
+          0,
+          7
+        ],
+        [
+          129,
+          0,
+          1
+        ],
+        [
+          129,
+          0,
+          0
+        ],
+        [
+          129,
+          0,
+          5
+        ],
+        [
+          129,
+          0,
+          6
+        ],
+        [
+          129,
+          0,
+          2
+        ],
+        [
+          129,
+          0,
+          4
+        ]
+      ],
+      "answer": "A menstrual cup is a reusable menstrual hygiene product.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: collect menstrual flow | to collect menstrual flow"
+    },
+    {
+      "qid": "25afb37a49ca9520a3f717e1ca448c7f",
+      "question": "who won the oscar for best picture in 1976",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          121,
+          0,
+          1
+        ],
+        [
+          121,
+          0,
+          0
+        ],
+        [
+          121,
+          0,
+          7
+        ],
+        [
+          62,
+          0,
+          0
+        ],
+        [
+          121,
+          0,
+          2
+        ],
+        [
+          121,
+          0,
+          6
+        ],
+        [
+          62,
+          0,
+          1
+        ]
+      ],
+      "answer": "\"Rocky\" won the Oscar for Best Picture in 1976.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Rocky"
+    },
+    {
+      "qid": "db0cfb9dc4ecd25f4dd1df26d9deb213",
+      "question": "when are centrally acting skeletal muscle relaxants used",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          18,
+          0,
+          0
+        ],
+        [
+          18,
+          0,
+          2
+        ],
+        [
+          18,
+          0,
+          5
+        ],
+        [
+          18,
+          0,
+          7
+        ],
+        [
+          18,
+          0,
+          1
+        ],
+        [
+          18,
+          0,
+          3
+        ],
+        [
+          18,
+          0,
+          4
+        ],
+        [
+          18,
+          0,
+          6
+        ]
+      ],
+      "answer": "Centrally acting skeletal muscle relaxants are used to alleviate symptoms such as muscle spasms, pain, and hyperreflexia.",
+      "verdict": "correct",
+      "ground_truth": "Any of: to alleviate musculoskeletal pain and spasms | to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological conditions | to reduce spasticity in a variety of neurological conditions"
+    },
+    {
+      "qid": "9f0cf39c6c6224f5c074d751e522350c",
+      "question": "who has scored more goals in the premier league",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          134,
+          0,
+          1
+        ],
+        [
+          134,
+          0,
+          0
+        ],
+        [
+          134,
+          0,
+          6
+        ],
+        [
+          134,
+          0,
+          4
+        ],
+        [
+          134,
+          0,
+          2
+        ],
+        [
+          134,
+          0,
+          5
+        ],
+        [
+          134,
+          0,
+          7
+        ],
+        [
+          134,
+          0,
+          3
+        ]
+      ],
+      "answer": "Alan Shearer has scored the most goals in the Premier League with 260 goals.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Alan Shearer"
+    },
+    {
+      "qid": "72337c51aecfec52587a8aead8120bc5",
+      "question": "where is the north pole on the world map",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          162,
+          0,
+          0
+        ],
+        [
+          162,
+          0,
+          1
+        ],
+        [
+          162,
+          0,
+          7
+        ],
+        [
+          162,
+          0,
+          2
+        ],
+        [
+          162,
+          0,
+          6
+        ],
+        [
+          162,
+          0,
+          3
+        ]
+      ],
+      "answer": "The North Pole is at the top center of the Northern Hemisphere on a world map.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 90°N 0°W﻿ / ﻿90°N -0°E | latitude 90° North"
+    },
+    {
+      "qid": "898783b96a8c03aa1e0c77f5ca85ec40",
+      "question": "where does kevins family go in home alone 2",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          175,
+          0,
+          0
+        ],
+        [
+          175,
+          0,
+          2
+        ],
+        [
+          175,
+          0,
+          1
+        ],
+        [
+          100,
+          0,
+          2
+        ],
+        [
+          175,
+          0,
+          3
+        ],
+        [
+          100,
+          0,
+          1
+        ],
+        [
+          100,
+          0,
+          3
+        ]
+      ],
+      "answer": "Kevin's family goes to Florida.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Florida"
+    },
+    {
+      "qid": "1a9fb7d8eddf41cd0fdbc4465263c708",
+      "question": "where are the coastal plains of india situated",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          167,
+          0,
+          0
+        ],
+        [
+          167,
+          0,
+          1
+        ],
+        [
+          167,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          167,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          2
+        ]
+      ],
+      "answer": "The coastal plains of India are situated along the eastern part of the Deccan Plateau and the Bay of Bengal in India.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: between the Eastern Ghats and the Bay of Bengal | from Tamil Nadu in the south to West Bengal in the north through Andhra Pradesh and Odisha"
+    },
+    {
+      "qid": "1b61f4ceacc6d5425e5735df8e45e472",
+      "question": "what kind of fish live in the salton sea",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          76,
+          0,
+          0
+        ],
+        [
+          76,
+          0,
+          1
+        ],
+        [
+          76,
+          0,
+          4
+        ],
+        [
+          76,
+          0,
+          2
+        ],
+        [
+          76,
+          0,
+          3
+        ],
+        [
+          76,
+          0,
+          5
+        ]
+      ],
+      "answer": "The Salton Sea is home to species such as tilapia.",
+      "verdict": "correct",
+      "ground_truth": "Any of: tilapia"
+    },
+    {
+      "qid": "130f6b82c51b0443b2c90d0ca043531f",
+      "question": "when was the first australian prime minister elected",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          50,
+          0,
+          0
+        ],
+        [
+          50,
+          0,
+          3
+        ],
+        [
+          50,
+          0,
+          4
+        ],
+        [
+          50,
+          0,
+          2
+        ],
+        [
+          50,
+          0,
+          1
+        ],
+        [
+          50,
+          0,
+          5
+        ]
+      ],
+      "answer": "I cannot find the exact date of the first Australian Prime Minister's election in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 1901 | Sir Edmund Barton"
+    },
+    {
+      "qid": "517b5e761a8deeac1a1bd30ef412817f",
+      "question": "the vascular layer of the eye is the",
+      "n_tiles": 5,
+      "tiles": [
+        [
+          168,
+          0,
+          0
+        ],
+        [
+          168,
+          0,
+          2
+        ],
+        [
+          168,
+          0,
+          1
+        ],
+        [
+          168,
+          0,
+          3
+        ],
+        [
+          168,
+          0,
+          4
+        ]
+      ],
+      "answer": "The vascular layer of the eye is the uvea.",
+      "verdict": "correct",
+      "ground_truth": "Any of: The uvea | middle layer | uvea"
+    },
+    {
+      "qid": "0160dc49118bf06acf6fd2b13cacd9ae",
+      "question": "who was the captain of the mayflower when it took the pilgrims to the new world",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          55,
+          0,
+          0
+        ],
+        [
+          55,
+          0,
+          7
+        ],
+        [
+          55,
+          0,
+          3
+        ],
+        [
+          55,
+          0,
+          2
+        ],
+        [
+          55,
+          0,
+          1
+        ],
+        [
+          55,
+          0,
+          6
+        ],
+        [
+          55,
+          0,
+          4
+        ]
+      ],
+      "answer": "The captain of the Mayflower was Christopher Jones.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Captain Jones | Christopher Jones | Master Christopher Jones"
+    },
+    {
+      "qid": "f21e92ca5d503a5aa4f79416d71aa71a",
+      "question": "what is bermuda competing in the winter olympics",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          170,
+          0,
+          0
+        ],
+        [
+          170,
+          0,
+          1
+        ],
+        [
+          170,
+          0,
+          2
+        ],
+        [
+          49,
+          0,
+          5
+        ],
+        [
+          170,
+          0,
+          3
+        ],
+        [
+          49,
+          0,
+          4
+        ],
+        [
+          49,
+          0,
+          6
+        ]
+      ],
+      "answer": "Bermuda competed in cross-country skiing at the 2018 Winter Olympics.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Cross-country skiing"
+    },
+    {
+      "qid": "4a07887348f2f1d87b449c5f31ed4edb",
+      "question": "when is the next scandal episode coming out",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          103,
+          0,
+          0
+        ],
+        [
+          103,
+          0,
+          3
+        ],
+        [
+          103,
+          0,
+          1
+        ],
+        [
+          103,
+          0,
+          7
+        ],
+        [
+          103,
+          0,
+          2
+        ],
+        [
+          103,
+          0,
+          4
+        ],
+        [
+          103,
+          0,
+          6
+        ]
+      ],
+      "answer": "The last episode of \"Scandal\" aired on April 19, 2018. There are no upcoming episodes.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: February 1, 2018"
+    },
+    {
+      "qid": "43bdee18d7246001d8cd2d0a1d07e563",
+      "question": "where do the royalties for winnie the pooh go",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          108,
+          0,
+          1
+        ],
+        [
+          108,
+          0,
+          7
+        ],
+        [
+          108,
+          0,
+          5
+        ],
+        [
+          108,
+          0,
+          0
+        ],
+        [
+          108,
+          0,
+          2
+        ],
+        [
+          108,
+          0,
+          6
+        ],
+        [
+          108,
+          0,
+          4
+        ]
+      ],
+      "answer": "I cannot find information about where the royalties for Winnie the Pooh go in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Slesinger, Inc. | the Slesinger family"
+    },
+    {
+      "qid": "c7a7dea6f49a22b61a932136514d663c",
+      "question": "who played the mother in the black stallion",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          147,
+          0,
+          0
+        ],
+        [
+          147,
+          0,
+          2
+        ],
+        [
+          147,
+          0,
+          1
+        ],
+        [
+          147,
+          0,
+          4
+        ],
+        [
+          147,
+          0,
+          3
+        ],
+        [
+          147,
+          0,
+          5
+        ]
+      ],
+      "answer": "The mother in \"The Black Stallion\" was played by Teri Garr.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Teri Garr"
+    },
+    {
+      "qid": "5080efa9c78b65792ff74c67090c30da",
+      "question": "when are two events said to be independent",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          155,
+          0,
+          0
+        ],
+        [
+          155,
+          0,
+          1
+        ],
+        [
+          155,
+          0,
+          2
+        ],
+        [
+          155,
+          0,
+          6
+        ],
+        [
+          155,
+          0,
+          3
+        ],
+        [
+          155,
+          0,
+          5
+        ],
+        [
+          155,
+          0,
+          7
+        ]
+      ],
+      "answer": "Two events are said to be independent if the occurrence of one does not affect the probability of the occurrence of the other. Mathematically, \\( P(A \\cap B) = P(A)P(B) \\).",
+      "verdict": "correct",
+      "ground_truth": "Any of: if the occurrence of one does not affect the probability of occurrence of the other | if the occurrence of one does not affect the probability of occurrence of the other."
+    },
+    {
+      "qid": "4b99b6dd724f2989492bba65d0d847d6",
+      "question": "when did the name of bombay change to mumbai",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          3,
+          0,
+          7
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          6
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          5
+        ]
+      ],
+      "answer": "The name of Bombay changed to Mumbai in 1995.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 1995"
+    },
+    {
+      "qid": "0b46c1b14392d89106c3c96cb0db97c0",
+      "question": "where was uncle tom's cabin first published",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          108,
+          0,
+          3
+        ],
+        [
+          127,
+          0,
+          0
+        ],
+        [
+          34,
+          0,
+          5
+        ],
+        [
+          36,
+          0,
+          0
+        ],
+        [
+          108,
+          0,
+          2
+        ],
+        [
+          108,
+          0,
+          4
+        ],
+        [
+          127,
+          0,
+          1
+        ],
+        [
+          34,
+          0,
+          4
+        ]
+      ],
+      "answer": "I cannot find it in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: The National Era | The National Era, an abolitionist periodical | in The National Era, an abolitionist periodical, starting with the June 5, 1851, issue"
+    },
+    {
+      "qid": "c0ee4f8bc6dfea3343d1f6c763d57439",
+      "question": "where was the deer hunter hunting scene filmed",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          43,
+          0,
+          0
+        ],
+        [
+          43,
+          0,
+          7
+        ],
+        [
+          43,
+          0,
+          5
+        ],
+        [
+          43,
+          0,
+          3
+        ],
+        [
+          43,
+          0,
+          1
+        ],
+        [
+          43,
+          0,
+          6
+        ],
+        [
+          43,
+          0,
+          4
+        ],
+        [
+          43,
+          0,
+          2
+        ]
+      ],
+      "answer": "The hunting scene in \"The Deer Hunter\" was filmed in the Cascade Range, which is not native to Pennsylvania.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Mount Baker-Snoqualmie National Forest | Mount Baker-Snoqualmie National Forest and Nooksack Falls in the North Cascades range of, Washington | Nooksack Falls in the North Cascades range of, Washington"
+    },
+    {
+      "qid": "303e9317ed4c233da2d8d66913adbcc5",
+      "question": "what was the first video game for nintendo",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          150,
+          0,
+          0
+        ],
+        [
+          150,
+          0,
+          4
+        ],
+        [
+          150,
+          0,
+          6
+        ],
+        [
+          150,
+          0,
+          3
+        ],
+        [
+          150,
+          0,
+          1
+        ],
+        [
+          150,
+          0,
+          5
+        ],
+        [
+          150,
+          0,
+          7
+        ],
+        [
+          150,
+          0,
+          2
+        ]
+      ],
+      "answer": "The first video game for Nintendo was \"Donkey Kong\" in 1981.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: EVR Race | Magnavox Odyssey"
+    },
+    {
+      "qid": "fa9cc779ec13b39ea956a6bf04abb025",
+      "question": "who is the speaker in shooting an elephant",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          166,
+          0,
+          0
+        ],
+        [
+          166,
+          0,
+          3
+        ],
+        [
+          166,
+          0,
+          4
+        ],
+        [
+          166,
+          0,
+          2
+        ],
+        [
+          166,
+          0,
+          1
+        ],
+        [
+          166,
+          0,
+          5
+        ]
+      ],
+      "answer": "The speaker in \"Shooting an Elephant\" is George Orwell.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Orwell | Orwell, writing in the first person | possibly Orwell himself, called upon to shoot an aggressive elephant while working as a police officer in Burma | the English narrator, possibly Orwell himself"
+    },
+    {
+      "qid": "5037b11e82a229878da82c98111e269f",
+      "question": "who sings that aint no way to go",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          86,
+          0,
+          0
+        ],
+        [
+          20,
+          0,
+          2
+        ],
+        [
+          12,
+          0,
+          0
+        ],
+        [
+          52,
+          0,
+          3
+        ],
+        [
+          86,
+          0,
+          1
+        ],
+        [
+          20,
+          0,
+          1
+        ],
+        [
+          20,
+          0,
+          3
+        ],
+        [
+          12,
+          0,
+          1
+        ]
+      ],
+      "answer": "Travis Tritt",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: American country music duo Brooks & Dunn | Brooks & Dunn"
+    },
+    {
+      "qid": "d1e88c0171f02c1f677b3ff323e0edfb",
+      "question": "who played lionel in as time goes by",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          178,
+          0,
+          0
+        ],
+        [
+          205,
+          0,
+          0
+        ],
+        [
+          178,
+          0,
+          7
+        ],
+        [
+          178,
+          0,
+          1
+        ],
+        [
+          205,
+          0,
+          1
+        ],
+        [
+          178,
+          0,
+          6
+        ],
+        [
+          178,
+          0,
+          2
+        ]
+      ],
+      "answer": "Geoffrey Palmer played Lionel in \"As Time Goes By.\"",
+      "verdict": "correct",
+      "ground_truth": "Any of: Geoffrey Dyson Palmer | Geoffrey Dyson Palmer, OBE"
+    },
+    {
+      "qid": "a6b6f107422a54ca2d0dacbf6a73333f",
+      "question": "when did the 5 day work week begin",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          123,
+          0,
+          1
+        ],
+        [
+          123,
+          0,
+          2
+        ],
+        [
+          123,
+          0,
+          0
+        ],
+        [
+          123,
+          0,
+          7
+        ],
+        [
+          123,
+          0,
+          3
+        ],
+        [
+          123,
+          0,
+          6
+        ]
+      ],
+      "answer": "The five-day workweek began in 1926 when Henry Ford implemented it in his automotive factories.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 1908 | 1940 | In 1908"
+    },
+    {
+      "qid": "7c1f7c09ef5a7da8ddbd649744422cc7",
+      "question": "how tall is the actor who plays hagrid in harry potter",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          136,
+          0,
+          0
+        ],
+        [
+          136,
+          0,
+          5
+        ],
+        [
+          136,
+          0,
+          7
+        ],
+        [
+          136,
+          0,
+          2
+        ],
+        [
+          136,
+          0,
+          1
+        ],
+        [
+          136,
+          0,
+          4
+        ],
+        [
+          136,
+          0,
+          6
+        ],
+        [
+          136,
+          0,
+          3
+        ]
+      ],
+      "answer": "I cannot find the height of the actor who plays Hagrid in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 6ft 1in"
+    },
+    {
+      "qid": "ca8eb564756f5d46799fc8ffe2e7876e",
+      "question": "who has won india's next super star",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          146,
+          0,
+          0
+        ],
+        [
+          39,
+          0,
+          4
+        ],
+        [
+          3,
+          0,
+          7
+        ],
+        [
+          128,
+          0,
+          1
+        ],
+        [
+          146,
+          0,
+          1
+        ],
+        [
+          39,
+          0,
+          3
+        ],
+        [
+          39,
+          0,
+          5
+        ]
+      ],
+      "answer": "I cannot find that information in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Aman Gandotra | Natasha Bharadwaj"
+    },
+    {
+      "qid": "16c9c1d81d99ceea27816bf2fe427901",
+      "question": "where does the story the great gatsby take place",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          36,
+          0,
+          1
+        ],
+        [
+          36,
+          0,
+          5
+        ],
+        [
+          36,
+          0,
+          0
+        ],
+        [
+          36,
+          0,
+          6
+        ],
+        [
+          36,
+          0,
+          2
+        ],
+        [
+          36,
+          0,
+          4
+        ],
+        [
+          36,
+          0,
+          7
+        ]
+      ],
+      "answer": "The story of \"The Great Gatsby\" takes place on Long Island, near New York City, specifically in the fictional areas of West Egg and East Egg.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Long Island of 1922 | the fictional town of West Egg on prosperous Long Island"
+    },
+    {
+      "qid": "ed04fa61f579a08ca688db91b5bd2b9b",
+      "question": "which five year plan was affected by indo pak indo china war",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          61,
+          0,
+          3
+        ],
+        [
+          61,
+          0,
+          2
+        ],
+        [
+          61,
+          0,
+          0
+        ],
+        [
+          61,
+          0,
+          4
+        ],
+        [
+          61,
+          0,
+          1
+        ],
+        [
+          61,
+          0,
+          5
+        ]
+      ],
+      "answer": "The Third Five-Year Plan was affected by the Indo-Pak and Indo-China wars.",
+      "verdict": "correct",
+      "ground_truth": "Any of: The Third Five-year Plan"
+    },
+    {
+      "qid": "538a43021d29c170f0d12a78306fe859",
+      "question": "when did toyota first come to the united states",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          44,
+          0,
+          5
+        ],
+        [
+          44,
+          0,
+          4
+        ],
+        [
+          44,
+          0,
+          6
+        ],
+        [
+          44,
+          0,
+          0
+        ],
+        [
+          44,
+          0,
+          3
+        ],
+        [
+          44,
+          0,
+          7
+        ],
+        [
+          44,
+          0,
+          1
+        ]
+      ],
+      "answer": "Toyota first came to the United States in 1957.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 1957"
+    },
+    {
+      "qid": "48ad895f333e099ccceab64e34f968bd",
+      "question": "how many books are in the diary of a whimpy kid series",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          100,
+          0,
+          0
+        ],
+        [
+          100,
+          0,
+          4
+        ],
+        [
+          100,
+          0,
+          1
+        ],
+        [
+          100,
+          0,
+          3
+        ],
+        [
+          100,
+          0,
+          5
+        ],
+        [
+          100,
+          0,
+          2
+        ]
+      ],
+      "answer": "There are 18 main books in the \"Diary of a Wimpy Kid\" series.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 12 | twelve Wimpy Kid books have been released, plus one do-it-yourself book and two movie diaries"
+    },
+    {
+      "qid": "030f65deceac4b1a0148eb9bea3b1bd4",
+      "question": "what is the longest pier in the uk",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          23,
+          0,
+          0
+        ],
+        [
+          23,
+          0,
+          7
+        ],
+        [
+          23,
+          0,
+          1
+        ],
+        [
+          23,
+          0,
+          2
+        ],
+        [
+          23,
+          0,
+          6
+        ],
+        [
+          23,
+          0,
+          3
+        ]
+      ],
+      "answer": "The longest pier in the UK is Southend Pier.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Southend Pier"
+    },
+    {
+      "qid": "9ccfa6983c3b9e0774f7008663040734",
+      "question": "where is republic of doyle supposed to take place",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          40,
+          0,
+          0
+        ],
+        [
+          40,
+          0,
+          3
+        ],
+        [
+          40,
+          0,
+          6
+        ],
+        [
+          40,
+          0,
+          7
+        ],
+        [
+          40,
+          0,
+          1
+        ],
+        [
+          40,
+          0,
+          2
+        ],
+        [
+          40,
+          0,
+          4
+        ],
+        [
+          40,
+          0,
+          5
+        ]
+      ],
+      "answer": "\"Republic of Doyle\" is supposed to take place in St. John's, Newfoundland and Labrador.",
+      "verdict": "correct",
+      "ground_truth": "Any of: St. John's, Newfoundland and Labrador"
+    },
+    {
+      "qid": "98c800a305ae7c44bd63f2d41c5f21c0",
+      "question": "what part of the brain is in the middle cranial fossa",
+      "n_tiles": 5,
+      "tiles": [
+        [
+          188,
+          0,
+          0
+        ],
+        [
+          188,
+          0,
+          1
+        ],
+        [
+          188,
+          0,
+          3
+        ],
+        [
+          188,
+          0,
+          2
+        ],
+        [
+          188,
+          0,
+          4
+        ]
+      ],
+      "answer": "The temporal lobes and the pituitary gland are lodged in the middle cranial fossa.",
+      "verdict": "correct",
+      "ground_truth": "Any of: pituitary gland | temporal lobes | the pituitary gland | the temporal lobes"
+    },
+    {
+      "qid": "bd994f5b4eea9d7bb35b5afa8bbf17f7",
+      "question": "when did disney art of animation resort open",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          62,
+          0,
+          0
+        ],
+        [
+          100,
+          0,
+          7
+        ],
+        [
+          19,
+          0,
+          0
+        ],
+        [
+          47,
+          0,
+          0
+        ],
+        [
+          62,
+          0,
+          1
+        ],
+        [
+          100,
+          0,
+          6
+        ],
+        [
+          19,
+          0,
+          1
+        ],
+        [
+          47,
+          0,
+          1
+        ]
+      ],
+      "answer": "I cannot find the opening date of Disney's Art of Animation Resort in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: May 31, 2012"
+    },
+    {
+      "qid": "43a4f229eab237ec6e2ef57692b501e9",
+      "question": "who has won the mens singles title in the australian open tennis tournament",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          88,
+          0,
+          0
+        ],
+        [
+          50,
+          0,
+          0
+        ],
+        [
+          207,
+          0,
+          2
+        ],
+        [
+          207,
+          0,
+          4
+        ],
+        [
+          88,
+          0,
+          1
+        ],
+        [
+          50,
+          0,
+          1
+        ],
+        [
+          207,
+          0,
+          1
+        ],
+        [
+          207,
+          0,
+          3
+        ]
+      ],
+      "answer": "I cannot find that information in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Roger Federer"
+    },
+    {
+      "qid": "330803144fcf5525686dcd7692cabc97",
+      "question": "what album is sacrifice by elton john on",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          22,
+          0,
+          2
+        ],
+        [
+          22,
+          0,
+          1
+        ],
+        [
+          22,
+          0,
+          0
+        ],
+        [
+          12,
+          0,
+          0
+        ],
+        [
+          22,
+          0,
+          3
+        ],
+        [
+          12,
+          0,
+          1
+        ]
+      ],
+      "answer": "\"Rocket Ride\"",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Sleeping with the Past | Sleeping with the Past. | the 1989 album Sleeping with the Past"
+    },
+    {
+      "qid": "3efcf1ba2797913f3b71019a6cca7846",
+      "question": "which site of an enzyme is called allosteric site",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          125,
+          0,
+          0
+        ],
+        [
+          125,
+          0,
+          1
+        ],
+        [
+          125,
+          0,
+          3
+        ],
+        [
+          125,
+          0,
+          5
+        ],
+        [
+          125,
+          0,
+          2
+        ],
+        [
+          125,
+          0,
+          4
+        ],
+        [
+          125,
+          0,
+          6
+        ]
+      ],
+      "answer": "The allosteric site of an enzyme is a site that is distinct and separate from the active site.",
+      "verdict": "correct",
+      "ground_truth": "Any of: regulatory site"
+    },
+    {
+      "qid": "1b5b14dd69a9b97f5df37f99ec8cf002",
+      "question": "what is the form of mozart symphony no 40",
+      "n_tiles": 6,
+      "tiles": [
+        [
+          84,
+          0,
+          0
+        ],
+        [
+          84,
+          0,
+          7
+        ],
+        [
+          84,
+          0,
+          6
+        ],
+        [
+          84,
+          0,
+          1
+        ],
+        [
+          84,
+          0,
+          5
+        ],
+        [
+          84,
+          0,
+          2
+        ]
+      ],
+      "answer": "The form of Mozart's Symphony No. 40 is in four movements, typical of a classical-style symphony:\n\nI. Molto allegro  \nII. Andante  \nIII. Menuetto. Allegretto – Trio  \nIV. Finale. Allegro assai",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: G minor | minor key symphonies"
+    },
+    {
+      "qid": "b5f936d4a7ddb334e107ee07b37f1e83",
+      "question": "what is the final season of downton abbey",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          156,
+          0,
+          0
+        ],
+        [
+          156,
+          0,
+          5
+        ],
+        [
+          156,
+          0,
+          4
+        ],
+        [
+          156,
+          0,
+          3
+        ],
+        [
+          156,
+          0,
+          1
+        ],
+        [
+          156,
+          0,
+          6
+        ],
+        [
+          156,
+          0,
+          2
+        ]
+      ],
+      "answer": "The final season of Downton Abbey is Season 6 (2015).",
+      "verdict": "correct",
+      "ground_truth": "Any of: Six | six | sixth | the sixth | the sixth series"
+    },
+    {
+      "qid": "d627e74e9747495d710191d04894d269",
+      "question": "what was the purpose of a revival meeting during the second great awakening",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          182,
+          0,
+          0
+        ],
+        [
+          182,
+          0,
+          7
+        ],
+        [
+          182,
+          0,
+          3
+        ],
+        [
+          182,
+          0,
+          4
+        ],
+        [
+          182,
+          0,
+          1
+        ],
+        [
+          182,
+          0,
+          6
+        ],
+        [
+          182,
+          0,
+          2
+        ],
+        [
+          182,
+          0,
+          5
+        ]
+      ],
+      "answer": "The purpose of a revival meeting during the Second Great Awakening was to provide an opportunity for individuals to experience a religious conversion, renew their faith, and gain a sense of personal salvation.",
+      "verdict": "correct",
+      "ground_truth": "Any of: evangelizing"
+    },
+    {
+      "qid": "d2e8b16e96d8da1904ef8b8ac8773347",
+      "question": "when is last time the astros won the world series",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          132,
+          0,
+          1
+        ],
+        [
+          169,
+          0,
+          0
+        ],
+        [
+          132,
+          0,
+          0
+        ],
+        [
+          169,
+          0,
+          7
+        ],
+        [
+          132,
+          0,
+          2
+        ],
+        [
+          169,
+          0,
+          1
+        ],
+        [
+          169,
+          0,
+          6
+        ]
+      ],
+      "answer": "The last time the Astros won the World Series was in 2017.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 2017"
+    },
+    {
+      "qid": "3a3d0ba401efb7c1704bf95d97265fae",
+      "question": "who performed the halftime show at super bowl 51",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          146,
+          0,
+          0
+        ],
+        [
+          146,
+          0,
+          2
+        ],
+        [
+          146,
+          0,
+          1
+        ],
+        [
+          146,
+          0,
+          6
+        ],
+        [
+          146,
+          0,
+          3
+        ],
+        [
+          146,
+          0,
+          5
+        ],
+        [
+          146,
+          0,
+          7
+        ]
+      ],
+      "answer": "Lady Gaga performed the halftime show at Super Bowl 51.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Lady Gaga"
+    },
+    {
+      "qid": "4b0c3808cfa35e167950ab1f30401a24",
+      "question": "how many countries are a part of opec",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          202,
+          0,
+          0
+        ],
+        [
+          202,
+          0,
+          1
+        ],
+        [
+          202,
+          0,
+          5
+        ],
+        [
+          202,
+          0,
+          2
+        ],
+        [
+          202,
+          0,
+          4
+        ],
+        [
+          202,
+          0,
+          6
+        ],
+        [
+          202,
+          0,
+          3
+        ]
+      ],
+      "answer": "I cannot find the exact number of countries that are part of OPEC in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 14"
+    },
+    {
+      "qid": "2aa323fb56f8d4a7bd9f5b4daac9fd95",
+      "question": "who are the characters in yo gabba gabba",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          5
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          4
+        ],
+        [
+          4,
+          0,
+          6
+        ]
+      ],
+      "answer": "The characters in \"Yo Gabba Gabba!\" are:\n\n- DJ Lance Rock\n- Muno\n- Foofa\n- Brobee\n- Toodee\n- Plex",
+      "verdict": "correct",
+      "ground_truth": "Any of: Brobee | Brobee (a little hairy green monster) | DJ Lance Rock | Foofa | Foofa (the pink flower bubble) | Gooble | Muno | Muno (the red cyclops) | Plex | Plex (the magic yellow robot) | Toodee | Toodee (the blue cat-dragon)"
+    },
+    {
+      "qid": "1c6e23af80a338bd6a01113a908c5856",
+      "question": "who has the talismans in sailor moon s",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          60,
+          0,
+          0
+        ],
+        [
+          60,
+          0,
+          4
+        ],
+        [
+          60,
+          0,
+          2
+        ],
+        [
+          60,
+          0,
+          7
+        ],
+        [
+          60,
+          0,
+          1
+        ],
+        [
+          60,
+          0,
+          3
+        ],
+        [
+          60,
+          0,
+          5
+        ],
+        [
+          60,
+          0,
+          6
+        ]
+      ],
+      "answer": "Sailor Uranus, Sailor Neptune, and Sailor Pluto have the Talismans.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Haruka | Haruka and Michiru | Michiru | Sailor Pluto"
+    },
+    {
+      "qid": "506d8513cb6d3dc55395c8813ef6c4de",
+      "question": "who is the most losing team in nfl history",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          95,
+          0,
+          0
+        ],
+        [
+          206,
+          0,
+          6
+        ],
+        [
+          196,
+          0,
+          7
+        ],
+        [
+          196,
+          0,
+          0
+        ],
+        [
+          95,
+          0,
+          1
+        ],
+        [
+          206,
+          0,
+          5
+        ],
+        [
+          206,
+          0,
+          7
+        ],
+        [
+          196,
+          0,
+          6
+        ]
+      ],
+      "answer": "I cannot find the information on the most losing team in NFL history in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Arizona Cardinals | Tampa Bay Buccaneers"
+    },
+    {
+      "qid": "4648ff5f4bf483a535b5817465710d63",
+      "question": "who sang rip it up and start again",
+      "n_tiles": 5,
+      "tiles": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          4
+        ]
+      ],
+      "answer": "\"Rip It Up\" was sung by Edwyn Collins.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Orange Juice | Scottish post-punk band Orange Juice"
+    },
+    {
+      "qid": "8bffbfc483c92c3e264dc767125145d0",
+      "question": "when did the song the joker come out",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          180,
+          0,
+          0
+        ],
+        [
+          180,
+          0,
+          3
+        ],
+        [
+          180,
+          0,
+          5
+        ],
+        [
+          180,
+          0,
+          1
+        ],
+        [
+          180,
+          0,
+          2
+        ],
+        [
+          180,
+          0,
+          4
+        ],
+        [
+          180,
+          0,
+          6
+        ]
+      ],
+      "answer": "\"The Joker\" was released in 1973.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 1973 | October 1973"
+    },
+    {
+      "qid": "f376c5216536cacae379771f91e25fdc",
+      "question": "who is the president of usa right now",
+      "n_tiles": 8,
+      "tiles": [
+        [
+          179,
+          0,
+          0
+        ],
+        [
+          179,
+          0,
+          1
+        ],
+        [
+          165,
+          0,
+          0
+        ],
+        [
+          179,
+          0,
+          4
+        ],
+        [
+          179,
+          0,
+          2
+        ],
+        [
+          165,
+          0,
+          1
+        ],
+        [
+          179,
+          0,
+          3
+        ],
+        [
+          179,
+          0,
+          5
+        ]
+      ],
+      "answer": "The president of the USA right now is Joe Biden.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Donald Trump"
+    },
+    {
+      "qid": "129302cd9d31f3f0878fdfa3b0b7e298",
+      "question": "name the process of fusion of an egg with a sperm",
+      "n_tiles": 5,
+      "tiles": [
+        [
+          116,
+          0,
+          0
+        ],
+        [
+          116,
+          0,
+          3
+        ],
+        [
+          116,
+          0,
+          1
+        ],
+        [
+          116,
+          0,
+          2
+        ],
+        [
+          116,
+          0,
+          4
+        ]
+      ],
+      "answer": "The process is called \"fertilization.\"",
+      "verdict": "correct",
+      "ground_truth": "Any of: Human fertilization | fertilization"
+    },
+    {
+      "qid": "bb8a1701e716206fe5cdf8decf009077",
+      "question": "who was the french chef given credit for developing the classic kitchen​ brigade",
+      "n_tiles": 7,
+      "tiles": [
+        [
+          46,
+          0,
+          0
+        ],
+        [
+          46,
+          0,
+          3
+        ],
+        [
+          46,
+          0,
+          4
+        ],
+        [
+          46,
+          0,
+          5
+        ],
+        [
+          46,
+          0,
+          1
+        ],
+        [
+          46,
+          0,
+          2
+        ],
+        [
+          46,
+          0,
+          6
+        ]
+      ],
+      "answer": "Auguste Escoffier.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Georges Auguste Escoffier"
+    }
+  ]
+}

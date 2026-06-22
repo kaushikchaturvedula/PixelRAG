@@ -1,0 +1,4544 @@
+{
+  "chunker": "content_aware",
+  "retrieval": "flat",
+  "modality": "text",
+  "reader": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "detail": "low",
+    "image_maxdim": null
+  },
+  "grade_method": "judge",
+  "judge_model": "gpt-4.1-2025-04-14",
+  "config": {
+    "reader_top_k": 4,
+    "expand_neighbors": 1,
+    "expand_cap": 8,
+    "expand_mode": null,
+    "expand_mode_effective": null
+  },
+  "n_graded": 150,
+  "n_skipped": 0,
+  "n_tiles_total": 600,
+  "mean_tiles_per_query": 4.0,
+  "accuracy": 0.4933,
+  "verdict_counts": {
+    "correct": 74,
+    "incorrect": 42,
+    "unattempted": 34,
+    "errors": 0
+  },
+  "reader_usage": {
+    "prompt_tokens": 63601,
+    "completion_tokens": 2395,
+    "total_tokens": 65996
+  },
+  "judge_usage": {
+    "prompt_tokens": 272110,
+    "completion_tokens": 6746,
+    "total_tokens": 278856
+  },
+  "results_src": "results/nqt_ca_retrieval.json",
+  "per_query": [
+    {
+      "qid": "train_4152846960040914039_0",
+      "question": "where was friday night lights tv series filmed",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          35,
+          0,
+          0
+        ],
+        [
+          35,
+          0,
+          3
+        ],
+        [
+          35,
+          0,
+          1
+        ],
+        [
+          35,
+          0,
+          2
+        ]
+      ],
+      "answer": "The \"Friday Night Lights\" TV series was filmed in Austin, Texas, and surrounding areas such as Pflugerville and Del Valle.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Austin, Texas | Pflugerville, Texas"
+    },
+    {
+      "qid": "train_8363535834304498519_0",
+      "question": "who owns liberty national golf course in new jersey",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          99,
+          0,
+          0
+        ],
+        [
+          99,
+          0,
+          2
+        ],
+        [
+          99,
+          0,
+          3
+        ],
+        [
+          99,
+          0,
+          1
+        ]
+      ],
+      "answer": "Liberty National Golf Club is owned by Paul Fireman.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Paul Fireman"
+    },
+    {
+      "qid": "train_5358989750134113442_0",
+      "question": "where is chicago illinois located on the map",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          84,
+          0,
+          0
+        ],
+        [
+          84,
+          0,
+          1
+        ],
+        [
+          84,
+          0,
+          4
+        ],
+        [
+          84,
+          0,
+          3
+        ]
+      ],
+      "answer": "Chicago, Illinois is located on the western shore of Lake Michigan in the Midwestern United States.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 41°50′13″N 87°41′05″W﻿ / ﻿41.83694°N 87.68472°W"
+    },
+    {
+      "qid": "train_-1646467645234599157_0",
+      "question": "what are the names of the counties in wales",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          145,
+          0,
+          0
+        ],
+        [
+          145,
+          0,
+          2
+        ],
+        [
+          48,
+          0,
+          0
+        ],
+        [
+          145,
+          0,
+          1
+        ]
+      ],
+      "answer": "The preserved counties of Wales are:\n\n1. Clwyd\n2. Dyfed\n3. Gwent\n4. Gwynedd\n5. Mid Glamorgan\n6. Powys\n7. South Glamorgan\n8. West Glamorgan",
+      "verdict": "correct",
+      "ground_truth": "Any of: Gwent | South Glamorgan | Mid Glamorgan | West Glamorgan | Dyfed | Powys | Gwynedd | Clwyd"
+    },
+    {
+      "qid": "train_2644983246422408755_0",
+      "question": "who made the song london bridge is falling down",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          201,
+          0,
+          0
+        ],
+        [
+          201,
+          0,
+          6
+        ],
+        [
+          201,
+          0,
+          5
+        ],
+        [
+          201,
+          0,
+          1
+        ]
+      ],
+      "answer": "The creator of \"London Bridge Is Falling Down\" is unknown.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Unknown"
+    },
+    {
+      "qid": "train_482912031216577464_0",
+      "question": "baby guinness ingredients 3 4 shot 3 parts coffee liqueur",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          188,
+          0,
+          0
+        ],
+        [
+          188,
+          0,
+          1
+        ],
+        [
+          105,
+          0,
+          2
+        ],
+        [
+          105,
+          0,
+          1
+        ]
+      ],
+      "answer": "A Baby Guinness is made with 3 parts coffee liqueur and 1 part Irish cream liqueur.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Coffee liqueur | Irish cream"
+    },
+    {
+      "qid": "train_7389078096068380796_0",
+      "question": "bangladesh visa on arrival for indian passport holders",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          167,
+          0,
+          4
+        ],
+        [
+          167,
+          0,
+          1
+        ],
+        [
+          167,
+          0,
+          0
+        ],
+        [
+          167,
+          0,
+          3
+        ]
+      ],
+      "answer": "Indian passport holders can obtain a visa on arrival in Bangladesh.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Visa required"
+    },
+    {
+      "qid": "train_4696587162491581715_0",
+      "question": "who owns the las vegas knights hockey club",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          191,
+          0,
+          0
+        ],
+        [
+          191,
+          0,
+          1
+        ],
+        [
+          191,
+          0,
+          2
+        ],
+        [
+          191,
+          0,
+          7
+        ]
+      ],
+      "answer": "The Vegas Golden Knights are owned by Black Knight Sports & Entertainment.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Bill Foley | Maloof family"
+    },
+    {
+      "qid": "train_2836916659279787633_0",
+      "question": "who has played most games for indian national football team",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          33,
+          0,
+          0
+        ],
+        [
+          33,
+          0,
+          1
+        ],
+        [
+          33,
+          0,
+          2
+        ],
+        [
+          33,
+          0,
+          7
+        ]
+      ],
+      "answer": "Sunil Chhetri has played the most games for the Indian national football team.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Sunil Chhetri"
+    },
+    {
+      "qid": "train_-1331499156224635103_0",
+      "question": "where does the rio grande start and finish",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          28,
+          0,
+          0
+        ],
+        [
+          28,
+          0,
+          1
+        ],
+        [
+          28,
+          0,
+          2
+        ],
+        [
+          28,
+          0,
+          3
+        ]
+      ],
+      "answer": "The Rio Grande starts in the San Juan Mountains of Colorado and finishes in the Gulf of Mexico.",
+      "verdict": "correct",
+      "ground_truth": "Any of: San Juan Mountains, Rio Grande National Forest[1], Colorado | Gulf of Mexico"
+    },
+    {
+      "qid": "train_-7746224911214298235_0",
+      "question": "how many songs are on vices and virtues",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          192,
+          0,
+          0
+        ],
+        [
+          136,
+          0,
+          2
+        ],
+        [
+          111,
+          0,
+          6
+        ],
+        [
+          9,
+          0,
+          0
+        ]
+      ],
+      "answer": "I cannot find the information on the number of songs on \"Vices & Virtues\" in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 10"
+    },
+    {
+      "qid": "train_4074776855802409677_0",
+      "question": "who plays the mom in charlie and the chocolate factory",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          83,
+          0,
+          3
+        ],
+        [
+          83,
+          0,
+          0
+        ],
+        [
+          83,
+          0,
+          1
+        ],
+        [
+          83,
+          0,
+          7
+        ]
+      ],
+      "answer": "I cannot find it in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Helena Bonham Carter"
+    },
+    {
+      "qid": "train_-3717973424067386610_0",
+      "question": "where does the grand river start in michigan",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          60,
+          0,
+          0
+        ],
+        [
+          60,
+          0,
+          2
+        ],
+        [
+          60,
+          0,
+          1
+        ],
+        [
+          60,
+          0,
+          3
+        ]
+      ],
+      "answer": "The Grand River starts in Hillsdale County, Michigan.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Somerset Township, Hillsdale County, Michigan"
+    },
+    {
+      "qid": "train_6954739864320771551_0",
+      "question": "where do the best sauvignon blanc wines come from",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          198,
+          0,
+          0
+        ],
+        [
+          198,
+          0,
+          2
+        ],
+        [
+          198,
+          0,
+          3
+        ],
+        [
+          198,
+          0,
+          4
+        ]
+      ],
+      "answer": "The best Sauvignon Blanc wines come from regions like the Loire Valley in France, Marlborough in New Zealand, and California in the United States.",
+      "verdict": "correct",
+      "ground_truth": "Any of: South Africa | Chile | New Zealand | California | Loire Valley | Bordeaux | Ukraine"
+    },
+    {
+      "qid": "train_3279782423556707604_0",
+      "question": "when did the movie wonder woman come out",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          39,
+          0,
+          0
+        ],
+        [
+          39,
+          0,
+          1
+        ],
+        [
+          39,
+          0,
+          4
+        ],
+        [
+          39,
+          0,
+          7
+        ]
+      ],
+      "answer": "\"Wonder Woman\" was released on May 25, 2017 (Shanghai) and June 2, 2017 (United States).",
+      "verdict": "correct",
+      "ground_truth": "Any of: June 2, 2017 (United States)"
+    },
+    {
+      "qid": "train_5711174123351508599_0",
+      "question": "when did the star wars ride open at disneyland",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          23,
+          0,
+          0
+        ],
+        [
+          23,
+          0,
+          6
+        ],
+        [
+          23,
+          0,
+          1
+        ],
+        [
+          23,
+          0,
+          5
+        ]
+      ],
+      "answer": "The Star Wars ride, Star Tours, opened at Disneyland on January 9, 1987.",
+      "verdict": "correct",
+      "ground_truth": "Any of: January 9, 1987"
+    },
+    {
+      "qid": "train_-6516071366425930036_0",
+      "question": "who won the man booker international prize 2016",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          0,
+          6
+        ]
+      ],
+      "answer": "Han Kang won the Man Booker International Prize in 2016.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Han Kang"
+    },
+    {
+      "qid": "train_-7682708996774394708_0",
+      "question": "how many laps is the daytona 500 race",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          194,
+          0,
+          1
+        ],
+        [
+          194,
+          0,
+          0
+        ],
+        [
+          194,
+          0,
+          6
+        ],
+        [
+          194,
+          0,
+          7
+        ]
+      ],
+      "answer": "The Daytona 500 race is 200 laps.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 200"
+    },
+    {
+      "qid": "train_-8325115228774170014_0",
+      "question": "how many episodes in season 2 jessica jones",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          43,
+          0,
+          0
+        ],
+        [
+          43,
+          0,
+          7
+        ],
+        [
+          43,
+          0,
+          6
+        ],
+        [
+          43,
+          0,
+          1
+        ]
+      ],
+      "answer": "Season 2 of *Jessica Jones* has 13 episodes.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 13"
+    },
+    {
+      "qid": "train_-2241479832634390772_0",
+      "question": "when was the last time brazil won miss universe",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          161,
+          0,
+          5
+        ],
+        [
+          161,
+          0,
+          1
+        ],
+        [
+          161,
+          0,
+          2
+        ],
+        [
+          161,
+          0,
+          4
+        ]
+      ],
+      "answer": "The last time Brazil won Miss Universe was in 1968.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Brazil"
+    },
+    {
+      "qid": "train_7391567824394174311_0",
+      "question": "when the potosí mines in peru opened in 1545",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          28,
+          0,
+          4
+        ],
+        [
+          203,
+          0,
+          0
+        ],
+        [
+          28,
+          0,
+          3
+        ],
+        [
+          189,
+          0,
+          4
+        ]
+      ],
+      "answer": "I cannot find the information about the opening of the Potosí mines in Peru in 1545 in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: April 1"
+    },
+    {
+      "qid": "train_3150966327409387818_0",
+      "question": "who is left on next food network star",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          13,
+          0,
+          0
+        ],
+        [
+          13,
+          0,
+          3
+        ],
+        [
+          13,
+          0,
+          5
+        ],
+        [
+          13,
+          0,
+          4
+        ]
+      ],
+      "answer": "I cannot find who is left on \"Next Food Network Star\" from the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Jason Smith"
+    },
+    {
+      "qid": "train_8211653332103107678_0",
+      "question": "who has won the most premier league titles since 1992",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          42,
+          0,
+          0
+        ],
+        [
+          127,
+          0,
+          5
+        ],
+        [
+          127,
+          0,
+          0
+        ],
+        [
+          127,
+          0,
+          7
+        ]
+      ],
+      "answer": "Manchester United with 13 titles.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Manchester United"
+    },
+    {
+      "qid": "train_-1852106108153177463_0",
+      "question": "when does episode 14 of ncis la air",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          111,
+          0,
+          0
+        ],
+        [
+          111,
+          0,
+          1
+        ],
+        [
+          111,
+          0,
+          2
+        ],
+        [
+          111,
+          0,
+          7
+        ]
+      ],
+      "answer": "I cannot find the air date for episode 14 of NCIS: Los Angeles in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: February 2, 2010"
+    },
+    {
+      "qid": "train_-2348639480981542013_0",
+      "question": "when does football season start in the nfl",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          97,
+          0,
+          0
+        ],
+        [
+          97,
+          0,
+          7
+        ],
+        [
+          50,
+          0,
+          0
+        ],
+        [
+          50,
+          0,
+          7
+        ]
+      ],
+      "answer": "The NFL regular season started on September 7, 2017.",
+      "verdict": "correct",
+      "ground_truth": "Any of: September 7, 2017"
+    },
+    {
+      "qid": "train_9221728174875822509_0",
+      "question": "little house on the prairie cast mrs oleson",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          73,
+          0,
+          2
+        ],
+        [
+          47,
+          0,
+          1
+        ],
+        [
+          32,
+          0,
+          3
+        ],
+        [
+          209,
+          0,
+          2
+        ]
+      ],
+      "answer": "I cannot find the information about Mrs. Oleson from \"Little House on the Prairie\" in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Katherine MacGregor"
+    },
+    {
+      "qid": "train_-6194360978580085030_0",
+      "question": "how many seasons of medici masters of florence are there",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          158,
+          0,
+          0
+        ],
+        [
+          158,
+          0,
+          2
+        ],
+        [
+          158,
+          0,
+          1
+        ],
+        [
+          158,
+          0,
+          7
+        ]
+      ],
+      "answer": "Three seasons.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 1"
+    },
+    {
+      "qid": "train_2802470407921881096_0",
+      "question": "when did the mughal rule come to an end",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          169,
+          0,
+          0
+        ],
+        [
+          169,
+          0,
+          2
+        ],
+        [
+          169,
+          0,
+          5
+        ],
+        [
+          169,
+          0,
+          7
+        ]
+      ],
+      "answer": "The Mughal rule came to an end in 1857.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 1857"
+    },
+    {
+      "qid": "train_-5902087291422384725_0",
+      "question": "where does the river mekong start and end",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          81,
+          0,
+          0
+        ],
+        [
+          81,
+          0,
+          2
+        ],
+        [
+          81,
+          0,
+          1
+        ],
+        [
+          81,
+          0,
+          3
+        ]
+      ],
+      "answer": "The Mekong River starts in the Tibetan Plateau and ends in the South China Sea.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Lasagongma Spring | Mekong Delta"
+    },
+    {
+      "qid": "train_-5170342286328866806_0",
+      "question": "where does cranial nerve 8 exit the skull",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          181,
+          0,
+          0
+        ],
+        [
+          181,
+          0,
+          2
+        ],
+        [
+          181,
+          0,
+          3
+        ],
+        [
+          181,
+          0,
+          4
+        ]
+      ],
+      "answer": "Cranial nerve VIII exits the skull through the internal auditory canal in the temporal bone.",
+      "verdict": "correct",
+      "ground_truth": "Any of: internal auditory canal"
+    },
+    {
+      "qid": "train_-5428799893277289514_0",
+      "question": "how many un secretary generals have there been",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          155,
+          0,
+          0
+        ],
+        [
+          155,
+          0,
+          1
+        ],
+        [
+          155,
+          0,
+          2
+        ],
+        [
+          155,
+          0,
+          7
+        ]
+      ],
+      "answer": "There have been 9 UN Secretary-Generals.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 9"
+    },
+    {
+      "qid": "train_7936337482968826206_0",
+      "question": "when was the last time auburn was in march madness",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          18,
+          0,
+          4
+        ],
+        [
+          18,
+          0,
+          0
+        ],
+        [
+          18,
+          0,
+          5
+        ],
+        [
+          18,
+          0,
+          3
+        ]
+      ],
+      "answer": "The screenshots do not provide information on when Auburn was last in March Madness.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 2018"
+    },
+    {
+      "qid": "train_-3559944461289544267_0",
+      "question": "what size in mm is a g crochet hook",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          184,
+          0,
+          0
+        ],
+        [
+          184,
+          0,
+          1
+        ],
+        [
+          184,
+          0,
+          2
+        ],
+        [
+          184,
+          0,
+          4
+        ]
+      ],
+      "answer": "A G crochet hook is 4 mm.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 4 mm"
+    },
+    {
+      "qid": "train_-5498625535940945499_0",
+      "question": "how many seasons of picket fences are there",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          106,
+          0,
+          0
+        ],
+        [
+          106,
+          0,
+          2
+        ],
+        [
+          106,
+          0,
+          4
+        ],
+        [
+          106,
+          0,
+          3
+        ]
+      ],
+      "answer": "Four seasons.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 4"
+    },
+    {
+      "qid": "train_-5094228014258553081_0",
+      "question": "when did channel 5 start in the uk",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          66,
+          0,
+          0
+        ],
+        [
+          66,
+          0,
+          1
+        ],
+        [
+          66,
+          0,
+          4
+        ],
+        [
+          66,
+          0,
+          6
+        ]
+      ],
+      "answer": "Channel 5 started in the UK on 30 March 1997.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 30 March 1997"
+    },
+    {
+      "qid": "train_-1041949344879306628_0",
+      "question": "christmas song that has to do with the alphabet",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          126,
+          0,
+          7
+        ],
+        [
+          126,
+          0,
+          4
+        ],
+        [
+          126,
+          0,
+          2
+        ],
+        [
+          126,
+          0,
+          6
+        ]
+      ],
+      "answer": "I cannot find a Christmas song related to the alphabet in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: \"Christmas Alphabet\""
+    },
+    {
+      "qid": "train_6768227533176627978_0",
+      "question": "where did the battle of chateau thierry take place",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          197,
+          0,
+          0
+        ],
+        [
+          197,
+          0,
+          6
+        ],
+        [
+          197,
+          0,
+          7
+        ],
+        [
+          20,
+          0,
+          5
+        ]
+      ],
+      "answer": "I cannot find information about the Battle of Château-Thierry in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Château-Thierry, Aisne, France"
+    },
+    {
+      "qid": "train_-200329563049649624_0",
+      "question": "name of the book written by charles darwin",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          82,
+          0,
+          0
+        ],
+        [
+          82,
+          0,
+          1
+        ],
+        [
+          82,
+          0,
+          7
+        ],
+        [
+          82,
+          0,
+          4
+        ]
+      ],
+      "answer": "The book written by Charles Darwin is \"On the Origin of Species.\"",
+      "verdict": "correct",
+      "ground_truth": "Any of: The Voyage of the Beagle | On the Origin of Species"
+    },
+    {
+      "qid": "train_5866210348166253753_0",
+      "question": "who was the cowboys quarterback before tony romo",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          44,
+          0,
+          4
+        ],
+        [
+          44,
+          0,
+          0
+        ],
+        [
+          68,
+          0,
+          5
+        ],
+        [
+          44,
+          0,
+          3
+        ]
+      ],
+      "answer": "Drew Bledsoe (2005-2006).",
+      "verdict": "correct",
+      "ground_truth": "Any of: Drew Bledsoe"
+    },
+    {
+      "qid": "train_-1513806678028808260_0",
+      "question": "when was when you say nothing at all released",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          186,
+          0,
+          4
+        ],
+        [
+          186,
+          0,
+          0
+        ],
+        [
+          186,
+          0,
+          3
+        ],
+        [
+          186,
+          0,
+          2
+        ]
+      ],
+      "answer": "\"When You Say Nothing at All\" was released on December 24, 1988, by Keith Whitley.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: August 1988"
+    },
+    {
+      "qid": "train_736408698626351764_0",
+      "question": "game of thrones battle of the bastards music",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          20,
+          0,
+          5
+        ],
+        [
+          20,
+          0,
+          4
+        ],
+        [
+          20,
+          0,
+          0
+        ],
+        [
+          20,
+          0,
+          1
+        ]
+      ],
+      "answer": "The music for the \"Battle of the Bastards\" includes tracks like \"Bastard\" and \"Trust Each Other.\"",
+      "verdict": "correct",
+      "ground_truth": "Any of: Reign | Let's Play a Game | Bastard | Trust Each Other"
+    },
+    {
+      "qid": "train_-5359751818872117843_0",
+      "question": "when was michael jackson off the wall released",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          171,
+          0,
+          0
+        ],
+        [
+          171,
+          0,
+          1
+        ],
+        [
+          171,
+          0,
+          2
+        ],
+        [
+          171,
+          0,
+          4
+        ]
+      ],
+      "answer": "August 10, 1979",
+      "verdict": "correct",
+      "ground_truth": "Any of: August 10, 1979"
+    },
+    {
+      "qid": "train_-557381569383777950_0",
+      "question": "what's the zip code for o'fallon missouri",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          60,
+          0,
+          5
+        ],
+        [
+          35,
+          0,
+          4
+        ],
+        [
+          35,
+          0,
+          6
+        ],
+        [
+          157,
+          0,
+          1
+        ]
+      ],
+      "answer": "I can't find the zip code for O'Fallon, Missouri in the provided images.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 63366 | 63368"
+    },
+    {
+      "qid": "train_8058721648023483854_0",
+      "question": "who played quinn on how i met your mother",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          65,
+          0,
+          0
+        ],
+        [
+          116,
+          0,
+          0
+        ],
+        [
+          116,
+          0,
+          1
+        ],
+        [
+          116,
+          0,
+          2
+        ]
+      ],
+      "answer": "Becki Newton played Quinn Garvey on *How I Met Your Mother*.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Quinn Garvey"
+    },
+    {
+      "qid": "train_-1202690655950173528_0",
+      "question": "when does 999 what's your emergency start",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          113,
+          0,
+          0
+        ],
+        [
+          190,
+          0,
+          6
+        ],
+        [
+          111,
+          0,
+          1
+        ],
+        [
+          186,
+          0,
+          0
+        ]
+      ],
+      "answer": "I cannot find the information about \"999 What's Your Emergency\" in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 10 September 2012"
+    },
+    {
+      "qid": "train_606284297303426629_0",
+      "question": "who wrote the song country boy by aaron lewis",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          136,
+          0,
+          0
+        ],
+        [
+          136,
+          0,
+          1
+        ],
+        [
+          186,
+          0,
+          0
+        ],
+        [
+          193,
+          0,
+          0
+        ]
+      ],
+      "answer": "Aaron Lewis, George Jones, and Charlie Daniels.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Aaron Lewis"
+    },
+    {
+      "qid": "train_2460272613262303836_0",
+      "question": "when did serena williams win her last grand slam",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          61,
+          0,
+          0
+        ],
+        [
+          61,
+          0,
+          1
+        ],
+        [
+          61,
+          0,
+          5
+        ],
+        [
+          61,
+          0,
+          7
+        ]
+      ],
+      "answer": "Serena Williams won her last Grand Slam at the 2017 Australian Open.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 2017"
+    },
+    {
+      "qid": "train_-743719609388855380_0",
+      "question": "who does thomas sangster play in star wars",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          76,
+          0,
+          0
+        ],
+        [
+          76,
+          0,
+          7
+        ],
+        [
+          76,
+          0,
+          6
+        ],
+        [
+          76,
+          0,
+          1
+        ]
+      ],
+      "answer": "Thomas Brodie-Sangster plays Jojen Reed in \"Star Wars.\"",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Petty Officer Thanisson"
+    },
+    {
+      "qid": "train_3725813781881858440_0",
+      "question": "who is the mc of the nfl honors",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          117,
+          0,
+          0
+        ],
+        [
+          117,
+          0,
+          3
+        ],
+        [
+          117,
+          0,
+          1
+        ],
+        [
+          117,
+          0,
+          2
+        ]
+      ],
+      "answer": "The MC of the NFL Honors varies each year. For example, Alec Baldwin hosted in 2012, and Kelly Clarkson hosted in 2023.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Rob Riggle"
+    },
+    {
+      "qid": "train_2488694354466612305_0",
+      "question": "who has qualified for the most world cups",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          5
+        ],
+        [
+          33,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          7
+        ]
+      ],
+      "answer": "Brazil has qualified for the most World Cups, with 23 appearances.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Brazil"
+    },
+    {
+      "qid": "train_1754699819269427278_0",
+      "question": "which is bigger lake michigan or lake superior",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          162,
+          0,
+          0
+        ],
+        [
+          162,
+          0,
+          1
+        ],
+        [
+          162,
+          0,
+          7
+        ],
+        [
+          162,
+          0,
+          6
+        ]
+      ],
+      "answer": "Lake Superior is bigger than Lake Michigan.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Lake Superior"
+    },
+    {
+      "qid": "train_-1599046537087357097_0",
+      "question": "where is iberian peninsula located on a map",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          189,
+          0,
+          0
+        ],
+        [
+          189,
+          0,
+          1
+        ],
+        [
+          189,
+          0,
+          2
+        ],
+        [
+          189,
+          0,
+          5
+        ]
+      ],
+      "answer": "The Iberian Peninsula is located in southwestern Europe.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 40°N 4°W﻿ / ﻿40°N 4°W"
+    },
+    {
+      "qid": "train_7805590361498257777_0",
+      "question": "zener diode is based on the principle of",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          93,
+          0,
+          0
+        ],
+        [
+          93,
+          0,
+          2
+        ],
+        [
+          93,
+          0,
+          3
+        ],
+        [
+          93,
+          0,
+          1
+        ]
+      ],
+      "answer": "The Zener diode is based on the principle of the Zener effect and avalanche breakdown.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Zener breakdown"
+    },
+    {
+      "qid": "train_-5195142305183469136_0",
+      "question": "when is new mission impossible movie coming out",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          37,
+          0,
+          0
+        ],
+        [
+          164,
+          0,
+          5
+        ],
+        [
+          164,
+          0,
+          4
+        ],
+        [
+          164,
+          0,
+          6
+        ]
+      ],
+      "answer": "I cannot find the release date for the new Mission: Impossible movie in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: July 27, 2018"
+    },
+    {
+      "qid": "train_1469765770976896967_0",
+      "question": "what are the parables in mark's gospel",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          71,
+          0,
+          0
+        ],
+        [
+          71,
+          0,
+          3
+        ],
+        [
+          71,
+          0,
+          2
+        ],
+        [
+          71,
+          0,
+          1
+        ]
+      ],
+      "answer": "The parables in Mark's Gospel include the Parable of the Sower, the Parable of the Growing Seed, and the Parable of the Mustard Seed.",
+      "verdict": "correct",
+      "ground_truth": "Any of: The Growing Seed | The Lamp under a Bushel | New Wine into Old Wineskins | Parable of the strong man | Parable of the Sower | Parable of the Mustard Seed | The Wicked Husbandmen | The Budding Fig Tree | The Faithful Servant"
+    },
+    {
+      "qid": "train_340564885262693043_0",
+      "question": "who was involved in the battle of lone pine",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          179,
+          0,
+          1
+        ],
+        [
+          179,
+          0,
+          7
+        ],
+        [
+          179,
+          0,
+          2
+        ],
+        [
+          179,
+          0,
+          0
+        ]
+      ],
+      "answer": "The Battle of Lone Pine involved the Australian and New Zealand Army Corps (ANZAC) and the Ottoman Empire.",
+      "verdict": "correct",
+      "ground_truth": "Any of: British Empire | Ottoman Empire"
+    },
+    {
+      "qid": "train_-2210373518149699008_0",
+      "question": "who sang the theme song for national lampoon vacation",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          34,
+          0,
+          0
+        ],
+        [
+          34,
+          0,
+          4
+        ],
+        [
+          94,
+          0,
+          3
+        ],
+        [
+          34,
+          0,
+          2
+        ]
+      ],
+      "answer": "Lindsey Buckingham",
+      "verdict": "correct",
+      "ground_truth": "Any of: Lindsey Buckingham"
+    },
+    {
+      "qid": "train_-5088132479499600653_0",
+      "question": "when was the last time uva beat tech in football",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          18,
+          0,
+          0
+        ],
+        [
+          18,
+          0,
+          7
+        ],
+        [
+          18,
+          0,
+          6
+        ],
+        [
+          68,
+          0,
+          7
+        ]
+      ],
+      "answer": "I cannot find that information in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: November 29, 2003"
+    },
+    {
+      "qid": "train_-4695219812581403227_0",
+      "question": "where was the sands casino in las vegas",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          67,
+          0,
+          0
+        ],
+        [
+          67,
+          0,
+          1
+        ],
+        [
+          67,
+          0,
+          4
+        ],
+        [
+          100,
+          0,
+          2
+        ]
+      ],
+      "answer": "The Sands Hotel and Casino was located on the Las Vegas Strip in Paradise, Nevada.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 3355 Las Vegas Boulevard South"
+    },
+    {
+      "qid": "train_-2038299292385346315_0",
+      "question": "what season and episode does george o'malley die",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          114,
+          0,
+          3
+        ],
+        [
+          138,
+          0,
+          7
+        ],
+        [
+          131,
+          0,
+          0
+        ],
+        [
+          138,
+          0,
+          3
+        ]
+      ],
+      "answer": "Season 5, Episode 24",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: \"Good Mourning\" 6x01,"
+    },
+    {
+      "qid": "train_-8033111735336640474_0",
+      "question": "what was the range of a v2 rocket",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          88,
+          0,
+          0
+        ],
+        [
+          88,
+          0,
+          5
+        ],
+        [
+          88,
+          0,
+          3
+        ],
+        [
+          88,
+          0,
+          6
+        ]
+      ],
+      "answer": "The range of a V-2 rocket was 320 kilometers (200 miles).",
+      "verdict": "correct",
+      "ground_truth": "Any of: 320 km (200 mi)"
+    },
+    {
+      "qid": "train_-8606153551212132738_0",
+      "question": "when did the riders win the grey cup",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          185,
+          0,
+          6
+        ],
+        [
+          185,
+          0,
+          3
+        ],
+        [
+          185,
+          0,
+          7
+        ],
+        [
+          185,
+          0,
+          1
+        ]
+      ],
+      "answer": "The Riders won the Grey Cup in 1966, 1989, 2007, and 2013.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 1966 | 1989 | 2007 | 2013"
+    },
+    {
+      "qid": "train_-3419048058363764201_0",
+      "question": "which country has the highest gdp per capita in europe",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          159,
+          0,
+          0
+        ],
+        [
+          159,
+          0,
+          3
+        ],
+        [
+          159,
+          0,
+          6
+        ],
+        [
+          159,
+          0,
+          2
+        ]
+      ],
+      "answer": "Luxembourg",
+      "verdict": "correct",
+      "ground_truth": "Any of: Luxembourg"
+    },
+    {
+      "qid": "train_8059727619774648051_0",
+      "question": "when did the last episode of naruto air",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          190,
+          0,
+          0
+        ],
+        [
+          172,
+          0,
+          5
+        ],
+        [
+          172,
+          0,
+          0
+        ],
+        [
+          190,
+          0,
+          1
+        ]
+      ],
+      "answer": "The last episode of \"Naruto\" aired on February 8, 2007.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: December 6, 2009"
+    },
+    {
+      "qid": "train_6815538363864437534_0",
+      "question": "when does my friend dahmer movie come out on netflix",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          204,
+          0,
+          0
+        ],
+        [
+          204,
+          0,
+          3
+        ],
+        [
+          204,
+          0,
+          2
+        ],
+        [
+          204,
+          0,
+          4
+        ]
+      ],
+      "answer": "I cannot find the release date for when \"My Friend Dahmer\" came out on Netflix.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: November 3, 2017"
+    },
+    {
+      "qid": "train_-7551692838081478693_0",
+      "question": "who won gold medal in high jump rio",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          128,
+          0,
+          7
+        ],
+        [
+          128,
+          0,
+          1
+        ],
+        [
+          128,
+          0,
+          5
+        ],
+        [
+          10,
+          0,
+          0
+        ]
+      ],
+      "answer": "I cannot find the information in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Derek Drouin"
+    },
+    {
+      "qid": "train_-3516751242166818725_0",
+      "question": "in what year was the fall of jerusalem to the romans and destruction of the second temple",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          98,
+          0,
+          0
+        ],
+        [
+          98,
+          0,
+          1
+        ],
+        [
+          98,
+          0,
+          7
+        ],
+        [
+          98,
+          0,
+          3
+        ]
+      ],
+      "answer": "The fall of Jerusalem to the Romans and the destruction of the Second Temple occurred in 70 CE.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 70 CE"
+    },
+    {
+      "qid": "train_6130524435079386874_0",
+      "question": "how much money did jerry seinfeld make per episode",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          73,
+          0,
+          1
+        ],
+        [
+          73,
+          0,
+          0
+        ],
+        [
+          149,
+          0,
+          7
+        ],
+        [
+          149,
+          0,
+          0
+        ]
+      ],
+      "answer": "Jerry Seinfeld made $1 million per episode.",
+      "verdict": "correct",
+      "ground_truth": "Any of: $1 million"
+    },
+    {
+      "qid": "train_-5764932350993841580_0",
+      "question": "who sings song stuck in the middle with you",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          130,
+          0,
+          0
+        ],
+        [
+          130,
+          0,
+          4
+        ],
+        [
+          130,
+          0,
+          3
+        ],
+        [
+          130,
+          0,
+          2
+        ]
+      ],
+      "answer": "Stealers Wheel.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Stealers Wheel"
+    },
+    {
+      "qid": "train_2422976173368763780_0",
+      "question": "who has won the most doubles titles in tennis",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          134,
+          0,
+          0
+        ],
+        [
+          61,
+          0,
+          1
+        ],
+        [
+          134,
+          0,
+          1
+        ],
+        [
+          61,
+          0,
+          0
+        ]
+      ],
+      "answer": "Martina Navratilova with 177 doubles titles.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Martina Navratilova"
+    },
+    {
+      "qid": "train_-7969407017061863495_0",
+      "question": "when is the last time the browns won a preseason game",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          74,
+          0,
+          6
+        ],
+        [
+          74,
+          0,
+          0
+        ],
+        [
+          74,
+          0,
+          3
+        ],
+        [
+          74,
+          0,
+          5
+        ]
+      ],
+      "answer": "The last time the Browns won a preseason game in 2015 was on August 20 against the Buffalo Bills.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: August 29"
+    },
+    {
+      "qid": "train_4839872260214536242_0",
+      "question": "who wrote the song play me the waltz of the angels",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          207,
+          0,
+          0
+        ],
+        [
+          207,
+          0,
+          1
+        ],
+        [
+          57,
+          0,
+          3
+        ],
+        [
+          147,
+          0,
+          2
+        ]
+      ],
+      "answer": "The song \"Play Me the Waltz of the Angels\" was written by Dick Reynolds and Jack Rhodes.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: C.A. Hussey"
+    },
+    {
+      "qid": "train_2208172088412827883_0",
+      "question": "who has the worst era in mlb history",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          120,
+          0,
+          6
+        ],
+        [
+          120,
+          0,
+          7
+        ],
+        [
+          120,
+          0,
+          5
+        ],
+        [
+          120,
+          0,
+          0
+        ]
+      ],
+      "answer": "The 1899 Cleveland Spiders had the worst era in MLB history with a .130 winning percentage.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Philadelphia Athletics"
+    },
+    {
+      "qid": "train_-2281267174161179168_0",
+      "question": "who is the founder of the mexican mafia",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          11,
+          0,
+          0
+        ],
+        [
+          11,
+          0,
+          2
+        ],
+        [
+          11,
+          0,
+          4
+        ],
+        [
+          11,
+          0,
+          5
+        ]
+      ],
+      "answer": "The Mexican Mafia was founded by Luis \"Huero Buff\" Flores.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Luis \"Huero Buff\" Flores"
+    },
+    {
+      "qid": "train_-255812635050276616_0",
+      "question": "who is the starting quarterback for the seattle seahawks",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          77,
+          0,
+          3
+        ],
+        [
+          77,
+          0,
+          5
+        ],
+        [
+          77,
+          0,
+          0
+        ],
+        [
+          77,
+          0,
+          4
+        ]
+      ],
+      "answer": "Geno Smith",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Russell Wilson"
+    },
+    {
+      "qid": "train_-3991134927880029907_0",
+      "question": "when is the last time tiger woods played",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          52,
+          0,
+          0
+        ],
+        [
+          144,
+          0,
+          0
+        ],
+        [
+          144,
+          0,
+          4
+        ],
+        [
+          144,
+          0,
+          1
+        ]
+      ],
+      "answer": "I cannot find the specific date of Tiger Woods' last tournament from the provided images.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 2017"
+    },
+    {
+      "qid": "train_2177855570205199561_0",
+      "question": "who did kelly monaco dance with on dancing with the stars when she won",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          103,
+          0,
+          1
+        ],
+        [
+          103,
+          0,
+          0
+        ],
+        [
+          103,
+          0,
+          6
+        ],
+        [
+          103,
+          0,
+          7
+        ]
+      ],
+      "answer": "Kelly Monaco danced with Alec Mazo when she won \"Dancing with the Stars.\"",
+      "verdict": "correct",
+      "ground_truth": "Any of: Alec Mazo"
+    },
+    {
+      "qid": "train_-8405504373130442929_0",
+      "question": "who did the buckeyes lose to last year",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          157,
+          0,
+          0
+        ],
+        [
+          157,
+          0,
+          7
+        ],
+        [
+          157,
+          0,
+          3
+        ],
+        [
+          157,
+          0,
+          1
+        ]
+      ],
+      "answer": "The Buckeyes lost to Clemson in the Fiesta Bowl CFP Semifinal.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Penn State | Clemson"
+    },
+    {
+      "qid": "train_5071624972590720592_0",
+      "question": "the video with the most dislikes on youtube",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          119,
+          0,
+          0
+        ],
+        [
+          119,
+          0,
+          7
+        ],
+        [
+          119,
+          0,
+          1
+        ],
+        [
+          119,
+          0,
+          6
+        ]
+      ],
+      "answer": "As of December 13, 2021, the video with the most dislikes on YouTube is \"YouTube Rewind 2018: Everyone Controls Rewind\" with 20.25 million dislikes.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Baby"
+    },
+    {
+      "qid": "train_5951536783285475717_0",
+      "question": "when did israel and egypt sign a peace treaty",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          161,
+          0,
+          3
+        ],
+        [
+          170,
+          0,
+          0
+        ],
+        [
+          98,
+          0,
+          1
+        ],
+        [
+          98,
+          0,
+          2
+        ]
+      ],
+      "answer": "I cannot find the information in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 26 March 1979"
+    },
+    {
+      "qid": "train_-7355882026142449148_0",
+      "question": "how many games in la liga season 2017",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          97,
+          0,
+          7
+        ],
+        [
+          97,
+          0,
+          0
+        ],
+        [
+          191,
+          0,
+          0
+        ],
+        [
+          191,
+          0,
+          2
+        ]
+      ],
+      "answer": "I cannot find the number of games in the La Liga 2017 season from the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 380"
+    },
+    {
+      "qid": "train_-7042334625370527103_0",
+      "question": "who won the war in the balkans ww2",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          19,
+          0,
+          0
+        ],
+        [
+          19,
+          0,
+          4
+        ],
+        [
+          19,
+          0,
+          3
+        ],
+        [
+          19,
+          0,
+          1
+        ]
+      ],
+      "answer": "The Axis powers initially won the Balkans campaign in World War II.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Axis victory"
+    },
+    {
+      "qid": "train_3483941750501905946_0",
+      "question": "when does chris find out mimi is a mermaid",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          129,
+          0,
+          2
+        ],
+        [
+          129,
+          0,
+          1
+        ],
+        [
+          129,
+          0,
+          3
+        ],
+        [
+          138,
+          0,
+          4
+        ]
+      ],
+      "answer": "Chris finds out Mimi is a mermaid in \"The Siren\" when she accidentally enchants David and Simon.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Homecoming"
+    },
+    {
+      "qid": "train_7054320799215627613_0",
+      "question": "when was the declaration of independence actually written",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          53,
+          0,
+          0
+        ],
+        [
+          53,
+          0,
+          7
+        ],
+        [
+          53,
+          0,
+          1
+        ],
+        [
+          53,
+          0,
+          3
+        ]
+      ],
+      "answer": "The Declaration of Independence was written in June 1776.",
+      "verdict": "correct",
+      "ground_truth": "Any of: June–July 1776"
+    },
+    {
+      "qid": "train_-9167682050066978664_0",
+      "question": "who owns the quickie mart on the simpsons",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          31,
+          0,
+          0
+        ],
+        [
+          31,
+          0,
+          1
+        ],
+        [
+          31,
+          0,
+          2
+        ],
+        [
+          31,
+          0,
+          3
+        ]
+      ],
+      "answer": "Apu Nahasapeemapetilon.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Apu Nahasapeemapetilon"
+    },
+    {
+      "qid": "train_-6435604861120807829_0",
+      "question": "who wrote you know it don't come easy",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          57,
+          0,
+          0
+        ],
+        [
+          186,
+          0,
+          0
+        ],
+        [
+          57,
+          0,
+          1
+        ],
+        [
+          126,
+          0,
+          4
+        ]
+      ],
+      "answer": "I cannot find it in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Richard Starkey"
+    },
+    {
+      "qid": "train_-7330397327818210687_0",
+      "question": "what is the energy (in mev ) released in the alpha decay of 239 pu",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          58,
+          0,
+          1
+        ],
+        [
+          58,
+          0,
+          0
+        ],
+        [
+          58,
+          0,
+          5
+        ],
+        [
+          58,
+          0,
+          2
+        ]
+      ],
+      "answer": "The energy released in the alpha decay of \\(^{239}\\text{Pu}\\) is 5.157 MeV.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 5.156 MeV"
+    },
+    {
+      "qid": "train_-6745512054475265618_0",
+      "question": "who are the judges on asia got talent",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          79,
+          0,
+          0
+        ],
+        [
+          79,
+          0,
+          4
+        ],
+        [
+          13,
+          0,
+          5
+        ],
+        [
+          25,
+          0,
+          7
+        ]
+      ],
+      "answer": "I cannot find the judges for Asia's Got Talent in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Anggun | David Foster | Melanie C | Vanness Wu | Jay Park"
+    },
+    {
+      "qid": "train_7071384151184051600_0",
+      "question": "what were the dates of the vietnam war",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          152,
+          0,
+          0
+        ],
+        [
+          152,
+          0,
+          1
+        ],
+        [
+          152,
+          0,
+          2
+        ],
+        [
+          152,
+          0,
+          3
+        ]
+      ],
+      "answer": "1 November 1955 – 30 April 1975",
+      "verdict": "correct",
+      "ground_truth": "Any of: November 1955[A 1] – 30 April 1975"
+    },
+    {
+      "qid": "train_5025048886945015951_0",
+      "question": "where did the battle of lake erie take place",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          197,
+          0,
+          0
+        ],
+        [
+          197,
+          0,
+          7
+        ],
+        [
+          197,
+          0,
+          6
+        ],
+        [
+          197,
+          0,
+          2
+        ]
+      ],
+      "answer": "The Battle of Lake Erie took place on Lake Erie, off the shores of Ohio.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Lake Erie, near Put-in-Bay, Ohio"
+    },
+    {
+      "qid": "train_-4632179914989396164_0",
+      "question": "what is the molar mass of magnesium hydroxide",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          49,
+          0,
+          1
+        ],
+        [
+          49,
+          0,
+          0
+        ],
+        [
+          49,
+          0,
+          3
+        ],
+        [
+          49,
+          0,
+          5
+        ]
+      ],
+      "answer": "The molar mass of magnesium hydroxide is 58.3197 g/mol.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 58.3197 g/mol"
+    },
+    {
+      "qid": "train_4528985198477702162_0",
+      "question": "how many bowl games has gus malzahn won at auburn",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          18,
+          0,
+          0
+        ],
+        [
+          18,
+          0,
+          5
+        ],
+        [
+          18,
+          0,
+          4
+        ],
+        [
+          18,
+          0,
+          3
+        ]
+      ],
+      "answer": "Gus Malzahn won two bowl games at Auburn.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 1"
+    },
+    {
+      "qid": "train_-556859623571443406_0",
+      "question": "who is the director of the film avatar",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          140,
+          0,
+          0
+        ],
+        [
+          140,
+          0,
+          1
+        ],
+        [
+          140,
+          0,
+          3
+        ],
+        [
+          140,
+          0,
+          5
+        ]
+      ],
+      "answer": "James Cameron",
+      "verdict": "correct",
+      "ground_truth": "Any of: James Cameron"
+    },
+    {
+      "qid": "train_-3039745806966464536_0",
+      "question": "where is tokyo located on a world map",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          41,
+          0,
+          0
+        ],
+        [
+          41,
+          0,
+          1
+        ],
+        [
+          41,
+          0,
+          7
+        ],
+        [
+          41,
+          0,
+          2
+        ]
+      ],
+      "answer": "Tokyo is located on the eastern coast of Honshu, Japan.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 35°41′N 139°41′E﻿ / ﻿35.683°N 139.683°ECoordinates: 35°41′N 139°41′E﻿ / ﻿35.683°N 139.683°E"
+    },
+    {
+      "qid": "train_-8226280023322249972_0",
+      "question": "who does emma swan marry in once upon a time",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          176,
+          0,
+          0
+        ],
+        [
+          176,
+          0,
+          1
+        ],
+        [
+          176,
+          0,
+          7
+        ],
+        [
+          176,
+          0,
+          2
+        ]
+      ],
+      "answer": "Emma Swan marries Killian Jones.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Killian Jones"
+    },
+    {
+      "qid": "train_7207146533356144547_0",
+      "question": "when did don't smile at me come out",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          91,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          90,
+          0,
+          0
+        ],
+        [
+          186,
+          0,
+          3
+        ]
+      ],
+      "answer": "I cannot find the release date of \"Don't Smile at Me\" in the provided images.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: August 11, 2017"
+    },
+    {
+      "qid": "train_-8587207002552933804_0",
+      "question": "real world cast go big or go home",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          164,
+          0,
+          0
+        ],
+        [
+          164,
+          0,
+          1
+        ],
+        [
+          164,
+          0,
+          7
+        ],
+        [
+          59,
+          0,
+          4
+        ]
+      ],
+      "answer": "\"Real World: Go Big or Go Home\" is the thirty-first season of MTV's reality series \"Real World.\" It was filmed in the Mountain States region of the United States, specifically in Nevada after the previous season in Las Vegas (2011).",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Dean Bart-Plange | Chris Ammon Hall | CeeJai Jenkins | Jenna Thomason | Kailah Casillas | Sabrina Kennedy | Dylan Moore | Dione Mariani"
+    },
+    {
+      "qid": "train_-3794877328839540995_0",
+      "question": "how many times have the carolina hurricanes won the stanley cup",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          208,
+          0,
+          0
+        ],
+        [
+          208,
+          0,
+          5
+        ],
+        [
+          208,
+          0,
+          7
+        ],
+        [
+          208,
+          0,
+          6
+        ]
+      ],
+      "answer": "The Carolina Hurricanes have won the Stanley Cup once.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 1 (2005–06)"
+    },
+    {
+      "qid": "train_-1776891268092889098_0",
+      "question": "who has the most sec championships in basketball",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          160,
+          0,
+          0
+        ],
+        [
+          68,
+          0,
+          5
+        ],
+        [
+          18,
+          0,
+          0
+        ],
+        [
+          68,
+          0,
+          4
+        ]
+      ],
+      "answer": "I cannot find that information in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Kentucky Wildcats"
+    },
+    {
+      "qid": "train_-7498296586917897382_0",
+      "question": "what are the six subcommittees of the house ways and means committee",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          30,
+          0,
+          0
+        ],
+        [
+          30,
+          0,
+          1
+        ],
+        [
+          30,
+          0,
+          3
+        ],
+        [
+          30,
+          0,
+          2
+        ]
+      ],
+      "answer": "The six subcommittees of the House Ways and Means Committee are:\n\n1. Health\n2. Social Security\n3. Worker and Family Support\n4. Trade\n5. Select Revenue Measures\n6. Oversight",
+      "verdict": "correct",
+      "ground_truth": "Any of: Health | Human Resources | Oversight | Tax Policy | Social Security | Trade"
+    },
+    {
+      "qid": "train_-549252769826078040_0",
+      "question": "who did ryan gosling play on mickey mouse",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          91,
+          0,
+          0
+        ],
+        [
+          91,
+          0,
+          1
+        ],
+        [
+          91,
+          0,
+          6
+        ],
+        [
+          91,
+          0,
+          5
+        ]
+      ],
+      "answer": "Ryan Gosling was a cast member on \"The All New Mickey Mouse Club.\"",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Himself"
+    },
+    {
+      "qid": "train_-2033602725380850919_0",
+      "question": "where is vandenberg air force base on a map",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          163,
+          0,
+          0
+        ],
+        [
+          163,
+          0,
+          3
+        ],
+        [
+          163,
+          0,
+          7
+        ],
+        [
+          107,
+          0,
+          3
+        ]
+      ],
+      "answer": "Vandenberg Space Force Base is located in Santa Barbara County, California, United States.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 34°43′57″N 120°34′05″W﻿ / ﻿34.73250°N 120.56806°W"
+    },
+    {
+      "qid": "train_-8594976173581200463_0",
+      "question": "who is the head of navy in nigeria",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          107,
+          0,
+          2
+        ],
+        [
+          107,
+          0,
+          3
+        ],
+        [
+          107,
+          0,
+          6
+        ],
+        [
+          107,
+          0,
+          0
+        ]
+      ],
+      "answer": "The current Chief of the Naval Staff is Vice Admiral Emmanuel Ogalla.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Vice Admiral Ibok-Ete Ekwe Ibas"
+    },
+    {
+      "qid": "train_-8125223799903855191_0",
+      "question": "who sings the song if you leave me now",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          57,
+          0,
+          0
+        ],
+        [
+          57,
+          0,
+          4
+        ],
+        [
+          57,
+          0,
+          3
+        ],
+        [
+          57,
+          0,
+          1
+        ]
+      ],
+      "answer": "The song \"If You Leave Me Now\" is sung by the American rock group Chicago.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Chicago"
+    },
+    {
+      "qid": "train_-5568659561052847453_0",
+      "question": "what is the name of the vaccination for hpv",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          101,
+          0,
+          0
+        ],
+        [
+          101,
+          0,
+          3
+        ],
+        [
+          101,
+          0,
+          1
+        ],
+        [
+          101,
+          0,
+          7
+        ]
+      ],
+      "answer": "The name of the vaccination for HPV is \"HPV vaccine.\"",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Gardasil | Cervarix"
+    },
+    {
+      "qid": "train_-679695353031752849_0",
+      "question": "when was the last james bond movie made",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          40,
+          0,
+          0
+        ],
+        [
+          40,
+          0,
+          1
+        ],
+        [
+          40,
+          0,
+          6
+        ],
+        [
+          40,
+          0,
+          3
+        ]
+      ],
+      "answer": "The last James Bond movie, \"No Time to Die,\" was released in 2021.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 2015"
+    },
+    {
+      "qid": "train_1378078812601044011_0",
+      "question": "where does the last name haynes come from",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          45,
+          0,
+          0
+        ],
+        [
+          45,
+          0,
+          1
+        ],
+        [
+          45,
+          0,
+          5
+        ],
+        [
+          45,
+          0,
+          2
+        ]
+      ],
+      "answer": "The last name Haynes comes from:\n\n1. The Middle English name Hain.\n2. The personal name Hagan.\n3. The Old English word haga ('enclosure', 'hedge').\n4. The Old English word heghen ('the hay meadows').",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: England (Bedfordshire) | Wales | Ireland (variant of Hayes) | Scotland (Highlands)"
+    },
+    {
+      "qid": "train_4305626113977392682_0",
+      "question": "what is the latest version of adobe indesign cc",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          205,
+          0,
+          0
+        ],
+        [
+          205,
+          0,
+          1
+        ],
+        [
+          205,
+          0,
+          4
+        ],
+        [
+          205,
+          0,
+          3
+        ]
+      ],
+      "answer": "I cannot find the latest version of Adobe InDesign CC in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: CC 2018 (13.0.1.207)"
+    },
+    {
+      "qid": "train_-3453851949257614776_0",
+      "question": "when does the new season of american ninja warrior",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          113,
+          0,
+          0
+        ],
+        [
+          113,
+          0,
+          1
+        ],
+        [
+          131,
+          0,
+          0
+        ],
+        [
+          43,
+          0,
+          0
+        ]
+      ],
+      "answer": "I cannot find the information about the new season of \"American Ninja Warrior\" in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: June 12 – September 18, 2017"
+    },
+    {
+      "qid": "train_-8085758219559765560_0",
+      "question": "who is the editor of the daily telegraph",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          150,
+          0,
+          0
+        ],
+        [
+          150,
+          0,
+          4
+        ],
+        [
+          150,
+          0,
+          1
+        ],
+        [
+          150,
+          0,
+          5
+        ]
+      ],
+      "answer": "I cannot find the editor's name in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Chris Evans"
+    },
+    {
+      "qid": "train_9210856662302195700_0",
+      "question": "when did mount vesuvius erupt and destroy pompeii",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          141,
+          0,
+          0
+        ],
+        [
+          141,
+          0,
+          1
+        ],
+        [
+          141,
+          0,
+          7
+        ],
+        [
+          141,
+          0,
+          2
+        ]
+      ],
+      "answer": "Mount Vesuvius erupted and destroyed Pompeii in 79 AD.",
+      "verdict": "correct",
+      "ground_truth": "Any of: August 24–25 (probable), AD 79"
+    },
+    {
+      "qid": "train_-4353754364012275737_0",
+      "question": "what is the meaning of muslim name zeeshan",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          137,
+          0,
+          0
+        ],
+        [
+          137,
+          0,
+          1
+        ],
+        [
+          79,
+          0,
+          3
+        ],
+        [
+          110,
+          0,
+          0
+        ]
+      ],
+      "answer": "The name Zeeshan is an Arabic given name meaning \"possessor of splendor\".",
+      "verdict": "correct",
+      "ground_truth": "Any of: Possessor of Splendor | Moon | Magnificent | Brilliant"
+    },
+    {
+      "qid": "train_-5387096363340560574_0",
+      "question": "who has won the most trophies rangers or celtic",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          125,
+          0,
+          0
+        ],
+        [
+          125,
+          0,
+          1
+        ],
+        [
+          125,
+          0,
+          3
+        ],
+        [
+          208,
+          0,
+          0
+        ]
+      ],
+      "answer": "Celtic has won more trophies than Rangers.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Rangers"
+    },
+    {
+      "qid": "train_-1201640196609447533_0",
+      "question": "who is the starting qb for the georgia bulldogs",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          68,
+          0,
+          0
+        ],
+        [
+          68,
+          0,
+          7
+        ],
+        [
+          68,
+          0,
+          6
+        ],
+        [
+          68,
+          0,
+          2
+        ]
+      ],
+      "answer": "Carson Beck",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Jake Fromm"
+    },
+    {
+      "qid": "train_-1262251090218463284_0",
+      "question": "who wrote love and war by tamar braxton",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          9,
+          0,
+          0
+        ],
+        [
+          9,
+          0,
+          3
+        ],
+        [
+          9,
+          0,
+          2
+        ],
+        [
+          9,
+          0,
+          1
+        ]
+      ],
+      "answer": "The song \"Love and War\" by Tamar Braxton was written by Tamar Braxton, LaShawn Daniels, Makeba Riddick, and Darhyl Camper Jr.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Tamar Braxton | LaShawn Daniels | Makeba Riddick | Darhyl Camper, Jr."
+    },
+    {
+      "qid": "train_7291412641754211631_0",
+      "question": "which members of the royal family live in buckingham palace",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          22,
+          0,
+          1
+        ],
+        [
+          22,
+          0,
+          3
+        ],
+        [
+          22,
+          0,
+          0
+        ],
+        [
+          22,
+          0,
+          2
+        ]
+      ],
+      "answer": "The King and Queen live in Buckingham Palace.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Queen | Duke of Edinburgh | Yorks | Wessexes"
+    },
+    {
+      "qid": "train_-2736205899324470808_0",
+      "question": "how many ml is in a shot of alcohol",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          105,
+          0,
+          4
+        ],
+        [
+          105,
+          0,
+          0
+        ],
+        [
+          105,
+          0,
+          2
+        ],
+        [
+          105,
+          0,
+          1
+        ]
+      ],
+      "answer": "A shot of alcohol is typically 44 ml or 1.5 US fluid ounces.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 37–44 ml"
+    },
+    {
+      "qid": "train_-2170276873365868486_0",
+      "question": "who wrote baby you're a rich man",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          91,
+          0,
+          0
+        ],
+        [
+          57,
+          0,
+          1
+        ],
+        [
+          57,
+          0,
+          5
+        ],
+        [
+          25,
+          0,
+          2
+        ]
+      ],
+      "answer": "I cannot find it in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Lennon–McCartney"
+    },
+    {
+      "qid": "train_3375243583594902574_0",
+      "question": "how many times have the falcons beat the seahawks",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          50,
+          0,
+          7
+        ],
+        [
+          50,
+          0,
+          6
+        ],
+        [
+          50,
+          0,
+          5
+        ],
+        [
+          77,
+          0,
+          3
+        ]
+      ],
+      "answer": "The Falcons beat the Seahawks once in the 2012 playoffs.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 7"
+    },
+    {
+      "qid": "train_-1361539813975645158_0",
+      "question": "who has won the most nfc north division titles",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          178,
+          0,
+          0
+        ],
+        [
+          178,
+          0,
+          1
+        ],
+        [
+          178,
+          0,
+          2
+        ],
+        [
+          178,
+          0,
+          5
+        ]
+      ],
+      "answer": "The Green Bay Packers have won the most NFC North division titles.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Minnesota Vikings"
+    },
+    {
+      "qid": "train_4543782505842307208_0",
+      "question": "who is credited with being the principal architect of the united states capitol",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          202,
+          0,
+          0
+        ],
+        [
+          202,
+          0,
+          6
+        ],
+        [
+          202,
+          0,
+          2
+        ],
+        [
+          202,
+          0,
+          1
+        ]
+      ],
+      "answer": "William Thornton is credited with being the principal architect of the United States Capitol.",
+      "verdict": "correct",
+      "ground_truth": "Any of: William Thornton"
+    },
+    {
+      "qid": "train_-5006046188328688724_0",
+      "question": "ls on a car what does it mean",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          183,
+          0,
+          0
+        ],
+        [
+          187,
+          0,
+          0
+        ],
+        [
+          183,
+          0,
+          1
+        ],
+        [
+          90,
+          0,
+          0
+        ]
+      ],
+      "answer": "The screenshots do not provide information on what \"LS\" means on a car.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: luxury sport | luxury special | luxury standard | luxury sedan | luxury saloon"
+    },
+    {
+      "qid": "train_4805456718444062621_0",
+      "question": "when was the golden nugget in atlantic city built",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          15,
+          0,
+          0
+        ],
+        [
+          15,
+          0,
+          4
+        ],
+        [
+          15,
+          0,
+          3
+        ],
+        [
+          15,
+          0,
+          2
+        ]
+      ],
+      "answer": "The Golden Nugget in Atlantic City was opened in 1985.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 1985"
+    },
+    {
+      "qid": "train_5869718724083541782_0",
+      "question": "how many seasons of man vs food are there",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          133,
+          0,
+          5
+        ],
+        [
+          133,
+          0,
+          0
+        ],
+        [
+          133,
+          0,
+          3
+        ],
+        [
+          133,
+          0,
+          4
+        ]
+      ],
+      "answer": "There are ten seasons of \"Man v. Food.\"",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: 6"
+    },
+    {
+      "qid": "train_3624594640673614200_0",
+      "question": "where is the church of smyrna located today",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          85,
+          0,
+          0
+        ],
+        [
+          85,
+          0,
+          4
+        ],
+        [
+          85,
+          0,
+          3
+        ],
+        [
+          85,
+          0,
+          5
+        ]
+      ],
+      "answer": "The Church of Smyrna is located in modern-day İzmir, Turkey.",
+      "verdict": "correct",
+      "ground_truth": "Any of: İzmir, İzmir Province, Turkey"
+    },
+    {
+      "qid": "train_7965161300531640273_0",
+      "question": "who played the son in steptoe and son",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          143,
+          0,
+          0
+        ],
+        [
+          143,
+          0,
+          7
+        ],
+        [
+          143,
+          0,
+          2
+        ],
+        [
+          143,
+          0,
+          1
+        ]
+      ],
+      "answer": "The son in \"Steptoe and Son\" was played by Harry H. Corbett.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Wilfrid Brambell"
+    },
+    {
+      "qid": "train_8844826707488134564_0",
+      "question": "when was the last time a cat 5 hit the us",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          104,
+          0,
+          0
+        ],
+        [
+          104,
+          0,
+          1
+        ],
+        [
+          104,
+          0,
+          6
+        ],
+        [
+          104,
+          0,
+          2
+        ]
+      ],
+      "answer": "The last Category 5 hurricane to hit the US was Hurricane Michael in 2018.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: September 18–20, 2017"
+    },
+    {
+      "qid": "train_-1031802681153121790_0",
+      "question": "when did dick clark's new year's eve start",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          27,
+          0,
+          0
+        ],
+        [
+          78,
+          0,
+          1
+        ],
+        [
+          126,
+          0,
+          0
+        ],
+        [
+          126,
+          0,
+          2
+        ]
+      ],
+      "answer": "Dick Clark's New Year's Eve started in 1972.",
+      "verdict": "correct",
+      "ground_truth": "Any of: December 31, 1972"
+    },
+    {
+      "qid": "train_-8713000851671558123_0",
+      "question": "where did the iran iraq war take place",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          110,
+          0,
+          0
+        ],
+        [
+          14,
+          0,
+          7
+        ],
+        [
+          169,
+          0,
+          2
+        ],
+        [
+          189,
+          0,
+          0
+        ]
+      ],
+      "answer": "I cannot find the information in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Iran | Iraq | Persian Gulf"
+    },
+    {
+      "qid": "train_5293113747515435835_0",
+      "question": "who starred in the secret life of bees",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          147,
+          0,
+          0
+        ],
+        [
+          147,
+          0,
+          2
+        ],
+        [
+          147,
+          0,
+          4
+        ],
+        [
+          147,
+          0,
+          3
+        ]
+      ],
+      "answer": "The film starred Queen Latifah, Dakota Fanning, Jennifer Hudson, Alicia Keys, Sophie Okonedo, and Paul Bettany.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Dakota Fanning | Jennifer Hudson | Queen Latifah | Alicia Keys | Hilarie Burton | Sophie Okonedo | Paul Bettany"
+    },
+    {
+      "qid": "train_-7338590596335280536_0",
+      "question": "when does dancing with the stars season 26 air",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          103,
+          0,
+          5
+        ],
+        [
+          4,
+          0,
+          6
+        ],
+        [
+          4,
+          0,
+          2
+        ]
+      ],
+      "answer": "April 30, 2018",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: April 30 – May 21, 2018"
+    },
+    {
+      "qid": "train_-4070702289377511826_0",
+      "question": "who has the largest prison system in the world",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          38,
+          0,
+          0
+        ],
+        [
+          11,
+          0,
+          0
+        ],
+        [
+          11,
+          0,
+          2
+        ],
+        [
+          132,
+          0,
+          0
+        ]
+      ],
+      "answer": "The United States has the largest prison system in the world.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Seychelles"
+    },
+    {
+      "qid": "train_3041611340375882333_0",
+      "question": "who plays treasure in how i met your mother",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          65,
+          0,
+          0
+        ],
+        [
+          65,
+          0,
+          1
+        ],
+        [
+          116,
+          0,
+          2
+        ],
+        [
+          116,
+          0,
+          1
+        ]
+      ],
+      "answer": "I cannot find it in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Erin Cardillo"
+    },
+    {
+      "qid": "train_4234958791308278418_0",
+      "question": "rank of india on the basis of gdp",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          135,
+          0,
+          0
+        ],
+        [
+          135,
+          0,
+          1
+        ],
+        [
+          159,
+          0,
+          0
+        ],
+        [
+          135,
+          0,
+          2
+        ]
+      ],
+      "answer": "India ranks 3rd by GDP (PPP).",
+      "verdict": "correct",
+      "ground_truth": "Any of: 3"
+    },
+    {
+      "qid": "train_-472300131230888754_0",
+      "question": "who wrote don't follow by alice in chains",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          32,
+          0,
+          7
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          32,
+          0,
+          2
+        ],
+        [
+          8,
+          0,
+          0
+        ]
+      ],
+      "answer": "I cannot find the information in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Jerry Cantrell"
+    },
+    {
+      "qid": "train_6199305145750841239_0",
+      "question": "who is the first runner up of rising star season 2",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          79,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          79,
+          0,
+          4
+        ],
+        [
+          103,
+          0,
+          0
+        ]
+      ],
+      "answer": "The first runner-up of Rising Star Season 2 is Vishnumaya Ramesh.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Rohanpreet Singh"
+    },
+    {
+      "qid": "train_4559014979139188110_0",
+      "question": "what directv channel is hallmark movies and mysteries",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          131,
+          0,
+          0
+        ],
+        [
+          66,
+          0,
+          2
+        ],
+        [
+          164,
+          0,
+          0
+        ],
+        [
+          35,
+          0,
+          0
+        ]
+      ],
+      "answer": "I can't find that information in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: 565"
+    },
+    {
+      "qid": "train_3033664970011188335_0",
+      "question": "how many seasons are there for sons of anarchy",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          131,
+          0,
+          0
+        ],
+        [
+          131,
+          0,
+          1
+        ],
+        [
+          131,
+          0,
+          4
+        ],
+        [
+          131,
+          0,
+          3
+        ]
+      ],
+      "answer": "Seven seasons.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 7"
+    },
+    {
+      "qid": "train_3720413883454168856_0",
+      "question": "which element is named for the greek word for green",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          199,
+          0,
+          4
+        ],
+        [
+          199,
+          0,
+          2
+        ],
+        [
+          199,
+          0,
+          7
+        ],
+        [
+          199,
+          0,
+          3
+        ]
+      ],
+      "answer": "Chlorine (Cl)",
+      "verdict": "correct",
+      "ground_truth": "Any of: Chlorine"
+    },
+    {
+      "qid": "train_1896169098323658928_0",
+      "question": "who did the theme song for danny phantom",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          55,
+          0,
+          0
+        ],
+        [
+          55,
+          0,
+          2
+        ],
+        [
+          55,
+          0,
+          4
+        ],
+        [
+          55,
+          0,
+          6
+        ]
+      ],
+      "answer": "I cannot find the information about who did the theme song for \"Danny Phantom\" in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Deric Battiste | Guy Moon"
+    },
+    {
+      "qid": "train_-2064680820854729713_0",
+      "question": "who did the song will you still love me tomorrow",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          94,
+          0,
+          5
+        ],
+        [
+          94,
+          0,
+          0
+        ],
+        [
+          94,
+          0,
+          4
+        ],
+        [
+          94,
+          0,
+          2
+        ]
+      ],
+      "answer": "\"Will You Love Me Tomorrow\" was written by Gerry Goffin and Carole King.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: The Shirelles"
+    },
+    {
+      "qid": "train_-1765949108278455540_0",
+      "question": "how many episodes are in part 4 of the ranch",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          92,
+          0,
+          4
+        ],
+        [
+          92,
+          0,
+          3
+        ],
+        [
+          92,
+          0,
+          0
+        ],
+        [
+          92,
+          0,
+          5
+        ]
+      ],
+      "answer": "Part 4 of \"The Ranch\" has 10 episodes.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 10"
+    },
+    {
+      "qid": "train_-503860436131797100_0",
+      "question": "when was the first two dollar bill issued",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          109,
+          0,
+          0
+        ],
+        [
+          109,
+          0,
+          1
+        ],
+        [
+          109,
+          0,
+          4
+        ],
+        [
+          109,
+          0,
+          3
+        ]
+      ],
+      "answer": "The first two-dollar bill was issued in March 1862.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 1862"
+    },
+    {
+      "qid": "train_-3489670529532500707_0",
+      "question": "when did the 20 dollar bill come out",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          109,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          109,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          7
+        ]
+      ],
+      "answer": "The twenty-dollar bill was first issued in 1861.",
+      "verdict": "correct",
+      "ground_truth": "Any of: 1861"
+    },
+    {
+      "qid": "train_-9046217087010288633_0",
+      "question": "who won the nickelodeon kids' choice award for favorite band in 2001",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          7,
+          0,
+          6
+        ],
+        [
+          91,
+          0,
+          0
+        ],
+        [
+          166,
+          0,
+          1
+        ],
+        [
+          55,
+          0,
+          5
+        ]
+      ],
+      "answer": "I cannot find it in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Destiny's Child"
+    },
+    {
+      "qid": "train_-3308470507109161581_0",
+      "question": "who plays in the new pirates of the caribbean movie",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          115,
+          0,
+          0
+        ],
+        [
+          115,
+          0,
+          2
+        ],
+        [
+          115,
+          0,
+          5
+        ],
+        [
+          115,
+          0,
+          3
+        ]
+      ],
+      "answer": "The new \"Pirates of the Caribbean\" movie features Johnny Depp, Javier Bardem, Geoffrey Rush, Brenton Thwaites, Kaya Scodelario, and Kevin McNally.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Johnny Depp | Javier Bardem | Brenton Thwaites | Kaya Scodelario | Kevin McNally | Geoffrey Rush"
+    },
+    {
+      "qid": "train_4661148496001254991_0",
+      "question": "what linux distribution is considered a cutting-edge distribution",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          46,
+          0,
+          4
+        ],
+        [
+          46,
+          0,
+          6
+        ],
+        [
+          46,
+          0,
+          0
+        ],
+        [
+          46,
+          0,
+          3
+        ]
+      ],
+      "answer": "KDE neon is considered a cutting-edge distribution.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Fedora"
+    },
+    {
+      "qid": "train_-6634850103100431616_0",
+      "question": "who played the dresser in beauty and the beast",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          91,
+          0,
+          0
+        ],
+        [
+          76,
+          0,
+          0
+        ],
+        [
+          76,
+          0,
+          1
+        ],
+        [
+          147,
+          0,
+          2
+        ]
+      ],
+      "answer": "I cannot find that information in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Audra McDonald | Jo Anne Worley"
+    },
+    {
+      "qid": "train_2688350960131617345_0",
+      "question": "according to census 2000 which state has the largest number of households",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          168,
+          0,
+          0
+        ],
+        [
+          168,
+          0,
+          1
+        ],
+        [
+          168,
+          0,
+          7
+        ],
+        [
+          173,
+          0,
+          4
+        ]
+      ],
+      "answer": "California",
+      "verdict": "correct",
+      "ground_truth": "Any of: California"
+    },
+    {
+      "qid": "train_7533414793808068658_0",
+      "question": "what is the name of the personal mailbox assistant in office 2016",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          86,
+          0,
+          0
+        ],
+        [
+          86,
+          0,
+          2
+        ],
+        [
+          86,
+          0,
+          7
+        ],
+        [
+          86,
+          0,
+          4
+        ]
+      ],
+      "answer": "The name of the personal mailbox assistant in Office 2016 is \"Clutter.\"",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Outlook"
+    }
+  ]
+}
