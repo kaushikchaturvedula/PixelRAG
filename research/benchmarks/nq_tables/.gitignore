@@ -1,0 +1,5 @@
+# Re-downloadable NQ-Tables dev split + the heavy render/embed/index build — regenerate, don't commit.
+# Keep only the reproducible selection: urls.txt, gold.jsonl, manifest.json, pixelrag*.yaml.
+cache/
+output/
+output_ca/
