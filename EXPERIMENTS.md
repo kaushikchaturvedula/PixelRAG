@@ -141,6 +141,15 @@ only one arm receiving expansion.
 | content_aware | flat | 0.56 | 4.00 |
 | content_aware | hier-expand | **0.68** | 7.84 |
 
+> **⚠️ Caveat — this +0.24 headline is IMAGE-QUERY-SPECIFIC.** It does **not** survive a
+> text-query modality flip on the *same* corpus and content_aware tiles (disambiguation experiment,
+> `research/CHUNKING_ANALYSIS.md`). With text queries the content_aware advantage is **-0.08 flat / +0.00 hier**
+> (vs **+0.12 flat / +0.28 hier** with image queries). Mechanism: under image queries
+> retrieval is saturated (the gold page reaches the reader ~96–100% either way), so content_aware's gain
+> is a **reader-side** effect of finer tiles; under text queries content_aware's finer tiles **reduce**
+> gold-page retrieval **68%→56%**, and the advantage vanishes. So content-aware chunking
+> does **not** improve QA on its own — the gain here is contingent on image-query retrieval.
+
 ### Decomposition
 - **Chunking** (fixed-flat → content_aware-flat): 0.44 → 0.56 (**+0.12**) — better boundaries help even with no expansion.
 - **Expansion** (content_aware-flat → content_aware-hier): 0.56 → 0.68 (**+0.12**) — adding section + reading-order context to the same retrieved tiles.
