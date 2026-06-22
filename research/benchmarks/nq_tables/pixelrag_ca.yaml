@@ -10,4 +10,5 @@ chunk:
 embed:
   model: Qwen/Qwen3-VL-Embedding-2B
   device: cuda
+  backend: direct_gpu
 output: /Users/user-home/Downloads/projects/PixelRAG/research/benchmarks/nq_tables/output_ca
