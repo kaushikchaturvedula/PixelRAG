@@ -325,6 +325,20 @@ def main() -> None:
         def _rels(hits: list[dict], gold_url: str) -> list[int]:
             return [1 if (gold_url and gold_url in (h.get("url") or "")) else 0 for h in hits]
 
+        # flat top-k hit coords, so qa_eval (reader → grade) runs from this JSON without re-retrieving.
+        # Retrieval metrics stay flat-top-k (arm-invariant); hier-expand only changes the reader's input.
+        def _coords(hits: list[dict], k: int) -> list[dict]:
+            return [
+                {
+                    "article_id": h.get("article_id"),
+                    "tile_index": h.get("tile_index"),
+                    "chunk_index": h.get("chunk_index"),
+                    "score": round(float(h.get("score", 0.0)), 6),
+                    "url": h.get("url"),
+                }
+                for h in hits[:k]
+            ]
+
         # --- per-query retrieval: IMAGE query (primary) + TEXT query (secondary floor) ---
         img_lat: list[float] = []
         txt_lat: list[float] = []
@@ -362,6 +376,9 @@ def main() -> None:
                 "rels_text": t_rels,
                 "top_urls_image": [h.get("url") for h in i_hits[:max_k]],
                 "top_urls_text": [h.get("url") for h in t_hits[:max_k]],
+                # flat top-k hit coords for QA (qa_eval reads these; image None when no image query)
+                "hits_image": _coords(i_hits, max_k) if has_image else None,
+                "hits_text": _coords(t_hits, max_k),
             })
 
         # --- aggregate retrieval metrics per modality (same gt_url hit-test for both) ---
