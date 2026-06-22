@@ -5,7 +5,7 @@
   "region_source": null,
   "paired_vs_baseline": null,
   "provenance": {
-    "git_commit": "46bf410260066c52240db177e66d92a361f935d8",
+    "git_commit": "8ca7a8eaaf1fe2dcb4873ed3528a76696ad1505d",
     "seed": 42,
     "model": "Qwen/Qwen3-VL-Embedding-2B",
     "device": "cuda",
@@ -19,7 +19,7 @@
     "n_queries": 25,
     "n_corpus_pages": 40,
     "index_dir": "/kaggle/working/pixelrag/research/mini_corpus/output",
-    "timestamp_utc": "2026-06-21T20:33:42.953048+00:00"
+    "timestamp_utc": "2026-06-22T00:48:53.122853+00:00"
   },
   "retrieval": {
     "primary": "image",
@@ -100,15 +100,15 @@
     },
     "retrieval_latency": {
       "image": {
-        "mean_ms": 6171.2,
-        "median_ms": 6108.8,
-        "p95_ms": 6794.1,
+        "mean_ms": 6228.3,
+        "median_ms": 6115.6,
+        "p95_ms": 8393.2,
         "n": 25
       },
       "text": {
-        "mean_ms": 141.4,
-        "median_ms": 121.0,
-        "p95_ms": 126.1,
+        "mean_ms": 160.0,
+        "median_ms": 115.6,
+        "p95_ms": 120.9,
         "n": 25
       }
     }
@@ -168,6 +168,150 @@
         "https://en.wikipedia.org/wiki/Jerusalem_artichoke",
         "https://en.wikipedia.org/wiki/Gloriosa_superba",
         "https://en.wikipedia.org/wiki/Humulus_lupulus"
+      ],
+      "hits_image": [
+        {
+          "article_id": 16,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.436433,
+          "url": "https://en.wikipedia.org/wiki/Symphyotrichum_laeve"
+        },
+        {
+          "article_id": 34,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.432425,
+          "url": "https://en.wikipedia.org/wiki/Jerusalem_artichoke"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.419165,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.385988,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.383967,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 24,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.381007,
+          "url": "https://en.wikipedia.org/wiki/Parentucellia_viscosa"
+        },
+        {
+          "article_id": 8,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.371594,
+          "url": "https://en.wikipedia.org/wiki/Houstonia_caerulea"
+        },
+        {
+          "article_id": 27,
+          "tile_index": 0,
+          "chunk_index": 6,
+          "score": 0.366166,
+          "url": "https://en.wikipedia.org/wiki/Iris_lacustris"
+        },
+        {
+          "article_id": 12,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.363646,
+          "url": "https://en.wikipedia.org/wiki/Cardoon"
+        },
+        {
+          "article_id": 16,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.362916,
+          "url": "https://en.wikipedia.org/wiki/Symphyotrichum_laeve"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 34,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.491258,
+          "url": "https://en.wikipedia.org/wiki/Jerusalem_artichoke"
+        },
+        {
+          "article_id": 34,
+          "tile_index": 0,
+          "chunk_index": 4,
+          "score": 0.448865,
+          "url": "https://en.wikipedia.org/wiki/Jerusalem_artichoke"
+        },
+        {
+          "article_id": 34,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.419364,
+          "url": "https://en.wikipedia.org/wiki/Jerusalem_artichoke"
+        },
+        {
+          "article_id": 34,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.417598,
+          "url": "https://en.wikipedia.org/wiki/Jerusalem_artichoke"
+        },
+        {
+          "article_id": 0,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.396346,
+          "url": "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.373148,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.37303,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 34,
+          "tile_index": 1,
+          "chunk_index": 3,
+          "score": 0.363482,
+          "url": "https://en.wikipedia.org/wiki/Jerusalem_artichoke"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.358753,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.345134,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        }
       ]
     },
     {
@@ -224,6 +368,150 @@
         "https://en.wikipedia.org/wiki/Jerusalem_artichoke",
         "https://en.wikipedia.org/wiki/Jerusalem_artichoke",
         "https://en.wikipedia.org/wiki/Ipomoea_indica"
+      ],
+      "hits_image": [
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.65459,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 7,
+          "score": 0.570676,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 4,
+          "score": 0.554563,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.532696,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.514668,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 1,
+          "chunk_index": 0,
+          "score": 0.507738,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.447766,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 5,
+          "score": 0.440048,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 6,
+          "score": 0.424389,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 14,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.362848,
+          "url": "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.375002,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 1,
+          "chunk_index": 2,
+          "score": 0.37426,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.370672,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.368809,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 34,
+          "tile_index": 1,
+          "chunk_index": 1,
+          "score": 0.367216,
+          "url": "https://en.wikipedia.org/wiki/Jerusalem_artichoke"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 5,
+          "score": 0.365539,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 12,
+          "tile_index": 0,
+          "chunk_index": 6,
+          "score": 0.363975,
+          "url": "https://en.wikipedia.org/wiki/Cardoon"
+        },
+        {
+          "article_id": 34,
+          "tile_index": 1,
+          "chunk_index": 0,
+          "score": 0.353407,
+          "url": "https://en.wikipedia.org/wiki/Jerusalem_artichoke"
+        },
+        {
+          "article_id": 34,
+          "tile_index": 0,
+          "chunk_index": 7,
+          "score": 0.351761,
+          "url": "https://en.wikipedia.org/wiki/Jerusalem_artichoke"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.347609,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        }
       ]
     },
     {
@@ -280,6 +568,150 @@
         "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta",
         "https://en.wikipedia.org/wiki/Cardoon",
         "https://en.wikipedia.org/wiki/Ilex_mucronata"
+      ],
+      "hits_image": [
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.51193,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 24,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.500198,
+          "url": "https://en.wikipedia.org/wiki/Parentucellia_viscosa"
+        },
+        {
+          "article_id": 29,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.492395,
+          "url": "https://en.wikipedia.org/wiki/Tussilago"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.480935,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.468819,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.456292,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.449743,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 12,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.431423,
+          "url": "https://en.wikipedia.org/wiki/Cardoon"
+        },
+        {
+          "article_id": 22,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.414297,
+          "url": "https://en.wikipedia.org/wiki/Tiarella_cordifolia"
+        },
+        {
+          "article_id": 16,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.413999,
+          "url": "https://en.wikipedia.org/wiki/Symphyotrichum_laeve"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.489418,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.484201,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 0,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.480893,
+          "url": "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.476644,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 22,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.474935,
+          "url": "https://en.wikipedia.org/wiki/Tiarella_cordifolia"
+        },
+        {
+          "article_id": 23,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.452067,
+          "url": "https://en.wikipedia.org/wiki/Spiranthes_cernua"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.446138,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.444156,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 12,
+          "tile_index": 0,
+          "chunk_index": 6,
+          "score": 0.441719,
+          "url": "https://en.wikipedia.org/wiki/Cardoon"
+        },
+        {
+          "article_id": 25,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.440756,
+          "url": "https://en.wikipedia.org/wiki/Ilex_mucronata"
+        }
       ]
     },
     {
@@ -336,6 +768,150 @@
         "https://en.wikipedia.org/wiki/Ipomoea_indica",
         "https://en.wikipedia.org/wiki/Humulus_lupulus",
         "https://en.wikipedia.org/wiki/Iris_lacustris"
+      ],
+      "hits_image": [
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.559872,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.458314,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.456692,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.455508,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 14,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.449698,
+          "url": "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+        },
+        {
+          "article_id": 8,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.446289,
+          "url": "https://en.wikipedia.org/wiki/Houstonia_caerulea"
+        },
+        {
+          "article_id": 25,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.436734,
+          "url": "https://en.wikipedia.org/wiki/Ilex_mucronata"
+        },
+        {
+          "article_id": 22,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.419303,
+          "url": "https://en.wikipedia.org/wiki/Tiarella_cordifolia"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.416205,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 27,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.41425,
+          "url": "https://en.wikipedia.org/wiki/Iris_lacustris"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.439767,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.437936,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.423408,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.409604,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 25,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.404778,
+          "url": "https://en.wikipedia.org/wiki/Ilex_mucronata"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.390821,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.390629,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.388504,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.386168,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 27,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.380278,
+          "url": "https://en.wikipedia.org/wiki/Iris_lacustris"
+        }
       ]
     },
     {
@@ -392,6 +968,150 @@
         "https://en.wikipedia.org/wiki/Gloriosa_superba",
         "https://en.wikipedia.org/wiki/Cardoon",
         "https://en.wikipedia.org/wiki/Protea_cynaroides"
+      ],
+      "hits_image": [
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.623747,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.463006,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 4,
+          "score": 0.440821,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.426049,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.409497,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.404292,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.398267,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 18,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.383463,
+          "url": "https://en.wikipedia.org/wiki/Malva_assurgentiflora"
+        },
+        {
+          "article_id": 1,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.382577,
+          "url": "https://en.wikipedia.org/wiki/Protea_cynaroides"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.376369,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.431914,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.422149,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.400802,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.398588,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 18,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.384694,
+          "url": "https://en.wikipedia.org/wiki/Malva_assurgentiflora"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.38393,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.383464,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.382194,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 12,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.379783,
+          "url": "https://en.wikipedia.org/wiki/Cardoon"
+        },
+        {
+          "article_id": 1,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.369291,
+          "url": "https://en.wikipedia.org/wiki/Protea_cynaroides"
+        }
       ]
     },
     {
@@ -448,6 +1168,150 @@
         "https://en.wikipedia.org/wiki/Protea_cynaroides",
         "https://en.wikipedia.org/wiki/Gloriosa_superba",
         "https://en.wikipedia.org/wiki/Malva_assurgentiflora"
+      ],
+      "hits_image": [
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.550103,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.483531,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.460561,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 24,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.456476,
+          "url": "https://en.wikipedia.org/wiki/Parentucellia_viscosa"
+        },
+        {
+          "article_id": 29,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.454195,
+          "url": "https://en.wikipedia.org/wiki/Tussilago"
+        },
+        {
+          "article_id": 12,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.452881,
+          "url": "https://en.wikipedia.org/wiki/Cardoon"
+        },
+        {
+          "article_id": 25,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.449799,
+          "url": "https://en.wikipedia.org/wiki/Ilex_mucronata"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.444489,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 16,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.440057,
+          "url": "https://en.wikipedia.org/wiki/Symphyotrichum_laeve"
+        },
+        {
+          "article_id": 8,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.429098,
+          "url": "https://en.wikipedia.org/wiki/Houstonia_caerulea"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.373867,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.368082,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 1,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.36122,
+          "url": "https://en.wikipedia.org/wiki/Protea_cynaroides"
+        },
+        {
+          "article_id": 0,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.358815,
+          "url": "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.358356,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.348273,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.346957,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 1,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.344817,
+          "url": "https://en.wikipedia.org/wiki/Protea_cynaroides"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.340564,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 18,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.33841,
+          "url": "https://en.wikipedia.org/wiki/Malva_assurgentiflora"
+        }
       ]
     },
     {
@@ -504,6 +1368,150 @@
         "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird",
         "https://en.wikipedia.org/wiki/Chlosyne_lacinia",
         "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+      ],
+      "hits_image": [
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.466304,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.435796,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        },
+        {
+          "article_id": 39,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.431842,
+          "url": "https://en.wikipedia.org/wiki/Sedge_warbler"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.429965,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.425931,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.41934,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.394749,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.386339,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.383188,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 1,
+          "chunk_index": 0,
+          "score": 0.380907,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.518378,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.496103,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.411618,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.404767,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.402416,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.399316,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.364122,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.362066,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.359236,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.356695,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        }
       ]
     },
     {
@@ -560,6 +1568,150 @@
         "https://en.wikipedia.org/wiki/Tussilago",
         "https://en.wikipedia.org/wiki/Cardoon",
         "https://en.wikipedia.org/wiki/Humulus_lupulus"
+      ],
+      "hits_image": [
+        {
+          "article_id": 23,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.548841,
+          "url": "https://en.wikipedia.org/wiki/Spiranthes_cernua"
+        },
+        {
+          "article_id": 22,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.437994,
+          "url": "https://en.wikipedia.org/wiki/Tiarella_cordifolia"
+        },
+        {
+          "article_id": 23,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.431444,
+          "url": "https://en.wikipedia.org/wiki/Spiranthes_cernua"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.426132,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 27,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.42156,
+          "url": "https://en.wikipedia.org/wiki/Iris_lacustris"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.417039,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 23,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.414006,
+          "url": "https://en.wikipedia.org/wiki/Spiranthes_cernua"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.401844,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 22,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.395256,
+          "url": "https://en.wikipedia.org/wiki/Tiarella_cordifolia"
+        },
+        {
+          "article_id": 23,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.393387,
+          "url": "https://en.wikipedia.org/wiki/Spiranthes_cernua"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.510768,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.462514,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.449552,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.38281,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.373581,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.355891,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 24,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.355317,
+          "url": "https://en.wikipedia.org/wiki/Parentucellia_viscosa"
+        },
+        {
+          "article_id": 29,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.354498,
+          "url": "https://en.wikipedia.org/wiki/Tussilago"
+        },
+        {
+          "article_id": 12,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.351081,
+          "url": "https://en.wikipedia.org/wiki/Cardoon"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.350235,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        }
       ]
     },
     {
@@ -616,6 +1768,150 @@
         "https://en.wikipedia.org/wiki/Chestnut_teal",
         "https://en.wikipedia.org/wiki/Black_oystercatcher",
         "https://en.wikipedia.org/wiki/Chestnut_teal"
+      ],
+      "hits_image": [
+        {
+          "article_id": 39,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.539569,
+          "url": "https://en.wikipedia.org/wiki/Sedge_warbler"
+        },
+        {
+          "article_id": 39,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.475582,
+          "url": "https://en.wikipedia.org/wiki/Sedge_warbler"
+        },
+        {
+          "article_id": 39,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.425606,
+          "url": "https://en.wikipedia.org/wiki/Sedge_warbler"
+        },
+        {
+          "article_id": 39,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.422131,
+          "url": "https://en.wikipedia.org/wiki/Sedge_warbler"
+        },
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.376353,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.368314,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 39,
+          "tile_index": 0,
+          "chunk_index": 4,
+          "score": 0.367857,
+          "url": "https://en.wikipedia.org/wiki/Sedge_warbler"
+        },
+        {
+          "article_id": 39,
+          "tile_index": 0,
+          "chunk_index": 5,
+          "score": 0.358817,
+          "url": "https://en.wikipedia.org/wiki/Sedge_warbler"
+        },
+        {
+          "article_id": 10,
+          "tile_index": 1,
+          "chunk_index": 2,
+          "score": 0.351849,
+          "url": "https://en.wikipedia.org/wiki/European_herring_gull"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.341344,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 39,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.453143,
+          "url": "https://en.wikipedia.org/wiki/Sedge_warbler"
+        },
+        {
+          "article_id": 26,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.432017,
+          "url": "https://en.wikipedia.org/wiki/Dusky_moorhen"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.417879,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.41571,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.411246,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.409349,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.409319,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        },
+        {
+          "article_id": 7,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.408615,
+          "url": "https://en.wikipedia.org/wiki/Chestnut_teal"
+        },
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.400978,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        },
+        {
+          "article_id": 7,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.39658,
+          "url": "https://en.wikipedia.org/wiki/Chestnut_teal"
+        }
       ]
     },
     {
@@ -672,6 +1968,150 @@
         "https://en.wikipedia.org/wiki/Tiarella_cordifolia",
         "https://en.wikipedia.org/wiki/Ipomoea_indica",
         "https://en.wikipedia.org/wiki/Ipomoea_indica"
+      ],
+      "hits_image": [
+        {
+          "article_id": 21,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.483531,
+          "url": "https://en.wikipedia.org/wiki/Pteris_tremula"
+        },
+        {
+          "article_id": 15,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.447327,
+          "url": "https://en.wikipedia.org/wiki/Plagiomnium_insigne"
+        },
+        {
+          "article_id": 21,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.435541,
+          "url": "https://en.wikipedia.org/wiki/Pteris_tremula"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.424963,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 22,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.420917,
+          "url": "https://en.wikipedia.org/wiki/Tiarella_cordifolia"
+        },
+        {
+          "article_id": 27,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.415396,
+          "url": "https://en.wikipedia.org/wiki/Iris_lacustris"
+        },
+        {
+          "article_id": 25,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.410197,
+          "url": "https://en.wikipedia.org/wiki/Ilex_mucronata"
+        },
+        {
+          "article_id": 14,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.398547,
+          "url": "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.388144,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 23,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.387736,
+          "url": "https://en.wikipedia.org/wiki/Spiranthes_cernua"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 21,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.507587,
+          "url": "https://en.wikipedia.org/wiki/Pteris_tremula"
+        },
+        {
+          "article_id": 21,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.441884,
+          "url": "https://en.wikipedia.org/wiki/Pteris_tremula"
+        },
+        {
+          "article_id": 21,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.408743,
+          "url": "https://en.wikipedia.org/wiki/Pteris_tremula"
+        },
+        {
+          "article_id": 15,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.379222,
+          "url": "https://en.wikipedia.org/wiki/Plagiomnium_insigne"
+        },
+        {
+          "article_id": 27,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.377732,
+          "url": "https://en.wikipedia.org/wiki/Iris_lacustris"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.377541,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.356732,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 22,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.353271,
+          "url": "https://en.wikipedia.org/wiki/Tiarella_cordifolia"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.351396,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.338792,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        }
       ]
     },
     {
@@ -728,6 +2168,150 @@
         "https://en.wikipedia.org/wiki/Antigonon_leptopus",
         "https://en.wikipedia.org/wiki/Cardoon",
         "https://en.wikipedia.org/wiki/Tussilago"
+      ],
+      "hits_image": [
+        {
+          "article_id": 14,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.617551,
+          "url": "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+        },
+        {
+          "article_id": 14,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.523183,
+          "url": "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+        },
+        {
+          "article_id": 0,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.505594,
+          "url": "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+        },
+        {
+          "article_id": 14,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.502411,
+          "url": "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.496872,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.488179,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.485691,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.476733,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.462636,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.454195,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.407226,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 34,
+          "tile_index": 0,
+          "chunk_index": 4,
+          "score": 0.365015,
+          "url": "https://en.wikipedia.org/wiki/Jerusalem_artichoke"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.356886,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.355124,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.35046,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 29,
+          "tile_index": 0,
+          "chunk_index": 4,
+          "score": 0.349083,
+          "url": "https://en.wikipedia.org/wiki/Tussilago"
+        },
+        {
+          "article_id": 29,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.344746,
+          "url": "https://en.wikipedia.org/wiki/Tussilago"
+        },
+        {
+          "article_id": 0,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.339072,
+          "url": "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+        },
+        {
+          "article_id": 12,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.33713,
+          "url": "https://en.wikipedia.org/wiki/Cardoon"
+        },
+        {
+          "article_id": 29,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.335257,
+          "url": "https://en.wikipedia.org/wiki/Tussilago"
+        }
       ]
     },
     {
@@ -784,6 +2368,150 @@
         "https://en.wikipedia.org/wiki/Antigonon_leptopus",
         "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum",
         "https://en.wikipedia.org/wiki/Plagiomnium_insigne"
+      ],
+      "hits_image": [
+        {
+          "article_id": 25,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.545077,
+          "url": "https://en.wikipedia.org/wiki/Ilex_mucronata"
+        },
+        {
+          "article_id": 14,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.517005,
+          "url": "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.472257,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.435499,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.427004,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 14,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.424079,
+          "url": "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+        },
+        {
+          "article_id": 31,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.40824,
+          "url": "https://en.wikipedia.org/wiki/Arctostaphylos_patula"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.403817,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.398108,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 27,
+          "tile_index": 0,
+          "chunk_index": 6,
+          "score": 0.389392,
+          "url": "https://en.wikipedia.org/wiki/Iris_lacustris"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.345207,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.334915,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.325472,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.324985,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 21,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.324145,
+          "url": "https://en.wikipedia.org/wiki/Pteris_tremula"
+        },
+        {
+          "article_id": 25,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.32207,
+          "url": "https://en.wikipedia.org/wiki/Ilex_mucronata"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.32009,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 0,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.316401,
+          "url": "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.311966,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 15,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.311367,
+          "url": "https://en.wikipedia.org/wiki/Plagiomnium_insigne"
+        }
       ]
     },
     {
@@ -840,6 +2568,150 @@
         "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum",
         "https://en.wikipedia.org/wiki/Protea_cynaroides",
         "https://en.wikipedia.org/wiki/Metrosideros_umbellata"
+      ],
+      "hits_image": [
+        {
+          "article_id": 1,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.643686,
+          "url": "https://en.wikipedia.org/wiki/Protea_cynaroides"
+        },
+        {
+          "article_id": 1,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.591521,
+          "url": "https://en.wikipedia.org/wiki/Protea_cynaroides"
+        },
+        {
+          "article_id": 1,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.543761,
+          "url": "https://en.wikipedia.org/wiki/Protea_cynaroides"
+        },
+        {
+          "article_id": 1,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.490582,
+          "url": "https://en.wikipedia.org/wiki/Protea_cynaroides"
+        },
+        {
+          "article_id": 1,
+          "tile_index": 0,
+          "chunk_index": 4,
+          "score": 0.448562,
+          "url": "https://en.wikipedia.org/wiki/Protea_cynaroides"
+        },
+        {
+          "article_id": 1,
+          "tile_index": 0,
+          "chunk_index": 5,
+          "score": 0.443544,
+          "url": "https://en.wikipedia.org/wiki/Protea_cynaroides"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.424246,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.421433,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.391686,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.372895,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.400356,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 14,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.368372,
+          "url": "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+        },
+        {
+          "article_id": 5,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.361243,
+          "url": "https://en.wikipedia.org/wiki/Metrosideros_umbellata"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.359342,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.357281,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.353665,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.353302,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.351665,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 1,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.348551,
+          "url": "https://en.wikipedia.org/wiki/Protea_cynaroides"
+        },
+        {
+          "article_id": 5,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.340298,
+          "url": "https://en.wikipedia.org/wiki/Metrosideros_umbellata"
+        }
       ]
     },
     {
@@ -896,6 +2768,150 @@
         "https://en.wikipedia.org/wiki/Pteris_tremula",
         "https://en.wikipedia.org/wiki/Tiarella_cordifolia",
         "https://en.wikipedia.org/wiki/Gloriosa_superba"
+      ],
+      "hits_image": [
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.554303,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.488314,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 27,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.406283,
+          "url": "https://en.wikipedia.org/wiki/Iris_lacustris"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.404442,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.382004,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.375708,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 24,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.369927,
+          "url": "https://en.wikipedia.org/wiki/Parentucellia_viscosa"
+        },
+        {
+          "article_id": 16,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.358225,
+          "url": "https://en.wikipedia.org/wiki/Symphyotrichum_laeve"
+        },
+        {
+          "article_id": 23,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.350554,
+          "url": "https://en.wikipedia.org/wiki/Spiranthes_cernua"
+        },
+        {
+          "article_id": 12,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.349477,
+          "url": "https://en.wikipedia.org/wiki/Cardoon"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.405689,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 31,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.395693,
+          "url": "https://en.wikipedia.org/wiki/Arctostaphylos_patula"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.39558,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.393268,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 25,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.39156,
+          "url": "https://en.wikipedia.org/wiki/Ilex_mucronata"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.390802,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 27,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.387759,
+          "url": "https://en.wikipedia.org/wiki/Iris_lacustris"
+        },
+        {
+          "article_id": 21,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.386239,
+          "url": "https://en.wikipedia.org/wiki/Pteris_tremula"
+        },
+        {
+          "article_id": 22,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.384862,
+          "url": "https://en.wikipedia.org/wiki/Tiarella_cordifolia"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.383676,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        }
       ]
     },
     {
@@ -952,6 +2968,150 @@
         "https://en.wikipedia.org/wiki/Tussilago",
         "https://en.wikipedia.org/wiki/Tussilago",
         "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+      ],
+      "hits_image": [
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.439339,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.4178,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.40765,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.400204,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 14,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.397745,
+          "url": "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+        },
+        {
+          "article_id": 23,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.390405,
+          "url": "https://en.wikipedia.org/wiki/Spiranthes_cernua"
+        },
+        {
+          "article_id": 24,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.388643,
+          "url": "https://en.wikipedia.org/wiki/Parentucellia_viscosa"
+        },
+        {
+          "article_id": 0,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.384703,
+          "url": "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+        },
+        {
+          "article_id": 12,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.380113,
+          "url": "https://en.wikipedia.org/wiki/Cardoon"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.376054,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.564116,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.516008,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.507644,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.487686,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.45452,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.446895,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.432435,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 29,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.417929,
+          "url": "https://en.wikipedia.org/wiki/Tussilago"
+        },
+        {
+          "article_id": 29,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.397507,
+          "url": "https://en.wikipedia.org/wiki/Tussilago"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.38324,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        }
       ]
     },
     {
@@ -1008,6 +3168,150 @@
         "https://en.wikipedia.org/wiki/Olive_warbler",
         "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird",
         "https://en.wikipedia.org/wiki/Black_oystercatcher"
+      ],
+      "hits_image": [
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.536156,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.493443,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.464352,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 1,
+          "chunk_index": 0,
+          "score": 0.390633,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.389101,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.389048,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 26,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.388454,
+          "url": "https://en.wikipedia.org/wiki/Dusky_moorhen"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.381859,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.370794,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.363115,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.451763,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        },
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.433049,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 10,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.408408,
+          "url": "https://en.wikipedia.org/wiki/European_herring_gull"
+        },
+        {
+          "article_id": 10,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.404784,
+          "url": "https://en.wikipedia.org/wiki/European_herring_gull"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.402425,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 26,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.389831,
+          "url": "https://en.wikipedia.org/wiki/Dusky_moorhen"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.38493,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.379666,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.379197,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.362211,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        }
       ]
     },
     {
@@ -1064,6 +3368,150 @@
         "https://en.wikipedia.org/wiki/Antigonon_leptopus",
         "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum",
         "https://en.wikipedia.org/wiki/Ilex_mucronata"
+      ],
+      "hits_image": [
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.540391,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.497084,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.403947,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.390125,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 0,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.389572,
+          "url": "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.380441,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 8,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.365851,
+          "url": "https://en.wikipedia.org/wiki/Houstonia_caerulea"
+        },
+        {
+          "article_id": 16,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.341141,
+          "url": "https://en.wikipedia.org/wiki/Symphyotrichum_laeve"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.336666,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.333243,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.494413,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.48061,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.452391,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 25,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.418543,
+          "url": "https://en.wikipedia.org/wiki/Ilex_mucronata"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.415659,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.396347,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.388775,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 0,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.376738,
+          "url": "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.362443,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 25,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.354526,
+          "url": "https://en.wikipedia.org/wiki/Ilex_mucronata"
+        }
       ]
     },
     {
@@ -1120,6 +3568,150 @@
         "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta",
         "https://en.wikipedia.org/wiki/Ipomoea_indica",
         "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+      ],
+      "hits_image": [
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.56797,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.557318,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.548531,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 14,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.490597,
+          "url": "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 5,
+          "score": 0.467684,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 1,
+          "chunk_index": 1,
+          "score": 0.467405,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.452654,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.449899,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.448238,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.446703,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.349065,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.331844,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.316295,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 1,
+          "chunk_index": 2,
+          "score": 0.308181,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.299875,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.297129,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.296513,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.296285,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.29324,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 14,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.293002,
+          "url": "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+        }
       ]
     },
     {
@@ -1176,6 +3768,150 @@
         "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta",
         "https://en.wikipedia.org/wiki/Metrosideros_umbellata",
         "https://en.wikipedia.org/wiki/Arctostaphylos_patula"
+      ],
+      "hits_image": [
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.545847,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.493204,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.473507,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.418264,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.408145,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.385409,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 16,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.382293,
+          "url": "https://en.wikipedia.org/wiki/Symphyotrichum_laeve"
+        },
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.372956,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.37114,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 0,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.364706,
+          "url": "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.506716,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.47305,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 16,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.426224,
+          "url": "https://en.wikipedia.org/wiki/Symphyotrichum_laeve"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.416884,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.409543,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.404826,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.386903,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.373587,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 5,
+          "tile_index": 0,
+          "chunk_index": 4,
+          "score": 0.365373,
+          "url": "https://en.wikipedia.org/wiki/Metrosideros_umbellata"
+        },
+        {
+          "article_id": 31,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.358236,
+          "url": "https://en.wikipedia.org/wiki/Arctostaphylos_patula"
+        }
       ]
     },
     {
@@ -1232,6 +3968,150 @@
         "https://en.wikipedia.org/wiki/Chestnut_teal",
         "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird",
         "https://en.wikipedia.org/wiki/Olive_warbler"
+      ],
+      "hits_image": [
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.626684,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        },
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.581592,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        },
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.51853,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        },
+        {
+          "article_id": 26,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.416591,
+          "url": "https://en.wikipedia.org/wiki/Dusky_moorhen"
+        },
+        {
+          "article_id": 10,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.41395,
+          "url": "https://en.wikipedia.org/wiki/European_herring_gull"
+        },
+        {
+          "article_id": 10,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.409491,
+          "url": "https://en.wikipedia.org/wiki/European_herring_gull"
+        },
+        {
+          "article_id": 10,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.39554,
+          "url": "https://en.wikipedia.org/wiki/European_herring_gull"
+        },
+        {
+          "article_id": 10,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.387715,
+          "url": "https://en.wikipedia.org/wiki/European_herring_gull"
+        },
+        {
+          "article_id": 10,
+          "tile_index": 1,
+          "chunk_index": 2,
+          "score": 0.38253,
+          "url": "https://en.wikipedia.org/wiki/European_herring_gull"
+        },
+        {
+          "article_id": 10,
+          "tile_index": 0,
+          "chunk_index": 5,
+          "score": 0.380809,
+          "url": "https://en.wikipedia.org/wiki/European_herring_gull"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 39,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.475631,
+          "url": "https://en.wikipedia.org/wiki/Sedge_warbler"
+        },
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.45317,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        },
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.441971,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 26,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.437951,
+          "url": "https://en.wikipedia.org/wiki/Dusky_moorhen"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.422755,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.420173,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.416679,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        },
+        {
+          "article_id": 7,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.415687,
+          "url": "https://en.wikipedia.org/wiki/Chestnut_teal"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 1,
+          "chunk_index": 0,
+          "score": 0.41485,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.404816,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        }
       ]
     },
     {
@@ -1288,6 +4168,150 @@
         "https://en.wikipedia.org/wiki/Sedge_warbler",
         "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird",
         "https://en.wikipedia.org/wiki/Humulus_lupulus"
+      ],
+      "hits_image": [
+        {
+          "article_id": 36,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.494484,
+          "url": "https://en.wikipedia.org/wiki/Aiolopus_strepens"
+        },
+        {
+          "article_id": 36,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.451672,
+          "url": "https://en.wikipedia.org/wiki/Aiolopus_strepens"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.407824,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.407429,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.38679,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.372106,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 4,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.340808,
+          "url": "https://en.wikipedia.org/wiki/Machimia_tentoriferella"
+        },
+        {
+          "article_id": 11,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.336944,
+          "url": "https://en.wikipedia.org/wiki/Euchroma_gigantea"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.335881,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.334952,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.422987,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 4,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.414213,
+          "url": "https://en.wikipedia.org/wiki/Machimia_tentoriferella"
+        },
+        {
+          "article_id": 37,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.409722,
+          "url": "https://en.wikipedia.org/wiki/Sympecma_fusca"
+        },
+        {
+          "article_id": 36,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.397212,
+          "url": "https://en.wikipedia.org/wiki/Aiolopus_strepens"
+        },
+        {
+          "article_id": 37,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.388349,
+          "url": "https://en.wikipedia.org/wiki/Sympecma_fusca"
+        },
+        {
+          "article_id": 11,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.383785,
+          "url": "https://en.wikipedia.org/wiki/Euchroma_gigantea"
+        },
+        {
+          "article_id": 36,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.375893,
+          "url": "https://en.wikipedia.org/wiki/Aiolopus_strepens"
+        },
+        {
+          "article_id": 39,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.374295,
+          "url": "https://en.wikipedia.org/wiki/Sedge_warbler"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.368104,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.355502,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        }
       ]
     },
     {
@@ -1344,6 +4368,150 @@
         "https://en.wikipedia.org/wiki/Metrosideros_umbellata",
         "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum",
         "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+      ],
+      "hits_image": [
+        {
+          "article_id": 17,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.560539,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 1,
+          "chunk_index": 1,
+          "score": 0.533847,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.52172,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 0,
+          "chunk_index": 6,
+          "score": 0.512344,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.502835,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.501842,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 0,
+          "chunk_index": 5,
+          "score": 0.483459,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.478626,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 25,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.46099,
+          "url": "https://en.wikipedia.org/wiki/Ilex_mucronata"
+        },
+        {
+          "article_id": 14,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.451773,
+          "url": "https://en.wikipedia.org/wiki/Lonicera_sempervirens"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 17,
+          "tile_index": 0,
+          "chunk_index": 5,
+          "score": 0.474482,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.358149,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.343357,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.316517,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.314476,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 17,
+          "tile_index": 1,
+          "chunk_index": 1,
+          "score": 0.312836,
+          "url": "https://en.wikipedia.org/wiki/Pecan"
+        },
+        {
+          "article_id": 5,
+          "tile_index": 0,
+          "chunk_index": 5,
+          "score": 0.312272,
+          "url": "https://en.wikipedia.org/wiki/Metrosideros_umbellata"
+        },
+        {
+          "article_id": 5,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.303555,
+          "url": "https://en.wikipedia.org/wiki/Metrosideros_umbellata"
+        },
+        {
+          "article_id": 30,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.302099,
+          "url": "https://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+        },
+        {
+          "article_id": 0,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.300642,
+          "url": "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+        }
       ]
     },
     {
@@ -1400,6 +4568,150 @@
         "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta",
         "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird",
         "https://en.wikipedia.org/wiki/European_herring_gull"
+      ],
+      "hits_image": [
+        {
+          "article_id": 7,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.522235,
+          "url": "https://en.wikipedia.org/wiki/Chestnut_teal"
+        },
+        {
+          "article_id": 26,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.407401,
+          "url": "https://en.wikipedia.org/wiki/Dusky_moorhen"
+        },
+        {
+          "article_id": 26,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.407305,
+          "url": "https://en.wikipedia.org/wiki/Dusky_moorhen"
+        },
+        {
+          "article_id": 7,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.401413,
+          "url": "https://en.wikipedia.org/wiki/Chestnut_teal"
+        },
+        {
+          "article_id": 37,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.370966,
+          "url": "https://en.wikipedia.org/wiki/Sympecma_fusca"
+        },
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.370738,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        },
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.358781,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        },
+        {
+          "article_id": 26,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.347079,
+          "url": "https://en.wikipedia.org/wiki/Dusky_moorhen"
+        },
+        {
+          "article_id": 26,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.340283,
+          "url": "https://en.wikipedia.org/wiki/Dusky_moorhen"
+        },
+        {
+          "article_id": 38,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.322391,
+          "url": "https://en.wikipedia.org/wiki/Black_oystercatcher"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 7,
+          "tile_index": 0,
+          "chunk_index": 2,
+          "score": 0.433488,
+          "url": "https://en.wikipedia.org/wiki/Chestnut_teal"
+        },
+        {
+          "article_id": 7,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.370141,
+          "url": "https://en.wikipedia.org/wiki/Chestnut_teal"
+        },
+        {
+          "article_id": 26,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.357741,
+          "url": "https://en.wikipedia.org/wiki/Dusky_moorhen"
+        },
+        {
+          "article_id": 39,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.353022,
+          "url": "https://en.wikipedia.org/wiki/Sedge_warbler"
+        },
+        {
+          "article_id": 6,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.33562,
+          "url": "https://en.wikipedia.org/wiki/Brown_jay"
+        },
+        {
+          "article_id": 32,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.330624,
+          "url": "https://en.wikipedia.org/wiki/Olive_warbler"
+        },
+        {
+          "article_id": 7,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.323794,
+          "url": "https://en.wikipedia.org/wiki/Chestnut_teal"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.317853,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 33,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.313099,
+          "url": "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+        },
+        {
+          "article_id": 10,
+          "tile_index": 1,
+          "chunk_index": 0,
+          "score": 0.306755,
+          "url": "https://en.wikipedia.org/wiki/European_herring_gull"
+        }
       ]
     },
     {
@@ -1456,6 +4768,150 @@
         "https://en.wikipedia.org/wiki/Humulus_lupulus",
         "https://en.wikipedia.org/wiki/Chlosyne_lacinia",
         "https://en.wikipedia.org/wiki/Euchroma_gigantea"
+      ],
+      "hits_image": [
+        {
+          "article_id": 4,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.535841,
+          "url": "https://en.wikipedia.org/wiki/Machimia_tentoriferella"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.40369,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 36,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.395494,
+          "url": "https://en.wikipedia.org/wiki/Aiolopus_strepens"
+        },
+        {
+          "article_id": 4,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.393918,
+          "url": "https://en.wikipedia.org/wiki/Machimia_tentoriferella"
+        },
+        {
+          "article_id": 11,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.37498,
+          "url": "https://en.wikipedia.org/wiki/Euchroma_gigantea"
+        },
+        {
+          "article_id": 39,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.368746,
+          "url": "https://en.wikipedia.org/wiki/Sedge_warbler"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.368493,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.368052,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 37,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.357379,
+          "url": "https://en.wikipedia.org/wiki/Sympecma_fusca"
+        },
+        {
+          "article_id": 23,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.346496,
+          "url": "https://en.wikipedia.org/wiki/Spiranthes_cernua"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 4,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.484417,
+          "url": "https://en.wikipedia.org/wiki/Machimia_tentoriferella"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.449385,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 36,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.422347,
+          "url": "https://en.wikipedia.org/wiki/Aiolopus_strepens"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.420313,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 37,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.404939,
+          "url": "https://en.wikipedia.org/wiki/Sympecma_fusca"
+        },
+        {
+          "article_id": 37,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.383708,
+          "url": "https://en.wikipedia.org/wiki/Sympecma_fusca"
+        },
+        {
+          "article_id": 4,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.370457,
+          "url": "https://en.wikipedia.org/wiki/Machimia_tentoriferella"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.359171,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 3,
+          "tile_index": 0,
+          "chunk_index": 3,
+          "score": 0.352632,
+          "url": "https://en.wikipedia.org/wiki/Chlosyne_lacinia"
+        },
+        {
+          "article_id": 11,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.344794,
+          "url": "https://en.wikipedia.org/wiki/Euchroma_gigantea"
+        }
       ]
     },
     {
@@ -1512,6 +4968,150 @@
         "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta",
         "https://en.wikipedia.org/wiki/Antigonon_leptopus",
         "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+      ],
+      "hits_image": [
+        {
+          "article_id": 8,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.496306,
+          "url": "https://en.wikipedia.org/wiki/Houstonia_caerulea"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.492489,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 8,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.460507,
+          "url": "https://en.wikipedia.org/wiki/Houstonia_caerulea"
+        },
+        {
+          "article_id": 16,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.440904,
+          "url": "https://en.wikipedia.org/wiki/Symphyotrichum_laeve"
+        },
+        {
+          "article_id": 2,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.439323,
+          "url": "https://en.wikipedia.org/wiki/Rhododendron_periclymenoides"
+        },
+        {
+          "article_id": 13,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.438721,
+          "url": "https://en.wikipedia.org/wiki/Festuca_pratensis"
+        },
+        {
+          "article_id": 23,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.431862,
+          "url": "https://en.wikipedia.org/wiki/Spiranthes_cernua"
+        },
+        {
+          "article_id": 27,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.419636,
+          "url": "https://en.wikipedia.org/wiki/Iris_lacustris"
+        },
+        {
+          "article_id": 25,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.419532,
+          "url": "https://en.wikipedia.org/wiki/Ilex_mucronata"
+        },
+        {
+          "article_id": 22,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.416725,
+          "url": "https://en.wikipedia.org/wiki/Tiarella_cordifolia"
+        }
+      ],
+      "hits_text": [
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.424699,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 35,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.377736,
+          "url": "https://en.wikipedia.org/wiki/Gloriosa_superba"
+        },
+        {
+          "article_id": 28,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.374924,
+          "url": "https://en.wikipedia.org/wiki/Ipomoea_indica"
+        },
+        {
+          "article_id": 22,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.369398,
+          "url": "https://en.wikipedia.org/wiki/Tiarella_cordifolia"
+        },
+        {
+          "article_id": 9,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.358215,
+          "url": "https://en.wikipedia.org/wiki/Humulus_lupulus"
+        },
+        {
+          "article_id": 23,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.355595,
+          "url": "https://en.wikipedia.org/wiki/Spiranthes_cernua"
+        },
+        {
+          "article_id": 19,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.353147,
+          "url": "https://en.wikipedia.org/wiki/Asclepias_amplexicaulis"
+        },
+        {
+          "article_id": 20,
+          "tile_index": 0,
+          "chunk_index": 1,
+          "score": 0.352589,
+          "url": "https://en.wikipedia.org/wiki/Camissoniopsis_bistorta"
+        },
+        {
+          "article_id": 0,
+          "tile_index": 0,
+          "chunk_index": 0,
+          "score": 0.352428,
+          "url": "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+        },
+        {
+          "article_id": 0,
+          "tile_index": 0,
+          "chunk_index": 5,
+          "score": 0.343992,
+          "url": "https://en.wikipedia.org/wiki/Antigonon_leptopus"
+        }
       ]
     }
   ]
