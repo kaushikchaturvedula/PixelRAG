@@ -12,6 +12,14 @@ qa_eval pipeline can be validated offline with zero API spend.
 openai+qwen go through the `openai` SDK (chat.completions vision, data-URL images); claude through
 the `anthropic` SDK (base64 image blocks); gemini through `google-genai` (optional). SDKs are
 imported lazily so a missing optional dep never blocks an unused provider (or the mock path).
+
+Cost control (the big lever — a full-page tile at OpenAI's default `detail:"high"` is ~tens of
+thousands of vision tokens):
+- `detail` ∈ {low, high, auto}, **default low** — passed into the OpenAI/qwen `image_url` block.
+  `low` caps each image at ~85 tokens. Anthropic/Gemini have no per-image detail param, so `detail`
+  is ignored there; use `image_maxdim` to bound their cost.
+- `image_maxdim` (default off) — PIL-downscale each tile to this long-side max BEFORE base64. For
+  when `low` blurs dense tables but full resolution is overkill; applies to every provider.
 """
 
 from __future__ import annotations
@@ -40,7 +48,25 @@ DEFAULT_MODELS = {
 PROVIDERS = ("openai", "qwen", "claude", "gemini", "mock")
 
 
-def _b64(path: str) -> str:
+def _b64(path: str, maxdim: int | None = None) -> str:
+    """base64-encode a PNG, optionally PIL-downscaled so its long side <= maxdim (re-encoded PNG).
+
+    Resizes (and re-encodes) only when the image is larger than maxdim; otherwise the original
+    bytes are returned untouched. PIL is imported lazily so it's only required when maxdim is set.
+    """
+    if maxdim:
+        import io
+
+        from PIL import Image
+
+        with Image.open(path) as im:
+            w, h = im.size
+            if max(w, h) > maxdim:
+                scale = maxdim / max(w, h)
+                im = im.resize((max(1, round(w * scale)), max(1, round(h * scale))))
+                buf = io.BytesIO()
+                im.save(buf, format="PNG")
+                return base64.standard_b64encode(buf.getvalue()).decode()
     return base64.standard_b64encode(Path(path).read_bytes()).decode()
 
 
@@ -51,22 +77,28 @@ def read(
     model: str | None = None,
     max_tokens: int = 512,
     system: str = SYSTEM_PROMPT,
+    detail: str = "low",
+    image_maxdim: int | None = None,
 ) -> tuple[str, dict]:
     """Answer `question` from the chunk PNGs at `image_paths`. Returns (answer, usage_dict).
 
-    usage_dict has prompt_tokens / completion_tokens / total_tokens (0s for mock). Raises
-    ValueError on an unknown provider; lets the SDK/IO errors propagate (caller decides retry).
+    `detail` (low|high|auto) is the OpenAI/qwen per-image token control (default low, ~85 tok/image;
+    ignored by claude/gemini — no equivalent). `image_maxdim` PIL-downscales every tile's long side
+    before encoding (default off; the cost lever for claude/gemini). usage_dict has prompt_tokens /
+    completion_tokens / total_tokens (0s for mock). Raises ValueError on an unknown provider; lets
+    SDK/IO errors propagate (caller decides retry).
     """
     provider = (provider or "openai").lower()
     if provider == "mock":
         return _read_mock(question, image_paths)
     model = model or DEFAULT_MODELS.get(provider)
     if provider in ("openai", "qwen"):
-        return _read_openai(question, image_paths, provider, model, max_tokens, system)
+        return _read_openai(question, image_paths, provider, model, max_tokens, system,
+                            detail, image_maxdim)
     if provider == "claude":
-        return _read_claude(question, image_paths, model, max_tokens, system)
+        return _read_claude(question, image_paths, model, max_tokens, system, image_maxdim)
     if provider == "gemini":
-        return _read_gemini(question, image_paths, model, max_tokens, system)
+        return _read_gemini(question, image_paths, model, max_tokens, system, image_maxdim)
     raise ValueError(f"unknown reader provider: {provider!r} (choose from {PROVIDERS})")
 
 
@@ -80,7 +112,8 @@ def _read_mock(question: str, image_paths: list[str]) -> tuple[str, dict]:
     return answer, {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
 
 
-def _read_openai(question, image_paths, provider, model, max_tokens, system):
+def _read_openai(question, image_paths, provider, model, max_tokens, system,
+                 detail="low", image_maxdim=None):
     from openai import OpenAI
 
     if provider == "qwen":
@@ -92,8 +125,15 @@ def _read_openai(question, image_paths, provider, model, max_tokens, system):
         client = OpenAI()  # OPENAI_API_KEY (+ optional OPENAI_BASE_URL) from env
     content = [{"type": "text", "text": question}]
     for p in image_paths:
+        # `detail` is the per-image token cap: low ~85 tok, high = full multi-tile cost.
         content.append(
-            {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{_b64(p)}"}}
+            {
+                "type": "image_url",
+                "image_url": {
+                    "url": f"data:image/png;base64,{_b64(p, image_maxdim)}",
+                    "detail": detail,
+                },
+            }
         )
     resp = client.chat.completions.create(
         model=model,
@@ -117,9 +157,10 @@ def _read_openai(question, image_paths, provider, model, max_tokens, system):
     return (resp.choices[0].message.content or ""), usage
 
 
-def _read_claude(question, image_paths, model, max_tokens, system):
+def _read_claude(question, image_paths, model, max_tokens, system, image_maxdim=None):
     # Anthropic vision = base64 image blocks (per the claude-api skill). No temperature on Opus 4.8
     # (rejected); thinking omitted — a VQA reader wants a direct answer, not a reasoning trace.
+    # No per-image `detail` param exists; bound cost with image_maxdim (downscale) instead.
     import anthropic
 
     client = anthropic.Anthropic()  # ANTHROPIC_API_KEY from env
@@ -128,7 +169,8 @@ def _read_claude(question, image_paths, model, max_tokens, system):
         content.append(
             {
                 "type": "image",
-                "source": {"type": "base64", "media_type": "image/png", "data": _b64(p)},
+                "source": {"type": "base64", "media_type": "image/png",
+                           "data": _b64(p, image_maxdim)},
             }
         )
     resp = client.messages.create(
@@ -146,7 +188,9 @@ def _read_claude(question, image_paths, model, max_tokens, system):
     return text, usage
 
 
-def _read_gemini(question, image_paths, model, max_tokens, system):
+def _read_gemini(question, image_paths, model, max_tokens, system, image_maxdim=None):
+    import base64 as _b
+
     from google import genai
     from google.genai.types import Blob, GenerateContentConfig, Content, Part
 
@@ -156,7 +200,9 @@ def _read_gemini(question, image_paths, model, max_tokens, system):
     client = genai.Client(api_key=api_key)
     parts = [Part(text=f"{system}\n\n{question}")]
     for p in image_paths:
-        parts.append(Part(inline_data=Blob(mime_type="image/png", data=Path(p).read_bytes())))
+        # no per-image detail param; image_maxdim downscales to bound cost (reuse _b64's resize)
+        data = _b.b64decode(_b64(p, image_maxdim))
+        parts.append(Part(inline_data=Blob(mime_type="image/png", data=data)))
     resp = client.models.generate_content(
         model=model,
         contents=[Content(role="user", parts=parts)],
