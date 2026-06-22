@@ -105,6 +105,29 @@ def build_section() -> str:
     smoke_lo_pq = _smoke_pq(smoke_lo)
     smoke_ratio = smoke_hi_pq / smoke_lo_pq
 
+    # Caveat data (disambiguation experiment, research/CHUNKING_ANALYSIS.md): iNat image-query vs
+    # text-query CA, sourced from results/qa_inat_text_*.json. Shows the headline is image-specific.
+    t_ff = _load("qa_inat_text_fixed_flat.json")["accuracy"]
+    t_fh = _load("qa_inat_text_fixed_hier.json")["accuracy"]
+    t_cf = _load("qa_inat_text_ca_flat.json")["accuracy"]
+    t_ch = _load("qa_inat_text_ca_hier.json")["accuracy"]
+    ca_img_flat = acc["ca_flat"] - acc["fixed_flat"]
+    ca_img_hier = acc["ca_hier"] - acc["fixed_hier"]
+    ca_txt_flat = t_cf - t_ff
+    ca_txt_hier = t_ch - t_fh
+
+    def _saw_gold(cell_file: str, ret_json: dict) -> tuple[int, int]:
+        """fraction of queries where the gold page reached the reader (gold_article_id in its tiles)."""
+        gm = {q["qid"]: q.get("gold_article_id") for q in ret_json["per_query"]}
+        pq = _load(cell_file)["per_query"]
+        seen = sum(1 for rr in pq if gm.get(rr["qid"]) in {t[0] for t in rr.get("tiles", [])})
+        return seen, len(pq)
+
+    fx_seen, fx_nn = _saw_gold("qa_inat_text_fixed_flat.json", base)
+    ca_seen, ca_nn = _saw_gold("qa_inat_text_ca_flat.json", caj)
+    fx_txt_pct = round(100 * fx_seen / fx_nn)
+    ca_txt_pct = round(100 * ca_seen / ca_nn)
+
     L = []
     A = L.append
 
@@ -143,6 +166,16 @@ def build_section() -> str:
     A(f"| fixed | hier-expand | {_f2(acc['fixed_hier'])} | {_f2(cells['fixed_hier']['mean_tiles_per_query'])} |")
     A(f"| content_aware | flat | {_f2(acc['ca_flat'])} | {_f2(cells['ca_flat']['mean_tiles_per_query'])} |")
     A(f"| content_aware | hier-expand | **{_f2(acc['ca_hier'])}** | {_f2(cells['ca_hier']['mean_tiles_per_query'])} |")
+    A("")
+    A(f"> **⚠️ Caveat — this +{C3['delta']:.2f} headline is IMAGE-QUERY-SPECIFIC.** It does **not** survive a")
+    A("> text-query modality flip on the *same* corpus and content_aware tiles (disambiguation experiment,")
+    A(f"> `research/CHUNKING_ANALYSIS.md`). With text queries the content_aware advantage is "
+      f"**{ca_txt_flat:+.2f} flat / {ca_txt_hier:+.2f} hier**")
+    A(f"> (vs **{ca_img_flat:+.2f} flat / {ca_img_hier:+.2f} hier** with image queries). Mechanism: under image queries")
+    A("> retrieval is saturated (the gold page reaches the reader ~96–100% either way), so content_aware's gain")
+    A(f"> is a **reader-side** effect of finer tiles; under text queries content_aware's finer tiles **reduce**")
+    A(f"> gold-page retrieval **{fx_txt_pct}%→{ca_txt_pct}%**, and the advantage vanishes. So content-aware chunking")
+    A("> does **not** improve QA on its own — the gain here is contingent on image-query retrieval.")
     A("")
 
     A("### Decomposition")
