@@ -98,17 +98,20 @@ def build(config: dict, limit: int | None = None, force: bool = False) -> Path:
     if pdf_docs:
         logger.info("  Rendered %d PDFs", len(pdf_docs))
 
-    # Save articles.json for serve API — title + URL per article
+    # Save articles.json for serve API — title + URL per article.
+    # Index by POSITION, not by the source doc.id. `articles` is built in positional order
+    # (idx = len(articles)); that position is the tile-dir name (stems=[str(idx)]), the article_id
+    # embed derives from each dir name, and the index serve uses to look it up
+    # (serve `_resolve_url`: articles[article_id]). The source doc.id is provenance only and is not
+    # integer-castable for every source — the web source emits "web_000000"; kiwix emits str(i), for
+    # which this is identical to the old int(a["id"]) (so the integer-id path is unchanged).
     articles_path = output / "articles.json"
-    max_idx = max(int(a["id"]) for a in articles) + 1 if articles else 0
-    article_entries = [{"title": "", "url": ""}] * max_idx
-    for a in articles:
-        idx = int(a["id"])
+    article_entries = []
+    for idx, a in enumerate(articles):
         title = a.get("metadata", {}).get("title", "")
         if not title and a.get("url"):
             title = a["url"].split("/")[-1].replace("_", " ").replace("%20", " ")
-        url = a.get("url", "")
-        article_entries[idx] = {"title": title or str(idx), "url": url}
+        article_entries.append({"title": title or str(idx), "url": a.get("url", "")})
     with open(articles_path, "w") as f:
         json.dump(article_entries, f)
     logger.info(
