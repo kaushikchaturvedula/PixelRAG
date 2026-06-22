@@ -49,10 +49,31 @@ def _mk_tiles(tiles_dir: Path, aid: int, chunks):
 # --------------------------------------------------------------------------- reader (mock)
 def test_reader_mock():
     # mock must NOT read the image files (paths don't exist) and must report zero usage.
-    answer, usage = R.read("What plant is this?", ["/nope/a.png", "/nope/b.png"], provider="mock")
+    # also: the cost-control kwargs (detail/image_maxdim) must be accepted on every code path.
+    answer, usage = R.read("What plant is this?", ["/nope/a.png", "/nope/b.png"], provider="mock",
+                           detail="low", image_maxdim=512)
     assert "2 tiles" in answer, answer
     assert usage == {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
-    print(f"  reader mock OK -> {answer}")
+    print(f"  reader mock OK (accepts detail/image_maxdim) -> {answer}")
+
+
+def test_reader_image_resize():
+    # _b64(maxdim) must downscale a tall tile; without maxdim it returns the original.
+    try:
+        import io
+
+        from PIL import Image
+    except ImportError:
+        print("  reader resize SKIPPED (no PIL)")
+        return
+    with tempfile.TemporaryDirectory() as d:
+        p = Path(d) / "tall.png"
+        Image.new("RGB", (1200, 300), "white").save(p)
+        small = Image.open(io.BytesIO(__import__("base64").b64decode(R._b64(str(p), maxdim=512))))
+        assert max(small.size) == 512, small.size  # long side downscaled to maxdim
+        full = Image.open(io.BytesIO(__import__("base64").b64decode(R._b64(str(p)))))
+        assert full.size == (1200, 300), full.size  # no maxdim → untouched
+    print("  reader _b64 resize OK (1200x300 -> long side 512; full-res untouched)")
 
 
 # --------------------------------------------------------------------------- grader
@@ -199,6 +220,7 @@ def test_qa_eval_dry_run():
 
 if __name__ == "__main__":
     test_reader_mock()
+    test_reader_image_resize()
     test_grader_exact()
     test_grader_judge_mock()
     test_grader_aggregate()

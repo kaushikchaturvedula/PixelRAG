@@ -61,6 +61,12 @@ def main() -> int:
     ap.add_argument("--reader", default="openai", choices=list(R.PROVIDERS))
     ap.add_argument("--reader-model", default=None, help="Override reader model (default per provider).")
     ap.add_argument("--reader-max-tokens", type=int, default=512)
+    ap.add_argument("--reader-detail", default="low", choices=["low", "high", "auto"],
+                    help="OpenAI/qwen per-image token cap (default low ~85 tok/img; high = full "
+                         "multi-tile cost). Ignored by claude/gemini — use --reader-image-maxdim there.")
+    ap.add_argument("--reader-image-maxdim", type=int, default=None,
+                    help="PIL-downscale each tile to this long-side max before encoding (default off; "
+                         "for when low detail blurs dense tables but full-res is overkill).")
     ap.add_argument("--modality", default="image", choices=["image", "text"],
                     help="Which retrieval to read over (image = primary for iNat).")
     ap.add_argument("--retrieval", default="flat", choices=["flat", "hier-expand"])
@@ -137,6 +143,7 @@ def main() -> int:
             answer, usage = R.read(
                 question, read_paths, provider=args.reader,
                 model=args.reader_model, max_tokens=args.reader_max_tokens,
+                detail=args.reader_detail, image_maxdim=args.reader_image_maxdim,
             )
             verdict = G.grade(
                 question, answer, g.get("reference_list"), answer=g.get("answer"),
@@ -165,7 +172,8 @@ def main() -> int:
         "chunker": chunker,
         "retrieval": args.retrieval,
         "modality": args.modality,
-        "reader": {"provider": args.reader, "model": args.reader_model or R.DEFAULT_MODELS.get(args.reader)},
+        "reader": {"provider": args.reader, "model": args.reader_model or R.DEFAULT_MODELS.get(args.reader),
+                   "detail": args.reader_detail, "image_maxdim": args.reader_image_maxdim},
         "grade_method": args.grade_method,
         "judge_model": args.judge_model if args.grade_method == "judge" else None,
         "config": {
