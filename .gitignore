@@ -71,6 +71,10 @@ node_modules/
 tmp/
 demos/demo_tiles/
 
+# Research mini-corpus / probe-set rendered+indexed outputs (regenerate; keep locally, don't commit)
+research/mini_corpus/output_ca/
+research/probe_set/output/
+
 # Mac dev venv + Kaggle transfer bundles (build artifacts, never commit)
 .venv-mac/
 *.zip
