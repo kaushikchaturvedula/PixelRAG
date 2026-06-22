@@ -176,6 +176,8 @@ def build(config: dict, limit: int | None = None, force: bool = False) -> Path:
             cmd += ["--model", embed_cfg["model"]]
         if "backend" in embed_cfg:
             cmd += ["--backend", embed_cfg["backend"]]
+        if "batch_size" in embed_cfg:
+            cmd += ["--batch-size", str(embed_cfg["batch_size"])]
     subprocess.run(cmd, check=True)
 
     # Stage 4: Build FAISS index
