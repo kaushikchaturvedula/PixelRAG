@@ -1,0 +1,134 @@
+{
+  "chunker": "content_aware",
+  "retrieval": "flat",
+  "modality": "image",
+  "reader": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "detail": "low",
+    "image_maxdim": null
+  },
+  "grade_method": "judge",
+  "judge_model": "gpt-4.1-2025-04-14",
+  "config": {
+    "reader_top_k": 4,
+    "expand_neighbors": 1,
+    "expand_cap": 8,
+    "expand_mode": null,
+    "expand_mode_effective": null
+  },
+  "n_graded": 3,
+  "n_skipped": 0,
+  "n_tiles_total": 12,
+  "mean_tiles_per_query": 4.0,
+  "accuracy": 0.3333,
+  "verdict_counts": {
+    "correct": 1,
+    "incorrect": 2,
+    "unattempted": 0,
+    "errors": 0
+  },
+  "reader_usage": {
+    "prompt_tokens": 34249,
+    "completion_tokens": 39,
+    "total_tokens": 34288
+  },
+  "judge_usage": {
+    "prompt_tokens": 5414,
+    "completion_tokens": 155,
+    "total_tokens": 5569
+  },
+  "results_src": "results/content_aware.json",
+  "per_query": [
+    {
+      "qid": "3c46dc335f471f94e2a27ca1ae3dc810",
+      "question": "When do the tubers of this plant have a crisp and crunchy texture?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          34,
+          0,
+          1
+        ],
+        [
+          19,
+          0,
+          1
+        ],
+        [
+          16,
+          0,
+          1
+        ],
+        [
+          8,
+          0,
+          2
+        ]
+      ],
+      "answer": "The tubers have a crisp and crunchy texture when they are eaten raw.",
+      "verdict": "correct",
+      "ground_truth": "Any of: when raw"
+    },
+    {
+      "qid": "22f37942512a71784e47587d4d031cd6",
+      "question": "What is the study of this plant?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          9,
+          0,
+          1
+        ],
+        [
+          9,
+          0,
+          6
+        ],
+        [
+          9,
+          0,
+          3
+        ],
+        [
+          9,
+          0,
+          9
+        ]
+      ],
+      "answer": "The study of this plant is called \"botany.\"",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Ecology"
+    },
+    {
+      "qid": "dd052b81550d0cfb0adc5da40c038794",
+      "question": "What kind of name is this plant?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          24,
+          0,
+          1
+        ],
+        [
+          13,
+          0,
+          1
+        ],
+        [
+          19,
+          0,
+          1
+        ],
+        [
+          29,
+          0,
+          1
+        ]
+      ],
+      "answer": "The plant is called \"Parthenocissus viscoasa.\"",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: common"
+    }
+  ]
+}
