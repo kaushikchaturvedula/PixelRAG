@@ -1,0 +1,75 @@
+{
+  "test": "exact two-sided McNemar (binomial); no approximation",
+  "n_queries": 25,
+  "binary_rule": "1 if verdict=='correct' else 0 (incorrect and unattempted both 0)",
+  "sources": {
+    "fixed_flat": "qa_fixed_flat.json",
+    "fixed_hier": "qa_fixed_hier.json",
+    "ca_flat": "qa_ca_flat.json",
+    "ca_hier": "qa_ca_hier.json"
+  },
+  "accuracies": {
+    "fixed_flat": 0.44,
+    "fixed_hier": 0.4,
+    "ca_flat": 0.56,
+    "ca_hier": 0.68
+  },
+  "contrasts": [
+    {
+      "id": "C1",
+      "contrast": "chunking (flat): fixed_flat -> ca_flat",
+      "arm_a": "fixed_flat",
+      "arm_b": "ca_flat",
+      "n": 25,
+      "acc_a": 0.44,
+      "acc_b": 0.56,
+      "delta": 0.12,
+      "b_a_correct_b_wrong": 0,
+      "c_a_wrong_b_correct": 3,
+      "discordant": 3,
+      "p_exact_mcnemar": 0.25
+    },
+    {
+      "id": "C2",
+      "contrast": "expansion (content_aware): ca_flat -> ca_hier",
+      "arm_a": "ca_flat",
+      "arm_b": "ca_hier",
+      "n": 25,
+      "acc_a": 0.56,
+      "acc_b": 0.68,
+      "delta": 0.12,
+      "b_a_correct_b_wrong": 0,
+      "c_a_wrong_b_correct": 3,
+      "discordant": 3,
+      "p_exact_mcnemar": 0.25
+    },
+    {
+      "id": "C3",
+      "contrast": "best vs baseline: fixed_flat -> ca_hier",
+      "arm_a": "fixed_flat",
+      "arm_b": "ca_hier",
+      "n": 25,
+      "acc_a": 0.44,
+      "acc_b": 0.68,
+      "delta": 0.24,
+      "b_a_correct_b_wrong": 0,
+      "c_a_wrong_b_correct": 6,
+      "discordant": 6,
+      "p_exact_mcnemar": 0.03125
+    },
+    {
+      "id": "C4",
+      "contrast": "expansion-on-fixed: fixed_flat -> fixed_hier",
+      "arm_a": "fixed_flat",
+      "arm_b": "fixed_hier",
+      "n": 25,
+      "acc_a": 0.44,
+      "acc_b": 0.4,
+      "delta": -0.04,
+      "b_a_correct_b_wrong": 1,
+      "c_a_wrong_b_correct": 0,
+      "discordant": 1,
+      "p_exact_mcnemar": 1.0
+    }
+  ]
+}
