@@ -119,7 +119,7 @@ Plainly: **(A) is necessary but untested on text** (CA never engaged there), and
 ruled out** (iNat is the lone image-query case) — so the honest verdict is **(C): the iNat result is
 confounded and not yet attributable.**
 
-**The one experiment that would disambiguate (do NOT run — just named):** **re-run the existing iNat
+**The one experiment that would disambiguate (now RUN — see the next section):** **re-run the existing iNat
 QA cells with TEXT queries** (`--modality text`; iNat text-query retrieval `hits_text` already exists
 in `content_aware.json` / `baseline_clean.json`). This holds the iNat corpus *and* the CA-vs-fixed
 chunk difference constant and flips **only** the query modality image→text. If CA's advantage
@@ -128,3 +128,46 @@ was a modality / image-query effect (supports B). It is the cheapest decisive te
 built iNat index and needs only a reader pass over the already-retrieved text-query tiles, no
 rendering or re-embedding. (A costlier complement: re-render NQ/NQ-Tables **uncapped** so CA actually
 differs from fixed, then re-run text-query QA — tests CA-on-text when the chunker genuinely engages.)
+
+---
+
+## Disambiguating experiment (RUN): iNat image-query vs text-query CA
+
+Holds the iNat corpus **and** the CA-vs-fixed chunk difference constant; flips **only** the query
+modality (reuses the existing `hits_text` — no render/embed). Reader gpt-4o `detail=low`, judge
+`gpt-4.1-2025-04-14`, `reader_top_k=4`, `expand 1 / cap 8`. Results in `results/qa_inat_text_*.json`
+(reproduce: `qa_eval.py … --modality text`; tabulate: `research/analyze_chunking.py`).
+
+| retrieval | fixed | CA | **CA Δ (ca−fixed)** | reader-saw-gold fixed→CA |
+|---|---|---|---|---|
+| **image** flat | 0.44 | 0.56 | **+0.12** | 100% → 96% |
+| **image** hier | 0.40 | 0.68 | **+0.28** | 100% → 96% |
+| **text** flat | 0.44 | 0.36 | **−0.08** | 68% → 56% |
+| **text** hier | 0.40 | 0.40 | **0.00** | 68% → 56% |
+
+**The CA advantage does not survive a modality flip.** Image queries: CA +0.12 (flat) / +0.28 (hier).
+Text queries — same corpus, same CA tiles — CA −0.08 / 0.00. So **CA chunking does not improve iNat QA
+on its own; the gain is image-query-specific.** Option **(A) is not supported**; the result leans **(B)**.
+
+The `reader-saw-gold` column (fraction of queries where the gold page was among the tiles the reader
+read) shows the mechanism, and it differs by modality:
+
+- **Image queries → retrieval saturated.** Fixed gets the gold page in front of the reader **100%** of
+  the time, CA **96%**. CA does **not** win by retrieving gold more (both already have it). CA's gain is
+  a **reader-side** effect: finer, content-aligned tiles let the reader extract the answer more often
+  from the *same* gold page (0.44→0.56 at flat), and section-expansion compounds it (0.68 at hier).
+- **Text queries → retrieval is the bottleneck** (deictic "this plant" questions retrieve weakly), and
+  CA's finer/smaller tiles retrieve the gold page **less** often (56% vs 68% for fixed) — diluting the
+  text-match signal — so CA is neutral-to-negative.
+
+**Caveat:** the text cells are partly retrieval-floor-limited (56–68% gold-seen vs ~100% for image), so
+this isn't a perfectly clean A/B isolation. But CA made text retrieval *worse*, not merely "couldn't
+help," so the conclusion holds.
+
+### Revised verdict
+The modality axis is now decoupled, sharpening Q5's earlier "(C) confounded": **the iNat CA gain is a
+reader-side benefit that only materializes under image-query retrieval (which saturates gold-page
+recall); it does not transfer to text queries and is not a modality-independent property of
+content-aware chunking.** Net across the project — CA was a no-op on the two text benchmarks (Q1), and
+where it *did* change the tiles (iNat) its QA benefit is contingent on image queries — the headline
+"content-aware chunking improves QA" is **not supported by the current data as a general claim.**

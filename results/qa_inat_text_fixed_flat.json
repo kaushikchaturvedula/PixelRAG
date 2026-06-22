@@ -1,0 +1,794 @@
+{
+  "chunker": "fixed",
+  "retrieval": "flat",
+  "modality": "text",
+  "reader": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "detail": "low",
+    "image_maxdim": null
+  },
+  "grade_method": "judge",
+  "judge_model": "gpt-4.1-2025-04-14",
+  "config": {
+    "reader_top_k": 4,
+    "expand_neighbors": 1,
+    "expand_cap": 8,
+    "expand_mode": null,
+    "expand_mode_effective": null
+  },
+  "n_graded": 25,
+  "n_skipped": 0,
+  "n_tiles_total": 100,
+  "mean_tiles_per_query": 4.0,
+  "accuracy": 0.44,
+  "verdict_counts": {
+    "correct": 11,
+    "incorrect": 8,
+    "unattempted": 6,
+    "errors": 0
+  },
+  "reader_usage": {
+    "prompt_tokens": 10648,
+    "completion_tokens": 368,
+    "total_tokens": 11016
+  },
+  "judge_usage": {
+    "prompt_tokens": 45218,
+    "completion_tokens": 1210,
+    "total_tokens": 46428
+  },
+  "results_src": "results/baseline_clean.json",
+  "per_query": [
+    {
+      "qid": "3c46dc335f471f94e2a27ca1ae3dc810",
+      "question": "When do the tubers of this plant have a crisp and crunchy texture?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          34,
+          0,
+          0
+        ],
+        [
+          34,
+          0,
+          4
+        ],
+        [
+          34,
+          0,
+          3
+        ],
+        [
+          34,
+          0,
+          1
+        ]
+      ],
+      "answer": "The tubers have a crisp and crunchy texture when eaten raw.",
+      "verdict": "correct",
+      "ground_truth": "Any of: when raw"
+    },
+    {
+      "qid": "22f37942512a71784e47587d4d031cd6",
+      "question": "What is the study of this plant?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          28,
+          0,
+          2
+        ],
+        [
+          17,
+          1,
+          2
+        ],
+        [
+          9,
+          0,
+          0
+        ],
+        [
+          20,
+          0,
+          0
+        ]
+      ],
+      "answer": "The study of the plant in the first image is \"Ipomoea.\"",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Ecology"
+    },
+    {
+      "qid": "dd052b81550d0cfb0adc5da40c038794",
+      "question": "What kind of name is this plant?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          28,
+          0,
+          0
+        ],
+        [
+          35,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          20,
+          0,
+          0
+        ]
+      ],
+      "answer": "The plant name is \"Ipomoea indica.\"",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: common"
+    },
+    {
+      "qid": "e717c706720cafd44c3a0936a82aaab4",
+      "question": "What is the ecology of this plant?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          19,
+          0,
+          0
+        ],
+        [
+          30,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          30,
+          0,
+          3
+        ]
+      ],
+      "answer": "I cannot find information about the ecology of *Asclepias amplexicaulis* in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Fire"
+    },
+    {
+      "qid": "cd5187a96949e4572576d7d09c92444a",
+      "question": "What can one flower of this plant do over 2.5 g of?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          35,
+          0,
+          2
+        ],
+        [
+          35,
+          0,
+          1
+        ],
+        [
+          35,
+          0,
+          0
+        ],
+        [
+          9,
+          0,
+          0
+        ]
+      ],
+      "answer": "One flower of Gloriosa superba can kill over 2.5 g of human tissue.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: weigh"
+    },
+    {
+      "qid": "d26c1b3ac9219df3e188317c3a0a40aa",
+      "question": "What does this plant grow as if it doesn't die?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          20,
+          0,
+          0
+        ],
+        [
+          19,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "answer": "Camissoniopsis bistorta grows as a perennial if it doesn't die.",
+      "verdict": "correct",
+      "ground_truth": "Any of: perennial"
+    },
+    {
+      "qid": "8382e6084018f5653c76afe2c8571a30",
+      "question": "What does this bird do in new mexico and arizona?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          32,
+          0,
+          0
+        ],
+        [
+          32,
+          0,
+          2
+        ],
+        [
+          6,
+          0,
+          1
+        ],
+        [
+          32,
+          0,
+          1
+        ]
+      ],
+      "answer": "The olive warbler breeds in southern Arizona and New Mexico.",
+      "verdict": "correct",
+      "ground_truth": "Any of: breeds"
+    },
+    {
+      "qid": "465a4d10f8e01df51b41678114a35d4a",
+      "question": "What does this plant do in wet meadows?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          13,
+          0,
+          0
+        ],
+        [
+          13,
+          0,
+          1
+        ],
+        [
+          19,
+          0,
+          0
+        ],
+        [
+          13,
+          0,
+          2
+        ]
+      ],
+      "answer": "In wet meadows, Lolium pratense is a constant species in certain plant communities, such as M22 blunt-flowered rush and M23 sharp-flowered rush communities.",
+      "verdict": "correct",
+      "ground_truth": "Any of: grows"
+    },
+    {
+      "qid": "64f86b0c7c70c0da3ae078fa5e0b539f",
+      "question": "What specific name does this bird have?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          39,
+          0,
+          0
+        ],
+        [
+          26,
+          0,
+          0
+        ],
+        [
+          33,
+          0,
+          0
+        ],
+        [
+          32,
+          0,
+          0
+        ]
+      ],
+      "answer": "The bird is called the \"Olive warbler.\"",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: schoenobaenus"
+    },
+    {
+      "qid": "5bea56733faed0bbf39a5f74784fbf73",
+      "question": "Is this plant a member or a non-member of the large genus pteris?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          21,
+          0,
+          0
+        ],
+        [
+          21,
+          0,
+          1
+        ],
+        [
+          21,
+          0,
+          2
+        ],
+        [
+          15,
+          0,
+          0
+        ]
+      ],
+      "answer": "The plant \"Pteris tremula\" is a member of the large genus Pteris.",
+      "verdict": "correct",
+      "ground_truth": "Any of: a member"
+    },
+    {
+      "qid": "66b8ff89c25891590e2ebfc9e4aa3dd3",
+      "question": "What is this plant used moderately for?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          35,
+          0,
+          1
+        ],
+        [
+          34,
+          0,
+          4
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          35,
+          0,
+          2
+        ]
+      ],
+      "answer": "The plant is used moderately for human consumption.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: animal cover"
+    },
+    {
+      "qid": "8129df82c9ef0e56ed497a7c0eb96894",
+      "question": "What does this plant usually do in moist or draining wet acid soils?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          19,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          30,
+          0,
+          1
+        ]
+      ],
+      "answer": "It becomes established and grows best.",
+      "verdict": "correct",
+      "ground_truth": "Any of: grows"
+    },
+    {
+      "qid": "39d3b377d43f6592332b346979329196",
+      "question": "When do the dormant buds of this plant produce new growth?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          30,
+          0,
+          0
+        ],
+        [
+          14,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          1
+        ],
+        [
+          20,
+          0,
+          0
+        ]
+      ],
+      "answer": "I cannot find it.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: after the fire"
+    },
+    {
+      "qid": "538fc8a463fa810679cc440183bece3d",
+      "question": "What shade of green are this plant's leaves?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          20,
+          0,
+          0
+        ],
+        [
+          31,
+          0,
+          0
+        ],
+        [
+          28,
+          0,
+          1
+        ],
+        [
+          28,
+          0,
+          0
+        ]
+      ],
+      "answer": "I cannot find the specific shade of green for the plant's leaves in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: bright"
+    },
+    {
+      "qid": "3ea8dccb01b4f3ef17f2ad9d36e035d6",
+      "question": "Besides humans, what else can be poisoned by this plant?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          35,
+          0,
+          1
+        ],
+        [
+          30,
+          0,
+          1
+        ],
+        [
+          30,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "answer": "California ground squirrels, western fence lizards, and other indigenous fauna.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: livestock"
+    },
+    {
+      "qid": "964f41847b2b3d21fafff982206ccbef",
+      "question": "Which populations of this bird have black bills, legs, and feet?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          38,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          2
+        ],
+        [
+          10,
+          0,
+          1
+        ]
+      ],
+      "answer": "The black oystercatcher populations have black bills, legs, and feet.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: both populations"
+    },
+    {
+      "qid": "c01ccb8b38f98d8e35097980649cf403",
+      "question": "Ivy-leaved and what other morning glory are the closest relatives of this plant?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          28,
+          0,
+          0
+        ],
+        [
+          28,
+          0,
+          2
+        ],
+        [
+          28,
+          0,
+          1
+        ],
+        [
+          25,
+          0,
+          0
+        ]
+      ],
+      "answer": "I cannot find it.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: picotee"
+    },
+    {
+      "qid": "69eb6fb40aeb07771d6868a26fee51ca",
+      "question": "What occurs in may in this plant?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          30,
+          0,
+          0
+        ],
+        [
+          19,
+          0,
+          0
+        ],
+        [
+          9,
+          0,
+          0
+        ],
+        [
+          17,
+          1,
+          2
+        ]
+      ],
+      "answer": "I cannot find information about what occurs in May for any of these plants in the provided screenshots.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Peak flowering"
+    },
+    {
+      "qid": "f94fe6bbe50a258c9498ea9a6349c6de",
+      "question": "What species of calyptocarpus is a host plant for this butterfly?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          16,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ]
+      ],
+      "answer": "Calyptocarpus vialis",
+      "verdict": "correct",
+      "ground_truth": "Any of: vialis"
+    },
+    {
+      "qid": "a3517037150fe0a03438a4066777a766",
+      "question": "What is the scientific name of this bird?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          39,
+          0,
+          0
+        ],
+        [
+          38,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          26,
+          0,
+          0
+        ]
+      ],
+      "answer": "The scientific name of the bird is *Acrocephalus schoenobaenus*.",
+      "verdict": "incorrect",
+      "ground_truth": "Any of: Haematopus bachmani"
+    },
+    {
+      "qid": "d240bafd091f974206de1a629b3d5916",
+      "question": "During what time of year can you find this insect?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          37,
+          0,
+          0
+        ],
+        [
+          36,
+          0,
+          1
+        ]
+      ],
+      "answer": "The bordered patch can be found from May to October in California, late January to mid-November in Arizona, and all year in southern Texas.",
+      "verdict": "correct",
+      "ground_truth": "Any of: July through October"
+    },
+    {
+      "qid": "f0e895232bdd1c077464f35e0bdae551",
+      "question": "What was the name of the slave who grafted this tree?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          17,
+          0,
+          5
+        ],
+        [
+          17,
+          0,
+          0
+        ],
+        [
+          30,
+          0,
+          0
+        ],
+        [
+          17,
+          0,
+          2
+        ]
+      ],
+      "answer": "The name of the slave who grafted the tree was Antoine.",
+      "verdict": "correct",
+      "ground_truth": "Any of: Antoine"
+    },
+    {
+      "qid": "347538f4d7ae78750f00c69543c3172e",
+      "question": "What type of scientific name did thomas campbell eyton give this bird?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          7,
+          0,
+          2
+        ],
+        [
+          7,
+          0,
+          0
+        ],
+        [
+          26,
+          0,
+          0
+        ],
+        [
+          39,
+          0,
+          0
+        ]
+      ],
+      "answer": "Thomas Campbell Eyton gave the bird the binomial name *Mareca castanea*.",
+      "verdict": "correct",
+      "ground_truth": "Any of: binomial"
+    },
+    {
+      "qid": "8f76118db2fca158e4633ac9d4340fa7",
+      "question": "What is the wingspan of this moth, in millimeters?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          36,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          1
+        ]
+      ],
+      "answer": "20–26 mm",
+      "verdict": "correct",
+      "ground_truth": "Any of: 20–26"
+    },
+    {
+      "qid": "8f7cbac74ad3c08245252ab8c27f890a",
+      "question": "What is simple and opposite in arrangement on this plant?",
+      "n_tiles": 4,
+      "tiles": [
+        [
+          20,
+          0,
+          0
+        ],
+        [
+          35,
+          0,
+          0
+        ],
+        [
+          28,
+          0,
+          1
+        ],
+        [
+          22,
+          0,
+          0
+        ]
+      ],
+      "answer": "I cannot find it in the provided text.",
+      "verdict": "unattempted",
+      "ground_truth": "Any of: Leaves"
+    }
+  ]
+}

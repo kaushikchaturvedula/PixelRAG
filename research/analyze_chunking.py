@@ -121,9 +121,46 @@ def q2_ceiling():
         print(f"  (a):(b) = {ratio}  -> {'reader-bound' if reader_ceiling>retrieval_ceiling else 'retrieval-bound'}")
 
 
+def q5_modality_flip():
+    """Disambiguating experiment: iNat QA with the SAME corpus + CA tiles, flipping only the query
+    modality (image vs text). Separates 'CA chunking helps' (A) from 'image queries help' (B)."""
+    print("\n========== iNat: IMAGE-query vs TEXT-query CA (disambiguating experiment) ==========")
+    cells = [  # (label, qa_cell, retrieval_json_for_gold_article_id)
+        ("image fixed-flat", "qa_fixed_flat", "baseline_clean"),
+        ("image fixed-hier", "qa_fixed_hier", "baseline_clean"),
+        ("image ca-flat", "qa_ca_flat", "content_aware"),
+        ("image ca-hier", "qa_ca_hier", "content_aware"),
+        ("text  fixed-flat", "qa_inat_text_fixed_flat", "baseline_clean"),
+        ("text  fixed-hier", "qa_inat_text_fixed_hier", "baseline_clean"),
+        ("text  ca-flat", "qa_inat_text_ca_flat", "content_aware"),
+        ("text  ca-hier", "qa_inat_text_ca_hier", "content_aware"),
+    ]
+    gmaps: dict[str, dict] = {}
+
+    def gmap(ret: str) -> dict:
+        if ret not in gmaps:
+            gmaps[ret] = {q["qid"]: q.get("gold_article_id") for q in L(ret)["per_query"]}
+        return gmaps[ret]
+
+    print(f"  {'cell':18s} {'acc':>6s} {'reader-saw-gold':>16s}")
+    acc: dict[str, float] = {}
+    for label, qa, ret in cells:
+        d = L(qa)
+        pq, gm = d["per_query"], gmap(ret)
+        seen = sum(1 for r in pq if gm.get(r["qid"]) in {t[0] for t in r.get("tiles", [])})
+        acc[" ".join(label.split())] = d["accuracy"]  # collapse alignment whitespace
+        print(f"  {label:18s} {d['accuracy']:6.3f} {seen:>4d}/{len(pq)} ({100*seen/len(pq):4.0f}%)")
+    print("\n  CA effect (ca − fixed), per modality x retrieval:")
+    for mod in ("image", "text"):
+        for r in ("flat", "hier"):
+            ca, fx = acc[f"{mod} ca-{r}"], acc[f"{mod} fixed-{r}"]
+            print(f"    {mod:5s} {r:4s}:  ca {ca:.3f} − fixed {fx:.3f} = {ca - fx:+.3f}")
+
+
 if __name__ == "__main__":
     q1_chunker_effect()
     q2_ceiling()
     q3_modality()
     q4_expansion()
+    q5_modality_flip()
     print()
