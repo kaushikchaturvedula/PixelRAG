@@ -1,0 +1,5 @@
+# Re-fetchable NQ gold + the heavy render/embed/index build — regenerate, don't commit.
+# Keep only the reproducible selection: urls.txt, gold.jsonl, manifest.json, pixelrag*.yaml.
+cache/
+output/
+output_ca/
