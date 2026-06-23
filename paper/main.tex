@@ -18,10 +18,11 @@
 
 \graphicspath{{figures/}}
 \input{numbers.tex}     % auto-generated \newcommand macros (paper/gen_paper_numbers.py)
+\setlength{\emergencystretch}{3em}  % absorb minor overfull \hbox warnings
 
 \title{\bfseries Content-Aware Visual Chunking in Screenshot RAG:\\ A Reader--Retriever Tradeoff}
-\author[1]{Kaushik Chaturvedula\thanks{Affiliation placeholder --- to be completed. Correspondence: \texttt{placeholder@example.com}.}}
-\affil[1]{\textit{Affiliation placeholder}}
+\author[1]{Kaushik Chaturvedula\thanks{Independent research. Correspondence: \texttt{kaushikchaturvedula@gmail.com}.}}
+\affil[1]{\textit{Independent Researcher}}
 \date{\today}
 
 \begin{document}
@@ -99,7 +100,8 @@ when it helps and hurts, and the reader--retriever mechanism behind it.
 \paragraph{Screenshot / pixel RAG.} Rather than parsing documents to text, pixel-native retrieval renders
 pages and retrieves over image tiles, reading answers directly from pixels~\citep{pixelrag}. This
 preserves tables, figures, and layout that text extraction discards, at the cost of importing image-space
-design choices such as tiling.
+design choices such as tiling. This line descends from late-interaction visual document retrieval, which
+embeds page images directly rather than extracted text~\citep{colpali}.
 
 \paragraph{Visual document chunking.} Several recent systems cut visual documents along structure rather
 than a fixed grid: region- and dependency-aware document chunking~\citep{m3docdep}, visual late chunking
@@ -121,7 +123,10 @@ content-aware visual chunking changes outcomes and \emph{why}.
 \section{Method}\label{sec:method}
 \paragraph{3.1 Pipeline.} Each document page is rendered to an image and split into tiles; tiles are
 embedded with \EmbedModel~\citep{qwen3vl}, indexed with FAISS~\citep{faiss}, and retrieved for a query
-embedded in the same space. The top tiles are read by a VLM reader (OpenAI \texttt{\ReaderModel}~\citep{gpt4o},
+embedded in the same space. The top tiles are read by a VLM reader (OpenAI \texttt{\ReaderModel}\footnote{The reader was invoked
+through the OpenAI \texttt{\ReaderModel} alias, which the API resolves to a server-side model snapshot at
+request time; the underlying snapshot was not pinned in our run configuration. The judge model
+(\S\ref{sec:method}) is pinned to \texttt{\JudgeModel}.}~\citep{gpt4o},
 image \texttt{detail=low}) that answers from the tile \emph{images} only---pixel-native, no text extraction.
 
 \paragraph{3.2 Content-aware chunker.} The fixed baseline slices each page into equal-height tiles. The
@@ -138,8 +143,8 @@ metadata, expands by reading-order neighbors only; section-structure expansion i
 content-aware-specific lever.
 
 \paragraph{3.4 Evaluation protocol.} We build closed mini-corpora (gold pages plus distractors,
-rendered/embedded/indexed) so retrieval recall is well-defined. Answers are graded by a VLM judge
-(\texttt{\JudgeModel}) against gold short answers (Correct/Incorrect/Unattempted; image-query corpus) or
+rendered\slash embedded\slash indexed) so retrieval recall is well-defined. Answers are graded by a VLM judge
+(\texttt{\JudgeModel}) against gold short answers (Correct\slash Incorrect\slash Unattempted; image-query corpus) or
 by exact match (text-query corpora). The core experiment is the 4-cell ablation chunker
 $\{$fixed, content-aware$\}$ $\times$ retrieval $\{$flat, hier-expand$\}$, which separates the
 \emph{chunking} effect from the \emph{expansion} effect.
@@ -158,6 +163,14 @@ modality, and---as \S\ref{sec:results} shows---whether content-aware chunking en
 All corpora use the same encoder (\EmbedModel), reader (\texttt{\ReaderModel}), and judge
 (\texttt{\JudgeModel}). We state plainly that the three corpora co-vary on multiple axes; the cleanest
 causal claim comes from the within-corpus modality flip of \S\ref{sec:modflip}.
+
+\paragraph{Reproducibility and code.} Code, corpus-construction scripts, and the
+evaluation harness are available at \url{https://github.com/kaushikchaturvedula/PixelRAG}.
+The pipeline builds on the screenshot-RAG system of \citet{pixelrag}; the content-aware
+chunker (\S\ref{sec:method}), the hierarchical retrieve-then-expand step, and the
+end-to-end QA evaluation harness are contributions of this work. Every numerical value
+in this manuscript is generated directly from logged JSON outputs by
+\texttt{paper/gen\_paper\_numbers.py}, so the text cannot diverge from the underlying results.
 
 \section{Results}\label{sec:results}
 
@@ -322,6 +335,19 @@ reader capacity---a stronger VLM, better prompting, or answer verification---not
 Expect it to (a) do nothing on uniform layouts, (b) help only when retrieval is not the binding
 constraint (e.g.\ image-query or otherwise high-recall regimes), and (c) be dominated, in many real
 pipelines, by the reader's reading capacity.
+
+\paragraph{Future work.} Three directions follow directly from this study.
+(i)~\emph{Reference-aware expansion}: our hierarchical retrieve-then-expand uses only
+same-section siblings and $\pm1$ reading-order neighbors; following in-document
+cross-references (figure/table callouts, ``see \S X'') to assemble the reader's context
+would test whether reference-aware expansion recovers the retrieval mass that finer
+content-aligned tiles fragment. (ii)~\emph{Breadth at scale}: extending the $2\times2$
+ablation from three corpora to the full screenshot-RAG benchmark suite would establish
+whether the reader--retriever tradeoff and layout-gating hold across document types and
+larger $n$. (iii)~\emph{Tile-level retrieval metrics}: labeling answer-bearing tiles
+would replace article-level recall/nDCG with a tile-level nDCG@$k$ that separates
+retrieving the right \emph{page} from retrieving the right \emph{region}, sharpening the
+diagnostic for where finer tiling helps or hurts.
 
 \section{Limitations}\label{sec:limitations}
 We state these as the boundary of valid claims, not as caveats to discount.
