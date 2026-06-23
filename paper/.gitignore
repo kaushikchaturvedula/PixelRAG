@@ -1,0 +1,15 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+main.pdf
+
+# arXiv submission tarball (regenerate via gen_paper_numbers.py + tectonic)
+*.tar.gz
+
+# paper extract / Overleaf-upload artifacts (regenerate from the tarball)
+*.zip
+overleaf_upload/
+pixelrag_arxiv/

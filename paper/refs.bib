@@ -1,0 +1,112 @@
+% References for "Content-Aware Visual Chunking in Screenshot RAG: A Reader--Retriever Tradeoff"
+%
+% Verification status (checked against arxiv.org / official sources, 2026-06-22):
+%   m3docdep, colchunk, mhierrag, colpali, qwen3vl, pageindex .... CONFIRMED (see per-entry notes)
+%   pixelrag (BASE PAPER) .................................. arXiv ID NOT CONFIRMABLE -- see flag below
+%   faiss, nq, evqa, raptor, gpt4o ........................ standard refs, unchanged
+
+% ---- pixelrag (base paper) cited as the GitHub-hosted report, per author decision (2026-06-22) ----
+% No arXiv ID is confirmable: the circulating 2506.05209 is a DIFFERENT paper ("The Common Pile v0.1").
+% The official repo (StarTrail-org/PixelRAG) hosts the paper as a PDF with no arXiv link. Title and the
+% full 8-author list are confirmed; only the venue is GitHub. Replace with arXiv details if ever posted.
+@misc{pixelrag,
+  title        = {Web Screenshots Beat Text for Retrieval-Augmented Generation},
+  author       = {Wang, Yichuan and Li, Zhifei and Wang, Zirui and Teiletche, Paul and
+                  Jin, Lesheng and Zaharia, Matei and Gonzalez, Joseph E. and Min, Sewon},
+  howpublished = {\url{https://github.com/StarTrail-org/PixelRAG}},
+  year         = {2026},
+  note         = {PixelRAG technical report.}
+}
+
+% ---- CONFIRMED on arxiv.org (full author lists, exact titles/IDs) ----
+@inproceedings{m3docdep,
+  title     = {{M3DocDep}: Multi-modal, Multi-page, Multi-document Dependency Chunking
+               with Large Vision-Language Models},
+  author    = {Shin, Joongmin and Park, Jeongbae and Seo, Jaehyung and Lim, Heuiseok},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2026},
+  note      = {arXiv:2605.18774}
+}
+
+@article{colchunk,
+  title   = {Visual Late Chunking: An Empirical Study of Contextual Chunking for
+             Efficient Visual Document Retrieval},
+  author  = {Yan, Yibo and Ou, Mingdong and Cao, Yi and Huo, Jiahao and Zou, Xin and
+             Liu, Shuliang and Kwok, James and Hu, Xuming},
+  journal = {arXiv preprint arXiv:2604.10167},
+  year    = {2026}
+}
+
+@article{mhierrag,
+  title   = {{MHier-RAG}: Multi-Modal {RAG} for Visual-Rich Document Question-Answering
+             via Hierarchical and Multi-Granularity Reasoning},
+  author  = {Gong, Ziyu and Mai, Chengcheng and Huang, Yihua},
+  journal = {arXiv preprint arXiv:2508.00579},
+  year    = {2025}
+}
+
+@misc{pageindex,
+  title        = {{PageIndex}: Vectorless, Reasoning-based {RAG}},
+  author       = {Zhang, Mingtian and Tang, Yu},
+  howpublished = {\url{https://github.com/VectifyAI/PageIndex}},
+  year         = {2025}
+}
+
+@article{colpali,
+  title   = {{ColPali}: Efficient Document Retrieval with Vision Language Models},
+  author  = {Faysse, Manuel and Sibille, Hugues and Wu, Tony and Omrani, Bilel and
+             Viaud, Gautier and Hudelot, C{\'e}line and Colombo, Pierre},
+  journal = {arXiv preprint arXiv:2407.01449},
+  year    = {2024}
+}
+
+% Qwen3-VL-Embedding report (the encoder used is Qwen3-VL-Embedding-2B, introduced here).
+% Cited as a team report; swap to the named author list (Mingxin Li et al., 12 authors) if preferred.
+@article{qwen3vl,
+  title   = {{Qwen3-VL-Embedding} and {Qwen3-VL-Reranker}: A Unified Framework for
+             State-of-the-Art Multimodal Retrieval and Ranking},
+  author  = {{Qwen Team}},
+  journal = {arXiv preprint arXiv:2601.04720},
+  year    = {2026}
+}
+
+% ---- Standard references (unchanged; confirmed to resolve) ----
+@inproceedings{raptor,
+  author    = {Sarthi, Parth and Abdullah, Salman and Tuli, Aditi and Khanna, Shubh and Goldie, Anna and Manning, Christopher D.},
+  title     = {{RAPTOR}: Recursive Abstractive Processing for Tree-Organized Retrieval},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2024}
+}
+
+@article{faiss,
+  author  = {Johnson, Jeff and Douze, Matthijs and J{\'e}gou, Herv{\'e}},
+  title   = {Billion-Scale Similarity Search with {GPUs}},
+  journal = {IEEE Transactions on Big Data},
+  volume  = {7},
+  number  = {3},
+  pages   = {535--547},
+  year    = {2021}
+}
+
+@article{nq,
+  author  = {Kwiatkowski, Tom and Palomaki, Jennimaria and Redfield, Olivia and Collins, Michael and Parikh, Ankur and Alberti, Chris and Epstein, Danielle and Polosukhin, Illia and Devlin, Jacob and Lee, Kenton and Toutanova, Kristina and Jones, Llion and Kelcey, Matthew and Chang, Ming-Wei and Dai, Andrew M. and Uszkoreit, Jakob and Le, Quoc and Petrov, Slav},
+  title   = {Natural Questions: A Benchmark for Question Answering Research},
+  journal = {Transactions of the Association for Computational Linguistics (TACL)},
+  volume  = {7},
+  pages   = {452--466},
+  year    = {2019}
+}
+
+@inproceedings{evqa,
+  author    = {Mensink, Thomas and Uijlings, Jasper and Castrejon, Lluis and Goel, Arushi and Cadar, Felipe and Zhou, Howard and Sha, Fei and Araujo, Andr{\'e} and Ferrari, Vittorio},
+  title     = {Encyclopedic {VQA}: Visual Questions about Detailed Properties of Fine-Grained Categories},
+  booktitle = {International Conference on Computer Vision (ICCV)},
+  year      = {2023}
+}
+
+@misc{gpt4o,
+  author = {{OpenAI}},
+  title  = {{GPT-4o}},
+  year   = {2024},
+  howpublished = {\url{https://openai.com/index/hello-gpt-4o/}}
+}
