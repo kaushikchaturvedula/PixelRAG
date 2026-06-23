@@ -375,7 +375,7 @@ ax.set_xticks(x)
 ax.set_xticklabels(groups)
 ax.set_ylabel("content-aware QA effect (CA $-$ fixed)")
 ax.set_title("Same iNat corpus & tiles: the CA benefit is image-query-specific")
-ax.legend(frameon=False, loc="upper right")
+ax.legend(frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.18), ncol=2)  # below axes; no bar/label overlap
 ax.margins(y=0.22)
 savefig(fig, "fig2_modality_flip")
 

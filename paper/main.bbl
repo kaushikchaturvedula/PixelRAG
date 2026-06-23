@@ -67,7 +67,9 @@ Parth Sarthi, Salman Abdullah, Aditi Tuli, Shubh Khanna, Anna Goldie, and
 Joongmin Shin, Jeongbae Park, Jaehyung Seo, and Heuiseok Lim.
 \newblock {M3DocDep}: Multi-modal, multi-page, multi-document dependency
   chunking with large vision-language models.
-\newblock \emph{arXiv preprint arXiv:2605.18774}, 2026.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision
+  and Pattern Recognition (CVPR)}, 2026.
+\newblock arXiv:2605.18774.
 
 \bibitem[Wang et~al.(2026)Wang, Li, Wang, Teiletche, Jin, Zaharia, Gonzalez,
   and Min]{pixelrag}
