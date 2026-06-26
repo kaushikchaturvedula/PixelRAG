@@ -1,3 +1,23 @@
+# Content-Aware Visual Chunking in Screenshot RAG: A Reader–Retriever Tradeoff
+
+This repository is a **fork of [StarTrail-org/PixelRAG](https://github.com/StarTrail-org/PixelRAG)**, built
+on top of their screenshot-RAG pipeline. On top of that base system it adds an empirical study of *when*
+content-aware visual chunking helps or hurts pixel RAG: a **content-aware chunker** (tile boundaries aligned
+to DOM regions), a **hierarchical retrieve-then-expand** step, and an **end-to-end QA evaluation harness**.
+The analysis characterizes a **reader–retriever tradeoff** — finer, content-aligned tiles aid the
+vision–language reader but can lower retrieval recall — and shows the effect is layout-gated and
+query-modality-dependent rather than a general improvement.
+
+- **Paper:** [`paper/main.tex`](paper/main.tex) — *Content-Aware Visual Chunking in Screenshot RAG: A Reader–Retriever Tradeoff*.
+- **Reproducible numbers:** every figure and number is generated from logged JSON outputs by
+  [`paper/gen_paper_numbers.py`](paper/gen_paper_numbers.py).
+
+> The rest of this README is the **upstream base-system documentation** from
+> [StarTrail-org/PixelRAG](https://github.com/StarTrail-org/PixelRAG) (the pipeline this fork builds on),
+> retained in full below — including its authors, acknowledgments, and license.
+
+---
+
 <p align="center">
   <img src="docs/assets/banner.png" alt="PixelRAG — Visual Retrieval-Augmented Generation" width="100%">
 </p>

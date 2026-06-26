@@ -128,6 +128,8 @@ through the OpenAI \texttt{\ReaderModel} alias, which the API resolves to a serv
 request time; the underlying snapshot was not pinned in our run configuration. The judge model
 (\S3.4) is pinned to \texttt{\JudgeModel}.}~\citep{gpt4o},
 image \texttt{detail=low}) that answers from the tile \emph{images} only---pixel-native, no text extraction.
+Under the hierarchical variant (\S3.3), this retrieved set is expanded with structural neighbors before
+reading, so the reader receives more than four tiles.
 
 \paragraph{3.2 Content-aware chunker.} The fixed baseline slices each page into equal-height tiles. The
 content-aware chunker instead places tile boundaries at DOM region boundaries via a greedy packer that
