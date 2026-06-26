@@ -44,7 +44,7 @@ vision--language reader extract answers but \emph{reduce} retrieval recall. Whic
 depends on query modality. Under image queries, where retrieval is already saturated, content-aware
 chunking raises QA accuracy by as much as \CaImgHierDelta\ absolute; \emph{but this gain is
 regime-specific}: under text queries on the same corpus with identical tiles it vanishes or reverses
-(\CaTxtFlatDelta\,/\,\CaTxtHierDelta), as smaller tiles lower gold-page retrieval from
+(\CaTxtFlatDelta\,/\,\CaTxtHierDelta), as smaller tiles lower gold-page reach from
 \TxtFixedSawGold\%\ to \TxtCaSawGold\%. Third, across all three corpora \ReaderCeilPctMin--\ReaderCeilPctMax\%\
 of QA errors occur on \emph{correctly-retrieved} content, indicating the reader---not chunking or
 retrieval---is the dominant bottleneck. We therefore caution against treating content-aware visual
@@ -280,7 +280,7 @@ queries the gold page reaches the reader only \TxtFixedSawGold\%\ (fixed) vs.\ \
 (content-aware)\footnote{This figure is the fraction of text queries whose gold-page tile is among the
 reader's top four input tiles---\emph{not} the article-level recall@5 of Table~\ref{tab:retrieval}. The two
 coincide for fixed but not for content-aware, whose recall@5 is higher because some gold pages first enter
-the ranking beyond the reader's top-4 input.}: content-aware's finer tiles actively \emph{lower} gold-page retrieval.
+the ranking beyond the reader's top-4 input.}: content-aware's finer tiles actively \emph{lower} gold-page reach.
 
 \paragraph{Caveat, stated where the claim is made.} iNaturalist questions are \emph{deictic}
 (e.g.\ ``what is the range of \emph{this} bird''), naming the entity only in the query image, so text
