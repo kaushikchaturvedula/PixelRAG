@@ -123,10 +123,10 @@ content-aware visual chunking changes outcomes and \emph{why}.
 \section{Method}\label{sec:method}
 \paragraph{3.1 Pipeline.} Each document page is rendered to an image and split into tiles; tiles are
 embedded with \EmbedModel~\citep{qwen3vl}, indexed with FAISS~\citep{faiss}, and retrieved for a query
-embedded in the same space. The top four retrieved tiles per query are read by a VLM reader (OpenAI \texttt{\ReaderModel}\footnote{The reader was invoked
+embedded in the same space. The top four retrieved tiles per query are read by a VLM reader\footnote{The reader was invoked
 through the OpenAI \texttt{\ReaderModel} alias, which the API resolves to a server-side model snapshot at
 request time; the underlying snapshot was not pinned in our run configuration. The judge model
-(\S3.4) is pinned to \texttt{\JudgeModel}.}~\citep{gpt4o},
+(\S3.4) is pinned to \texttt{\JudgeModel}.} (OpenAI \texttt{\ReaderModel}~\citep{gpt4o},
 image \texttt{detail=low}) that answers from the tile \emph{images} only---pixel-native, no text extraction.
 Under the hierarchical variant (\S3.3), this retrieved set is expanded with structural neighbors before
 reading, so the reader receives more than four tiles.
@@ -286,7 +286,7 @@ the ranking beyond the reader's top-4 input.}: content-aware's finer tiles activ
 (e.g.\ ``what is the range of \emph{this} bird''), naming the entity only in the query image, so text
 queries retrieve weakly and the text arm is partly retrieval-floor-limited---this is \emph{not} a
 perfectly clean modality A/B. Crucially, however, content-aware chunking made text-query retrieval
-\emph{worse} (gold-page recall \TxtFixedSawGold\%\ $\to$ \TxtCaSawGold\%), not merely ``failed to help,''
+\emph{worse} (gold-page reach \TxtFixedSawGold\%\ $\to$ \TxtCaSawGold\%), not merely ``failed to help,''
 so the directional conclusion---that the content-aware advantage is contingent on image-query
 retrieval---holds.
 
@@ -334,7 +334,7 @@ a \emph{reallocation} that helps the reader and hurts the retriever.
 corpus, retrieval is already saturated (gold reaches the reader \ImgFixedSawGold--\ImgCaSawGold\%\ either
 way), so the retrieval penalty cannot bite and the reading benefit surfaces as a QA gain (up to
 \CaImgHierDelta). Under text queries on the \emph{same corpus and tiles}, retrieval is the binding
-constraint; content-aware chunking lowers gold-page recall (\TxtFixedSawGold\%\ $\to$ \TxtCaSawGold\%) and
+constraint; content-aware chunking lowers gold-page reach (\TxtFixedSawGold\%\ $\to$ \TxtCaSawGold\%) and
 the QA advantage disappears or reverses. This within-corpus flip---holding document, layout, and chunk
 difference fixed and changing only the query---is the cleanest evidence that the ``content-aware chunking
 helps'' effect is contingent on the retrieval regime, not a property of the chunking itself.
