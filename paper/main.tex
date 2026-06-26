@@ -21,9 +21,9 @@
 \setlength{\emergencystretch}{3em}  % absorb minor overfull \hbox warnings
 
 \title{\bfseries Content-Aware Visual Chunking in Screenshot RAG:\\ A Reader--Retriever Tradeoff}
-\author[1]{Kaushik Chaturvedula\thanks{Independent research. Correspondence: \texttt{kaushikchaturvedula@gmail.com}.}}
+\author[1]{Kaushik Chaturvedula\thanks{Correspondence: \texttt{kaushikchaturvedula@gmail.com}.}}
 \affil[1]{\textit{Independent Researcher}}
-\date{\today}
+\date{June 25, 2026}
 
 \begin{document}
 \maketitle
@@ -123,7 +123,7 @@ content-aware visual chunking changes outcomes and \emph{why}.
 \section{Method}\label{sec:method}
 \paragraph{3.1 Pipeline.} Each document page is rendered to an image and split into tiles; tiles are
 embedded with \EmbedModel~\citep{qwen3vl}, indexed with FAISS~\citep{faiss}, and retrieved for a query
-embedded in the same space. The top tiles are read by a VLM reader (OpenAI \texttt{\ReaderModel}\footnote{The reader was invoked
+embedded in the same space. The top four retrieved tiles per query are read by a VLM reader (OpenAI \texttt{\ReaderModel}\footnote{The reader was invoked
 through the OpenAI \texttt{\ReaderModel} alias, which the API resolves to a server-side model snapshot at
 request time; the underlying snapshot was not pinned in our run configuration. The judge model
 (\S3.4) is pinned to \texttt{\JudgeModel}.}~\citep{gpt4o},
@@ -166,9 +166,10 @@ causal claim comes from the within-corpus modality flip of \S\ref{sec:modflip}.
 
 \paragraph{Reproducibility and code.} Code, corpus-construction scripts, and the
 evaluation harness are available at \url{https://github.com/kaushikchaturvedula/PixelRAG}.
-The pipeline builds on the screenshot-RAG system of \citet{pixelrag}; the content-aware
-chunker (\S\ref{sec:method}), the hierarchical retrieve-then-expand step, and the
-end-to-end QA evaluation harness are contributions of this work. Every numerical value
+The pipeline builds on the upstream screenshot-RAG system of \citet{pixelrag}. Our repository is a fork
+of the upstream \texttt{StarTrail-org/PixelRAG} and shares its name; the contributions below are built on
+top of that fork. The content-aware chunker (\S\ref{sec:method}), the hierarchical retrieve-then-expand
+step, and the end-to-end QA evaluation harness are contributions of this work. Every numerical value
 in this manuscript is generated directly from logged JSON outputs by
 \texttt{paper/gen\_paper\_numbers.py}, so the text cannot diverge from the underlying results.
 
@@ -274,7 +275,10 @@ The mechanism is visible in how often the gold page reaches the reader. Under im
 saturated---the gold page is read \ImgFixedSawGold\%\ of the time for fixed and \ImgCaSawGold\%\ for
 content-aware---so the retrieval penalty has no room to bite and the reading benefit surfaces. Under text
 queries the gold page reaches the reader only \TxtFixedSawGold\%\ (fixed) vs.\ \TxtCaSawGold\%\
-(content-aware): content-aware's finer tiles actively \emph{lower} gold-page retrieval.
+(content-aware)\footnote{This figure is the fraction of text queries whose gold-page tile is among the
+reader's top four input tiles---\emph{not} the article-level recall@5 of Table~\ref{tab:retrieval}. The two
+coincide for fixed but not for content-aware, whose recall@5 is higher because some gold pages first enter
+the ranking beyond the reader's top-4 input.}: content-aware's finer tiles actively \emph{lower} gold-page retrieval.
 
 \paragraph{Caveat, stated where the claim is made.} iNaturalist questions are \emph{deictic}
 (e.g.\ ``what is the range of \emph{this} bird''), naming the entity only in the query image, so text

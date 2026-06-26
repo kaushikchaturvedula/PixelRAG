@@ -5,6 +5,11 @@ table, and inline number is generated from the committed `results/*.json` by `ge
 (which reuses the `research/analyze_chunking.py` primitives, so the paper and the analysis cannot
 disagree).
 
+> **Upstream / naming:** this pipeline builds on **`StarTrail-org/PixelRAG`** (the upstream
+> screenshot-RAG system). This repository (`kaushikchaturvedula/PixelRAG`) is a distinct fork that
+> shares the name; the content-aware chunker, hierarchical retrieve-then-expand, and end-to-end QA
+> harness are additions of this work.
+
 ## Build
 
 1. **Generate numbers, tables, and figures** (needs `matplotlib`; stdlib otherwise):
@@ -20,9 +25,9 @@ disagree).
    ```
    Or upload the `paper/` folder to Overleaf and compile there.
 
-> **Note:** no LaTeX toolchain was available on the authoring machine, so the PDF was **not** compiled
-> locally — `main.tex` was verified structurally only (all `\input`/`\includegraphics`/`\bibliography`
-> targets resolve, macros defined, environments balanced). Compile on Overleaf or any TeX install.
+> **Note:** `main.tex` compiles cleanly with `pdflatex`+`bibtex` (e.g. via Tectonic locally or on
+> Overleaf) — 0 overfull/underfull boxes, 0 undefined references or citations. A generated `main.bbl`
+> is committed, so the build works even without re-running BibTeX.
 
 ## Files
 - `main.tex` — the paper (article class, single column).
@@ -30,8 +35,7 @@ disagree).
 - `numbers.tex` — generated `\newcommand` macros (do not edit).
 - `tables/*.tex` — generated `booktabs` tabulars (do not edit).
 - `figures/*.{pdf,png}` — generated matplotlib figures.
-- `refs.bib` — references. **Several recent-preprint entries are placeholders flagged `VERIFY`** — confirm
-  authors/venue/arXiv before submission.
+- `refs.bib` — references. All 12 citations are verified against arXiv / official sources.
 
 ## Regenerating after data changes
 `gen_paper_numbers.py` reads only `results/*.json`; re-run it to refresh every number. The paper stays in
